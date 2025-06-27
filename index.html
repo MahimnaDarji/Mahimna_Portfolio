@@ -665,139 +665,163 @@
 
 <!-- Projects Section -->
 <section id="projects" class="py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl font-bold text-blue-900 mb-4 title-font">Featured Projects</h2>
-        <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
-      </div>
-    
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="project-grid">
-    
-        <!-- Project 1: Supply Chain -->
-        <div class="project-card rounded-lg overflow-hidden shadow-lg transition-all duration-300">
-          <div class="w-full aspect-video overflow-hidden">
-            <img src="Assests/SC.png" alt="Supply Chain Optimization Platform" class="w-full h-full object-cover">
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold text-blue-900 mb-2">Supply Chain Optimization Platform</h3>
-            <p class="text-gray-600 mb-4">Developed a full-stack supply chain analytics platform using Python, MongoDB, Streamlit, and Tableau to simulate logistics, forecast inventory with Prophet, and detect shipment delays using anomaly detection and scoring models.</p>
-            <p class="text-gray-600 mb-4">Delivered interactive dashboards with cost optimization, vendor performance radar charts, and real-time KPIs—empowering smarter decision-making for inventory, shipping, and vendor management.</p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="px-3 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full">Python</span>
-              <span class="px-3 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full">Tableau</span>
-              <span class="px-3 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full">MongoDB</span>
-              <span class="px-3 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full">Streamlit</span>
-            </div>
-            <div class="flex space-x-3">
-              <a href="https://github.com/manasi1102/Supply-Chain-Optimization-Platform.git" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Source Code</a>
-            </div>
-          </div>
-        </div>
-    
-        <!-- Project 2: LAPD -->
-        <div class="project-card rounded-lg overflow-hidden shadow-lg transition-all duration-300">
-          <div class="w-full aspect-video overflow-hidden">
-            <img src="Assests/LAPD.png" alt="LAPD Crime Dashboard" class="w-full h-full object-cover">
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold text-blue-900 mb-2">LAPD Crime Dashboard</h3>
-            <p class="text-gray-600 mb-4">Developed an interactive Streamlit dashboard using over 900,000 LAPD crime records to analyze spatial and temporal trends. Integrated advanced visualizations such as time series plots, density heatmaps, geospatial clustering, and interactive cluster maps. </p>
-            <p class="text-gray-600 mb-4">Used stratified sampling for performance and uncovered location-based risk zones and demographic crime patterns to support urban policy and law enforcement.</p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full">Python</span>
-              <span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full">Streamlit</span>
-              <span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full">Geospatial</span>
-              <span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full">Data Viz</span>
-            </div>
-            <div class="flex space-x-3">
-              <a href="https://github.com/MahimnaDarji/LAPD-Crime-Dashboard.git" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Source Code</a>
-            </div>
-          </div>
-        </div>
-    
-        <!-- Project 3: Book Recommendation -->
-        <div class="project-card rounded-lg overflow-hidden shadow-lg transition-all duration-300">
-          <div class="w-full aspect-video overflow-hidden">
-            <img src="Assests/BRS.png" alt="Book Recommendation System" class="w-full h-full object-cover">
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold text-blue-900 mb-2">Book Recommendation System</h3>
-            <p class="text-gray-600 mb-4">Built a book recommendation system using Python, Flask, HTML/CSS and Content Based filtering Recommender System to deliver personalized book suggestions. Built a clean, user-friendly interface with genre browsing and dynamic recommendations.</p>
-            <p class="text-gray-600 mb-4">Used user interaction data to improve suggestions, making book discovery more accurate and personalized.</p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="px-3 py-1 bg-purple-100 text-purple-800 text-xs font-medium rounded-full">Python</span>
-              <span class="px-3 py-1 bg-purple-100 text-purple-800 text-xs font-medium rounded-full">Flask</span>
-              <span class="px-3 py-1 bg-purple-100 text-purple-800 text-xs font-medium rounded-full">HTML & CSS</span>
-              <span class="px-3 py-1 bg-purple-100 text-purple-800 text-xs font-medium rounded-full">Recommender System</span>
-            </div>
-            <div class="flex space-x-3">
-              <a href="https://github.com/MahimnaDarji/Book-Recommendation-System.git" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Source Code</a>
-            </div>
-          </div>
-        </div>
-    
-        <!-- Project 4: Social Network (Initially Hidden) -->
-        <div class="project-card rounded-lg overflow-hidden shadow-lg transition-all duration-300 hidden" id="project-4">
-          <div class="w-full aspect-video overflow-hidden">
-            <img src="Assests/SN.png" alt="Social Network Platform" class="w-full h-full object-cover">
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold text-blue-900 mb-2">Social Network Platform</h3>
-            <p class="text-gray-600 mb-4">Developed a full-stack social networking platform using React.js for frontend and FastAPI for backend, with MongoDB for data storage. Added key features like user login, profile management, content posting, and real-time chat.</p>
-            <p class="text-gray-600 mb-4">Containerized the app using Docker and deployed the backend on Render and frontend on Vercel. This ensured smooth, scalable, and reliable performance across environments.</p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-xs font-medium rounded-full">React.js</span>
-              <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-xs font-medium rounded-full">FastAPI</span>
-              <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-xs font-medium rounded-full">MongoDB</span>
-              <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-xs font-medium rounded-full">Docker</span>
-            </div>
-            <div class="flex space-x-3">
-              <a href="https://social-network-frontend-five.vercel.app/login" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Source Code</a>
-            </div>
-          </div>
-        </div>
-    
-      </div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl font-bold text-blue-900 mb-4 title-font">Featured Projects</h2>
+      <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
     </div>
 
-          <!-- Toggle Buttons (Fixed alignment) -->
-          <div class="flex justify-center mt-12 space-x-4">
-            <button id="view-more-btn"
-                    onclick="toggleProjects(true)"
-                    class="inline-flex items-center px-6 py-3 border border-blue-600 text-blue-600 font-medium rounded-md hover:bg-blue-50 transition duration-300">
-              View All Projects
-              <i class="fas fa-arrow-down ml-2"></i>
-            </button>
-      
-            <button id="show-less-btn"
-                    onclick="toggleProjects(false)"
-                    class="inline-flex items-center px-6 py-3 border border-blue-600 text-blue-600 font-medium rounded-md hover:bg-blue-50 transition duration-300 hidden">
-              Show Less Projects
-              <i class="fas fa-arrow-up ml-2"></i>
-            </button>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="project-grid">
+
+      <!-- Project 1: Supply Chain -->
+      <div class="project-card rounded-lg overflow-hidden shadow-lg transition-all duration-300">
+        <div class="w-full aspect-video overflow-hidden">
+          <img src="Assests/SC.png" alt="Supply Chain Optimization Platform" class="w-full h-full object-cover">
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-blue-900 mb-2">Supply Chain Optimization Platform</h3>
+          <p class="text-gray-600 mb-4">Developed a full-stack supply chain analytics platform using Python, MongoDB, Streamlit, and Tableau to simulate logistics, forecast inventory with Prophet, and detect shipment delays using anomaly detection and scoring models.</p>
+          <p class="text-gray-600 mb-4">Delivered interactive dashboards with cost optimization, vendor performance radar charts, and real-time KPIs—empowering smarter decision-making for inventory, shipping, and vendor management.</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="px-3 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full">Python</span>
+            <span class="px-3 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full">Tableau</span>
+            <span class="px-3 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full">MongoDB</span>
+            <span class="px-3 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full">Streamlit</span>
+          </div>
+          <div class="flex space-x-3">
+            <a href="https://github.com/manasi1102/Supply-Chain-Optimization-Platform.git" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Source Code</a>
           </div>
         </div>
-      </section>
-      
-      <!-- Toggle Script -->
-      <script>
-        function toggleProjects(showMore) {
-          const project4 = document.getElementById('project-4');
-          const viewMoreBtn = document.getElementById('view-more-btn');
-          const showLessBtn = document.getElementById('show-less-btn');
-      
-          if (showMore) {
-            project4.classList.remove('hidden');
-            viewMoreBtn.classList.add('hidden');
-            showLessBtn.classList.remove('hidden');
-          } else {
-            project4.classList.add('hidden');
-            viewMoreBtn.classList.remove('hidden');
-            showLessBtn.classList.add('hidden');
-          }
-        }
-      </script>
-    </section>
+      </div>
+
+      <!-- Project 2: LAPD -->
+      <div class="project-card rounded-lg overflow-hidden shadow-lg transition-all duration-300">
+        <div class="w-full aspect-video overflow-hidden">
+          <img src="Assests/LAPD.png" alt="LAPD Crime Dashboard" class="w-full h-full object-cover">
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-blue-900 mb-2">LAPD Crime Dashboard</h3>
+          <p class="text-gray-600 mb-4">Developed an interactive Streamlit dashboard using over 900,000 LAPD crime records to analyze spatial and temporal trends. Integrated advanced visualizations such as time series plots, density heatmaps, geospatial clustering, and interactive cluster maps.</p>
+          <p class="text-gray-600 mb-4">Used stratified sampling for performance and uncovered location-based risk zones and demographic crime patterns to support urban policy and law enforcement.</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full">Python</span>
+            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full">Streamlit</span>
+            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full">Geospatial</span>
+            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full">Data Viz</span>
+          </div>
+          <div class="flex space-x-3">
+            <a href="https://github.com/MahimnaDarji/LAPD-Crime-Dashboard.git" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Source Code</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3: Water Potability -->
+      <div class="project-card rounded-lg overflow-hidden shadow-lg transition-all duration-300">
+        <div class="w-full aspect-video overflow-hidden">
+          <img src="Assests/Water.png" alt="Water Potability Classification" class="w-full h-full object-cover">
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-blue-900 mb-2">Water Potability Classification</h3>
+          <p class="text-gray-600 mb-4">Developed a classification system using Python and Scikit-learn to predict water potability based on chemical attributes. Compared multiple supervised models, applied SHAP and PDP for interpretability, and validated results through ROC curves and stratified cross-validation.</p>
+          <p class="text-gray-600 mb-4">Performed hierarchical clustering, PCA for feature space analysis, and scenario-based testing to assess model robustness and identify influential features like Sulfate and Organic Carbon.</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="px-3 py-1 bg-teal-100 text-teal-800 text-xs font-medium rounded-full">Supervised Learning</span>
+            <span class="px-3 py-1 bg-teal-100 text-teal-800 text-xs font-medium rounded-full">Model Interpretability</span>
+            <span class="px-3 py-1 bg-teal-100 text-teal-800 text-xs font-medium rounded-full">Clustering & Segmentation</span>
+            <span class="px-3 py-1 bg-teal-100 text-teal-800 text-xs font-medium rounded-full">PCA</span>
+          </div>
+          <div class="flex space-x-3">
+            <a href="https://github.com/MahimnaDarji/Water-Potability-Classification.git" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Source Code</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 4: Book Recommendation (Initially Hidden) -->
+      <div class="project-card rounded-lg overflow-hidden shadow-lg transition-all duration-300 hidden" id="project-4">
+        <div class="w-full aspect-video overflow-hidden">
+          <img src="Assests/BRS.png" alt="Book Recommendation System" class="w-full h-full object-cover">
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-blue-900 mb-2">Book Recommendation System</h3>
+          <p class="text-gray-600 mb-4">Built a book recommendation system using Python, Flask, HTML/CSS and Content Based filtering Recommender System to deliver personalized book suggestions. Built a clean, user-friendly interface with genre browsing and dynamic recommendations.</p>
+          <p class="text-gray-600 mb-4">Used user interaction data to improve suggestions, making book discovery more accurate and personalized.</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="px-3 py-1 bg-purple-100 text-purple-800 text-xs font-medium rounded-full">Python</span>
+            <span class="px-3 py-1 bg-purple-100 text-purple-800 text-xs font-medium rounded-full">Flask</span>
+            <span class="px-3 py-1 bg-purple-100 text-purple-800 text-xs font-medium rounded-full">HTML & CSS</span>
+            <span class="px-3 py-1 bg-purple-100 text-purple-800 text-xs font-medium rounded-full">Recommender System</span>
+          </div>
+          <div class="flex space-x-3">
+            <a href="https://github.com/MahimnaDarji/Book-Recommendation-System.git" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Source Code</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 5: Social Network (Initially Hidden) -->
+      <div class="project-card rounded-lg overflow-hidden shadow-lg transition-all duration-300 hidden" id="project-5">
+        <div class="w-full aspect-video overflow-hidden">
+          <img src="Assests/SN.png" alt="Social Network Platform" class="w-full h-full object-cover">
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-blue-900 mb-2">Social Network Platform</h3>
+          <p class="text-gray-600 mb-4">Developed a full-stack social networking platform using React.js for frontend and FastAPI for backend, with MongoDB for data storage. Added key features like user login, profile management, content posting, and real-time chat.</p>
+          <p class="text-gray-600 mb-4">Containerized the app using Docker and deployed the backend on Render and frontend on Vercel. This ensured smooth, scalable, and reliable performance across environments.</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-xs font-medium rounded-full">React.js</span>
+            <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-xs font-medium rounded-full">FastAPI</span>
+            <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-xs font-medium rounded-full">MongoDB</span>
+            <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-xs font-medium rounded-full">Docker</span>
+          </div>
+          <div class="flex space-x-3">
+            <a href="https://social-network-frontend-five.vercel.app/login" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Source Code</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Toggle Buttons -->
+    <div class="flex justify-center mt-12 space-x-4">
+      <button id="view-more-btn"
+              onclick="toggleProjects(true)"
+              class="inline-flex items-center px-6 py-3 border border-blue-600 text-blue-600 font-medium rounded-md hover:bg-blue-50 transition duration-300">
+        View All Projects
+        <i class="fas fa-arrow-down ml-2"></i>
+      </button>
+
+      <button id="show-less-btn"
+              onclick="toggleProjects(false)"
+              class="inline-flex items-center px-6 py-3 border border-blue-600 text-blue-600 font-medium rounded-md hover:bg-blue-50 transition duration-300 hidden">
+        Show Less Projects
+        <i class="fas fa-arrow-up ml-2"></i>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Toggle Script -->
+<script>
+  function toggleProjects(showMore) {
+    const project4 = document.getElementById('project-4');
+    const project5 = document.getElementById('project-5');
+    const viewMoreBtn = document.getElementById('view-more-btn');
+    const showLessBtn = document.getElementById('show-less-btn');
+
+    if (showMore) {
+      project4.classList.remove('hidden');
+      project5.classList.remove('hidden');
+      viewMoreBtn.classList.add('hidden');
+      showLessBtn.classList.remove('hidden');
+    } else {
+      project4.classList.add('hidden');
+      project5.classList.add('hidden');
+      viewMoreBtn.classList.remove('hidden');
+      showLessBtn.classList.add('hidden');
+    }
+  }
+</script>
+
+
     
 
 <!-- Certifications Section -->
@@ -815,9 +839,9 @@
           <!-- First 4 Certificates -->
           <div class="cert-card bg-white p-6 rounded-lg shadow-md text-center flex flex-col items-center">
             <div class="w-full h-60 flex items-center justify-center mb-6">
-              <img src="Assests/Intro to DE.png" alt="Coursera" class="w-50 h-50 object-contain">
+              <img src="Assests/Data Engineering.jpg" alt="Coursera" class="w-50 h-50 object-contain">
             </div>
-            <h3 class="text-lg font-semibold text-blue-900 mb-1">Intro to Data Engineering</h3>
+            <h3 class="text-lg font-semibold text-blue-900 mb-1">DeepLearning.AI Data Engineering</h3>
             <p class="text-gray-500 text-sm font-semibold">Coursera</p>
           </div>
     
@@ -949,7 +973,7 @@
     </script>
     
 
-   <!-- Blog Section -->
+
 <!-- Blog Section -->
 <section id="blog" class="py-20 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -959,7 +983,25 @@
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="blog-grid">
-      <!-- Blog 1 -->
+
+      <!-- Blog 1 (New Blog) -->
+      <div class="blog-card border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition duration-300">
+        <div class="h-52 bg-gray-100 overflow-hidden">
+          <img src="Assests/Data Lake.png" alt="Modern Data Architecture Blog" class="w-full h-full object-cover">
+        </div>
+        <div class="p-6">
+          <div class="flex items-center text-sm text-gray-500 mb-2">
+            <span>June 26, 2025</span>
+            <span class="mx-2">•</span>
+            <span>7 min read</span>
+          </div>
+          <h3 class="text-xl font-bold text-blue-900 mb-2">Data Warehouses, Lakes, and Lakehouses: Diving into the Buckets, Brains, and Bytes of Modern Data Architecture</h3>
+          <p class="text-gray-600 mb-4">This blog breaks down modern data architectures: Warehouses for structured ETL, Lakes for ML-ready schema-on-read, and Lakehouses with ACID, tiered storage, and AWS integrations like Redshift MPP.</p>
+          <a href="https://medium.com/aws-in-plain-english/data-warehouses-lakes-and-lakehouses-diving-into-the-buckets-brains-and-bytes-of-modern-data-f81aee997ecc" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Read More</a>
+        </div>
+      </div>
+
+      <!-- Blog 2 -->
       <div class="blog-card border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition duration-300">
         <div class="h-52 bg-gray-100 overflow-hidden">
           <img src="Assests/Blog4.png" alt="Orchestration Blog" class="w-full h-full object-cover">
@@ -976,7 +1018,7 @@
         </div>
       </div>
 
-      <!-- Blog 2 -->
+      <!-- Blog 3 -->
       <div class="blog-card border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition duration-300">
         <div class="h-52 bg-gray-100 overflow-hidden">
           <img src="Assests/Airflow.png" alt="Airflow Blog" class="w-full h-full object-cover">
@@ -993,8 +1035,8 @@
         </div>
       </div>
 
-      <!-- Blog 3 -->
-      <div class="blog-card border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition duration-300">
+      <!-- Blog 4 (Initially Hidden) -->
+      <div id="blog-4" class="blog-card border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition duration-300 hidden">
         <div class="h-52 bg-gray-100 overflow-hidden">
           <img src="Assests/Ingestion.png" alt="Data Ingestion Blog" class="w-full h-full object-cover">
         </div>
@@ -1010,8 +1052,8 @@
         </div>
       </div>
 
-      <!-- Blog 4 (Initially Hidden) -->
-      <div id="blog-4" class="blog-card border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition duration-300 hidden">
+      <!-- Blog 5 (Initially Hidden) -->
+      <div id="blog-5" class="blog-card border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition duration-300 hidden">
         <div class="h-52 bg-gray-100 overflow-hidden">
           <img src="Assests/VPC.png" alt="AWS Networking Blog" class="w-full h-full object-cover">
         </div>
@@ -1050,20 +1092,24 @@
 <script>
   function toggleBlogs(showMore) {
     const blog4 = document.getElementById('blog-4');
+    const blog5 = document.getElementById('blog-5');
     const viewMoreBtn = document.getElementById('view-more-blog-btn');
     const showLessBtn = document.getElementById('show-less-blog-btn');
 
     if (showMore) {
       blog4.classList.remove('hidden');
+      blog5.classList.remove('hidden');
       viewMoreBtn.classList.add('hidden');
       showLessBtn.classList.remove('hidden');
     } else {
       blog4.classList.add('hidden');
+      blog5.classList.add('hidden');
       viewMoreBtn.classList.remove('hidden');
       showLessBtn.classList.add('hidden');
     }
   }
 </script>
+
 
 
 <!-- Contact Section -->
