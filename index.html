@@ -984,7 +984,24 @@
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="blog-grid">
 
-      <!-- Blog 1 (New Blog) -->
+      <!-- Blog 1 -->
+      <div class="blog-card border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition duration-300">
+        <div class="h-52 bg-gray-100 overflow-hidden">
+          <img src="Assests/DataVault.png" alt="Data Modeling and Pipelines" class="w-full h-full object-cover">
+        </div>
+        <div class="p-6">
+          <div class="flex items-center text-sm text-gray-500 mb-2">
+            <span>July 3, 2025</span>
+            <span class="mx-2">•</span>
+            <span>6 min read</span>
+          </div>
+          <h3 class="text-xl font-bold text-blue-900 mb-2">From Models to Pipelines: A Practical Guide to Data Modeling, Architectures, and Engineering Tools</h3>
+          <p class="text-gray-600 mb-4">This blog breaks down essential concepts in data modeling and pipelines — from normalization and Star Schema to Data Vault and OBT. It also covers engineering choices like ETL vs. ELT, Spark vs. Hadoop, and tools like DBT and AWS Glue, with practical analogies and trade-offs.</p>
+          <a href="https://medium.com/@m2analytics1117/from-models-to-pipelines-a-practical-guide-to-data-modeling-architectures-and-engineering-tools-49a3ff58bc87" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Read More</a>
+        </div>
+      </div>
+
+      <!-- Blog 2 -->
       <div class="blog-card border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition duration-300">
         <div class="h-52 bg-gray-100 overflow-hidden">
           <img src="Assests/Data Lake.png" alt="Modern Data Architecture Blog" class="w-full h-full object-cover">
@@ -1001,7 +1018,7 @@
         </div>
       </div>
 
-      <!-- Blog 2 -->
+      <!-- Blog 3 -->
       <div class="blog-card border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition duration-300">
         <div class="h-52 bg-gray-100 overflow-hidden">
           <img src="Assests/Blog4.png" alt="Orchestration Blog" class="w-full h-full object-cover">
@@ -1018,8 +1035,8 @@
         </div>
       </div>
 
-      <!-- Blog 3 -->
-      <div class="blog-card border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition duration-300">
+      <!-- Blog 4 (Initially Hidden) -->
+      <div id="blog-4" class="blog-card border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition duration-300 hidden">
         <div class="h-52 bg-gray-100 overflow-hidden">
           <img src="Assests/Airflow.png" alt="Airflow Blog" class="w-full h-full object-cover">
         </div>
@@ -1035,8 +1052,8 @@
         </div>
       </div>
 
-      <!-- Blog 4 (Initially Hidden) -->
-      <div id="blog-4" class="blog-card border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition duration-300 hidden">
+      <!-- Blog 5 (Initially Hidden) -->
+      <div id="blog-5" class="blog-card border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition duration-300 hidden">
         <div class="h-52 bg-gray-100 overflow-hidden">
           <img src="Assests/Ingestion.png" alt="Data Ingestion Blog" class="w-full h-full object-cover">
         </div>
@@ -1052,8 +1069,8 @@
         </div>
       </div>
 
-      <!-- Blog 5 (Initially Hidden) -->
-      <div id="blog-5" class="blog-card border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition duration-300 hidden">
+      <!-- Blog 6 (Initially Hidden) -->
+      <div id="blog-6" class="blog-card border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition duration-300 hidden">
         <div class="h-52 bg-gray-100 overflow-hidden">
           <img src="Assests/VPC.png" alt="AWS Networking Blog" class="w-full h-full object-cover">
         </div>
@@ -1091,25 +1108,23 @@
 
 <script>
   function toggleBlogs(showMore) {
-    const blog4 = document.getElementById('blog-4');
-    const blog5 = document.getElementById('blog-5');
+    const blogsToToggle = ['blog-4', 'blog-5', 'blog-6'];
     const viewMoreBtn = document.getElementById('view-more-blog-btn');
     const showLessBtn = document.getElementById('show-less-blog-btn');
 
-    if (showMore) {
-      blog4.classList.remove('hidden');
-      blog5.classList.remove('hidden');
-      viewMoreBtn.classList.add('hidden');
-      showLessBtn.classList.remove('hidden');
-    } else {
-      blog4.classList.add('hidden');
-      blog5.classList.add('hidden');
-      viewMoreBtn.classList.remove('hidden');
-      showLessBtn.classList.add('hidden');
-    }
+    blogsToToggle.forEach(id => {
+      const blog = document.getElementById(id);
+      if (showMore) {
+        blog.classList.remove('hidden');
+      } else {
+        blog.classList.add('hidden');
+      }
+    });
+
+    viewMoreBtn.classList.toggle('hidden', showMore);
+    showLessBtn.classList.toggle('hidden', !showMore);
   }
 </script>
-
 
 
 <!-- Contact Section -->
