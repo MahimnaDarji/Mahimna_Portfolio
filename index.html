@@ -982,7 +982,24 @@
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="blog-grid">
 
-      <!-- Blog 1 -->
+      <!-- New Blog (Position 1) -->
+      <div class="blog-card border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition duration-300">
+        <div class="h-52 bg-gray-100 overflow-hidden">
+          <img src="Assests/blog7.png" alt="Blog 7" class="w-full h-full object-cover">
+        </div>
+        <div class="p-6">
+          <div class="flex items-center text-sm text-gray-500 mb-2">
+            <span>July 8, 2025</span>
+            <span class="mx-2">•</span>
+            <span>6 min read</span>
+          </div>
+          <h3 class="text-xl font-bold text-blue-900 mb-2">Why Data Centers Are the New Oil Fields: Powering the AI Boom, One Megawatt at a Time</h3>
+          <p class="text-gray-600 mb-4">This blog explores the environmental and geopolitical impact of data centers in the age of AI — covering their energy and water consumption, global infrastructure race, and the urgent need to balance digital growth with real-world sustainability.</p>
+          <a href="https://medium.com/aws-in-plain-english/why-data-centers-are-the-new-oil-fields-powering-the-ai-boom-one-megawatt-at-a-time-00244047add7" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Read More</a>
+        </div>
+      </div>
+
+      <!-- Blog 2 -->
       <div class="blog-card border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition duration-300">
         <div class="h-52 bg-gray-100 overflow-hidden">
           <img src="Assests/DataVault.png" alt="Data Modeling and Pipelines" class="w-full h-full object-cover">
@@ -999,7 +1016,7 @@
         </div>
       </div>
 
-      <!-- Blog 2 -->
+      <!-- Blog 3 -->
       <div class="blog-card border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition duration-300">
         <div class="h-52 bg-gray-100 overflow-hidden">
           <img src="Assests/Data Lake.png" alt="Modern Data Architecture Blog" class="w-full h-full object-cover">
@@ -1016,8 +1033,8 @@
         </div>
       </div>
 
-      <!-- Blog 3 -->
-      <div class="blog-card border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition duration-300">
+      <!-- Blog 4 (Hidden) -->
+      <div id="blog-4" class="blog-card hidden border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition duration-300">
         <div class="h-52 bg-gray-100 overflow-hidden">
           <img src="Assests/Blog4.png" alt="Orchestration Blog" class="w-full h-full object-cover">
         </div>
@@ -1033,8 +1050,8 @@
         </div>
       </div>
 
-      <!-- Blog 4 (Initially Hidden) -->
-      <div id="blog-4" class="blog-card border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition duration-300 hidden">
+      <!-- Blog 5 (Hidden) -->
+      <div id="blog-5" class="blog-card hidden border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition duration-300">
         <div class="h-52 bg-gray-100 overflow-hidden">
           <img src="Assests/Airflow.png" alt="Airflow Blog" class="w-full h-full object-cover">
         </div>
@@ -1050,8 +1067,8 @@
         </div>
       </div>
 
-      <!-- Blog 5 (Initially Hidden) -->
-      <div id="blog-5" class="blog-card border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition duration-300 hidden">
+      <!-- Blog 6 (Hidden) -->
+      <div id="blog-6" class="blog-card hidden border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition duration-300">
         <div class="h-52 bg-gray-100 overflow-hidden">
           <img src="Assests/Ingestion.png" alt="Data Ingestion Blog" class="w-full h-full object-cover">
         </div>
@@ -1067,8 +1084,8 @@
         </div>
       </div>
 
-      <!-- Blog 6 (Initially Hidden) -->
-      <div id="blog-6" class="blog-card border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition duration-300 hidden">
+      <!-- Blog 7 (Hidden) -->
+      <div id="blog-7" class="blog-card hidden border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition duration-300">
         <div class="h-52 bg-gray-100 overflow-hidden">
           <img src="Assests/VPC.png" alt="AWS Networking Blog" class="w-full h-full object-cover">
         </div>
@@ -1106,7 +1123,7 @@
 
 <script>
   function toggleBlogs(showMore) {
-    const blogsToToggle = ['blog-4', 'blog-5', 'blog-6'];
+    const blogsToToggle = ['blog-4', 'blog-5', 'blog-6', 'blog-7'];
     const viewMoreBtn = document.getElementById('view-more-blog-btn');
     const showLessBtn = document.getElementById('show-less-blog-btn');
 
@@ -1123,7 +1140,6 @@
     showLessBtn.classList.toggle('hidden', !showMore);
   }
 </script>
-
 
 <!-- Contact Section -->
 <section id="contact" class="py-20 bg-gray-50">
