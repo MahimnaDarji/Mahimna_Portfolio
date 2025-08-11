@@ -294,8 +294,9 @@
                         </div>
                         <h4 class="text-lg font-semibold text-gray-700 mb-3">Data Scientist</h4>
                         <ul class="list-disc pl-5 space-y-2 text-gray-600">
-                            <li>Extract financial grant data from multiple source systems and build pipelines to clean, standardize, and structure records from 53 nonprofit organizations, covering records from 2013 to 2021. This helps ensure consistency and allows for clear time-series and geospatial analysis.</li>
-                            <li>Create interactive Tableau dashboards that highlight donation trends and regional funding disparities, allowing stakeholders to monitor financial patterns influenced by socioeconomic factors and make informed decisions.</li>
+                            <li>Build ETL pipelines to collect, clean, and standardize financial grant data from 7 sources across 53 nonprofit organizations spanning 2013 to 2021, reducing processing time by 40% and enabling structured analysis using PySpark, SQL, and Python.</li>
+                            <li>Transform over 130,000 records for time-series and geospatial analysis to identify grant distribution patterns and funding trends across regions.</li>
+                            <li>Create Tableau dashboards to highlight donation trends and funding disparities. Collaborate with executive leadership to define KPIs. Document the data pipeline, regression testing logic, and version control through Git to ensure reproducibility.</li>
                         </ul>
                     </div>
                 </div>
@@ -312,9 +313,9 @@
                         </div>
                         <h4 class="text-lg font-semibold text-gray-700 mb-3">Machine Learning Intern</h4>
                         <ul class="list-disc pl-5 space-y-2 text-gray-600">
-                            <li>Developed a predictive model to forecast Air Quality Index (AQI) using historical air quality data, weather patterns, and pollutant concentrations. </li>
-                            <li>Enhanced the accuracy and efficiency of AQI predictions by optimizing four machine learning models, conducting in-depth data analysis across multiple datasets, and improving model performance by 7.6%.</li>
-                            <li>Integrated the optimized predictive model into a real-time AQI monitoring system, enabling continuous tracking of pollution levels and providing early warnings for hazardous air conditions.</li>
+                            <li>Engineered a Python-based backend for real-time AQI forecasting using cloud-native infrastructure and automated ingestion from REST APIs. Developed CI/CD workflows using Git for streamlined deployment.</li>
+                            <li>Improved model accuracy by 7.6% through hyperparameter tuning and feature selection using scikit-learn and NumPy. Optimized preprocessing logic across 4 supervised learning models including regression and decision trees, enabling more reliable predictions.</li>
+                            <li>Deployed the final model into a real-time pipeline with custom monitoring scripts using Docker containerization. Enabled early alerts for hazardous conditions through data modeling techniques.</li>
                         </ul>
                     </div>
                 </div>
@@ -331,8 +332,8 @@
                         </div>
                         <h4 class="text-lg font-semibold text-gray-700 mb-3">Data Science & Business Analytics Intern</h4>
                         <ul class="list-disc pl-5 space-y-2 text-gray-600">
-                            <li>Developed an image classification model using convolutional neural networks (CNNs) to accurately identify and categorize visual inputs.</li>
-                            <li>Extended the project by integrating natural language processing to analyze and extract insights from related textual data, including captions and descriptions.</li>
+                            <li>Implemented an image classification model using CNNs and applied NLP techniques to analyze 2,000 image-text pairs from educational materials. Enabled multimodal analysis and improved prediction accuracy by 11% through model optimization using TensorFlow frameworks and Transformers for text classification tasks.</li>
+                            <li>Built backend-to-frontend data pipelines to track model performance and deliver insights. Deployed Power BI dashboards with interactive visualizations and user-friendly views to support stakeholder decision-making.</li>
                         </ul>
                     </div>
                 </div>
@@ -971,7 +972,6 @@
     </script>
     
 
-
 <!-- Blog Section -->
 <section id="blog" class="py-20 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -982,8 +982,59 @@
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="blog-grid">
 
-      <!-- New Blog (Position 1) -->
+      <!-- Placeholder Blog 1 -->
       <div class="blog-card border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition duration-300">
+        <div class="h-52 bg-gray-100 overflow-hidden">
+          <img src="Assests/blog10.jpg" alt="Blog 10" class="w-full h-full object-cover">
+        </div>
+        <div class="p-6">
+          <div class="flex items-center text-sm text-gray-500 mb-2">
+            <span>July 29, 2025</span>
+            <span class="mx-2">•</span>
+            <span>7 min read</span>
+          </div>
+          <h3 class="text-xl font-bold text-blue-900 mb-2">Redshift vs BigQuery vs Snowflake: Choosing the Right Data Warehouse for Your Stack</h3>
+          <p class="text-gray-600 mb-4">This blog compares Redshift, BigQuery, and Snowflake — covering their architectures, query performance trade-offs, and pricing models from per-node billing to per-byte scans. It also explores SQL dialect quirks, tooling support, security features, and ecosystem fit and wraps up with guidance on choosing the right warehouse based on cloud alignment, scalability needs, and workload isolation.</p>
+          <a href="https://medium.com/aws-in-plain-english/redshift-vs-bigquery-vs-snowflake-choosing-the-right-data-warehouse-for-your-stack-5b87bdb5a840" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Read More</a>
+        </div>
+      </div>
+
+      <!-- Placeholder Blog 2 -->
+      <div class="blog-card border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition duration-300">
+        <div class="h-52 bg-gray-100 overflow-hidden">
+          <img src="Assests/blog9.png" alt="Blog 9" class="w-full h-full object-cover">
+        </div>
+        <div class="p-6">
+          <div class="flex items-center text-sm text-gray-500 mb-2">
+            <span>July 22, 2025</span>
+            <span class="mx-2">•</span>
+            <span>7 min read</span>
+          </div>
+          <h3 class="text-xl font-bold text-blue-900 mb-2">Do We Even Want to Understand AI Or Just Use It?</h3>
+          <p class="text-gray-600 mb-4">This blog unpacks why most people use AI like ChatGPT without knowing how it works — and whether that’s okay. It explains the model’s inner workings from tokenization and transformers to pretraining and RLHF. It also explores why basic AI literacy matters, highlighting the risks of “black box” technology and urging curiosity over blind convenience.</p>
+          <a href="https://medium.com/aws-in-plain-english/do-we-even-want-to-understand-ai-or-just-use-it-e4018a01d1b1" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Read More</a>
+        </div>
+      </div>
+
+      <!-- Placeholder Blog 3 -->
+      <div class="blog-card border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition duration-300">
+        <div class="h-52 bg-gray-100 overflow-hidden">
+          <img src="Assests/blog8.jpg" alt="Blog 8" class="w-full h-full object-cover">
+        </div>
+        <div class="p-6">
+          <div class="flex items-center text-sm text-gray-500 mb-2">
+            <span>July 15, 2025</span>
+            <span class="mx-2">•</span>
+            <span>5 min read</span>
+          </div>
+          <h3 class="text-xl font-bold text-blue-900 mb-2">Is AI Making Life Easier — or Just Narrower?</h3>
+          <p class="text-gray-600 mb-4">This blog explores how AI personalization shapes our online experiences — from reducing decision fatigue with tailored recommendations to risking filter bubbles that narrow perspectives. It also discusses design choices like balancing engagement with diversity and adding features such as “serendipity sliders” to encourage discovery and broaden user horizons.</p>
+          <a href="https://medium.com/aws-in-plain-english/is-ai-making-life-easier-or-just-narrower-6a8aaf6bbd23" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Read More</a>
+        </div>
+      </div>
+
+      <!-- All Existing Blogs in Hidden Section -->
+      <div id="blog-1" class="blog-card hidden border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition duration-300">
         <div class="h-52 bg-gray-100 overflow-hidden">
           <img src="Assests/blog7.png" alt="Blog 7" class="w-full h-full object-cover">
         </div>
@@ -999,8 +1050,7 @@
         </div>
       </div>
 
-      <!-- Blog 2 -->
-      <div class="blog-card border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition duration-300">
+      <div id="blog-2" class="blog-card hidden border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition duration-300">
         <div class="h-52 bg-gray-100 overflow-hidden">
           <img src="Assests/DataVault.png" alt="Data Modeling and Pipelines" class="w-full h-full object-cover">
         </div>
@@ -1016,8 +1066,7 @@
         </div>
       </div>
 
-      <!-- Blog 3 -->
-      <div class="blog-card border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition duration-300">
+      <div id="blog-3" class="blog-card hidden border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition duration-300">
         <div class="h-52 bg-gray-100 overflow-hidden">
           <img src="Assests/Data Lake.png" alt="Modern Data Architecture Blog" class="w-full h-full object-cover">
         </div>
@@ -1033,7 +1082,6 @@
         </div>
       </div>
 
-      <!-- Blog 4 (Hidden) -->
       <div id="blog-4" class="blog-card hidden border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition duration-300">
         <div class="h-52 bg-gray-100 overflow-hidden">
           <img src="Assests/Blog4.png" alt="Orchestration Blog" class="w-full h-full object-cover">
@@ -1050,7 +1098,6 @@
         </div>
       </div>
 
-      <!-- Blog 5 (Hidden) -->
       <div id="blog-5" class="blog-card hidden border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition duration-300">
         <div class="h-52 bg-gray-100 overflow-hidden">
           <img src="Assests/Airflow.png" alt="Airflow Blog" class="w-full h-full object-cover">
@@ -1067,7 +1114,6 @@
         </div>
       </div>
 
-      <!-- Blog 6 (Hidden) -->
       <div id="blog-6" class="blog-card hidden border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition duration-300">
         <div class="h-52 bg-gray-100 overflow-hidden">
           <img src="Assests/Ingestion.png" alt="Data Ingestion Blog" class="w-full h-full object-cover">
@@ -1084,7 +1130,6 @@
         </div>
       </div>
 
-      <!-- Blog 7 (Hidden) -->
       <div id="blog-7" class="blog-card hidden border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition duration-300">
         <div class="h-52 bg-gray-100 overflow-hidden">
           <img src="Assests/VPC.png" alt="AWS Networking Blog" class="w-full h-full object-cover">
@@ -1100,6 +1145,7 @@
           <a href="https://medium.com/@m2analytics1117/decoding-aws-networking-vpcs-subnets-igws-nats-route-tables-made-simple-e52f4b740c84" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Read More</a>
         </div>
       </div>
+
     </div>
 
     <!-- Toggle Buttons -->
@@ -1123,7 +1169,7 @@
 
 <script>
   function toggleBlogs(showMore) {
-    const blogsToToggle = ['blog-4', 'blog-5', 'blog-6', 'blog-7'];
+    const blogsToToggle = ['blog-1', 'blog-2', 'blog-3', 'blog-4', 'blog-5', 'blog-6', 'blog-7'];
     const viewMoreBtn = document.getElementById('view-more-blog-btn');
     const showLessBtn = document.getElementById('show-less-blog-btn');
 
@@ -1140,6 +1186,7 @@
     showLessBtn.classList.toggle('hidden', !showMore);
   }
 </script>
+
 
 <!-- Contact Section -->
 <section id="contact" class="py-20 bg-gray-50">
