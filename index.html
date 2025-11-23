@@ -225,10 +225,8 @@
                 </p>
                 <div class="flex space-x-4">
                     <a href="#projects" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md font-medium transition duration-300">View Projects</a>
-                    <!-- Changed from Contact Me to My Resume with download attribute and updated styling -->
                     <a href="Assests/Mahimna Resume.pdf" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md font-medium transition duration-300">My Resume</a>
                 </div>
-                <!-- Social Icons in Hero Section - Removed Medium link -->
             </div>
             <div class="md:w-1/2 flex justify-center">
                 <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-blue-100 shadow-xl floating flex items-center justify-center">
@@ -294,7 +292,6 @@
                     <div class="bg-white p-6 rounded-lg shadow-md">
                         <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
                             <h3 class="text-xl font-bold text-blue-900 flex items-center">
-                                <!-- Replaced Font Awesome icon with an image tag for company logo -->
                                 <img src="Assests/Project990.jpg" alt="Project 990 Inc. Logo" class="w-10 h-10 rounded-full mr-2 object-contain"> Project 990 Inc.
                             </h3>
                             <span class="text-blue-600 font-medium">Jan 2025 - Present</span>
@@ -313,7 +310,6 @@
                     <div class="bg-white p-6 rounded-lg shadow-md">
                         <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
                             <h3 class="text-xl font-bold text-blue-900 flex items-center">
-                                <!-- Replaced Font Awesome icon with an image tag for company logo -->
                                 <img src="Assests/ManekTech.jpg" alt="ManekTech Logo" class="w-10 h-10 rounded-full mr-2 object-contain"> ManekTech
                             </h3>
                             <span class="text-blue-600 font-medium">May 2024 - Aug 2024</span>
@@ -332,7 +328,6 @@
                     <div class="bg-white p-6 rounded-lg shadow-md">
                         <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
                             <h3 class="text-xl font-bold text-blue-900 flex items-center">
-                                <!-- Replaced Font Awesome icon with an image tag for company logo -->
                                 <img src="Assests/StartTech.jpg" alt="Start Tech Academy Logo" class="w-10 h-10 rounded-full mr-2 object-contain"> Start Tech Academy
                             </h3>
                             <span class="text-blue-600 font-medium">Jul 2022 - Sep 2022</span>
@@ -701,20 +696,62 @@
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="project-grid">
 
-      <!-- Project 1: Supply Chain -->
+      <!-- Project 1: Insightify (RAG Assistant) -->
+      <div class="project-card rounded-lg overflow-hidden shadow-lg transition-all duration-300">
+        <div class="w-full bg-slate-900 flex items-center justify-center">
+          <img
+            src="Assests/Insightify.png"
+            alt="Insightify RAG Based AI Knowledge Assistant"
+            class="max-h-56 w-auto object-contain"
+          />
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-blue-900 mb-2">
+            Insightify – RAG Based AI Knowledge Assistant
+          </h3>
+          <p class="text-gray-600 mb-4">
+            Designed an AI knowledge assistant with a full RAG pipeline to convert 10,000+ unstructured enterprise documents including PDFs, TXT and emails into searchable insights using LangChain for chunking and Sentence Transformers for embeddings.
+          <p class="text-gray-600 mb-4">
+            Created a FAISS vector index with metadata for fast semantic search. Integrated Hugging Face T5 models for context-aware answers, delivering 20% faster, more accurate queries on enterprise data.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="px-3 py-1 bg-sky-100 text-sky-800 text-xs font-medium rounded-full">RAG</span>
+            <span class="px-3 py-1 bg-sky-100 text-sky-800 text-xs font-medium rounded-full">FAISS</span>
+            <span class="px-3 py-1 bg-sky-100 text-sky-800 text-xs font-medium rounded-full">LangChain</span>
+            <span class="px-3 py-1 bg-sky-100 text-sky-800 text-xs font-medium rounded-full">Hugging Face</span>
+            <span class="px-3 py-1 bg-sky-100 text-sky-800 text-xs font-medium rounded-full">Semantic Search</span>
+          </div>
+          <div class="flex space-x-3">
+            <a
+              href="https://github.com/MahimnaDarji/Insightify-AI.git"
+              target="_blank"
+              class="text-blue-600 hover:text-blue-800 font-medium text-sm"
+            >
+              Source Code
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2: Supply Chain -->
       <div class="project-card rounded-lg overflow-hidden shadow-lg transition-all duration-300">
         <div class="w-full aspect-video overflow-hidden">
           <img src="Assests/SC.png" alt="Supply Chain Optimization Platform" class="w-full h-full object-cover">
         </div>
         <div class="p-6">
           <h3 class="text-xl font-bold text-blue-900 mb-2">Supply Chain Optimization Platform</h3>
-          <p class="text-gray-600 mb-4">Developed a full-stack supply chain analytics platform using Python, MongoDB, Streamlit, and Tableau to simulate logistics, forecast inventory with Prophet, and detect shipment delays using anomaly detection and scoring models.</p>
-          <p class="text-gray-600 mb-4">Delivered interactive dashboards with cost optimization, vendor performance radar charts, and real-time KPIs—empowering smarter decision-making for inventory, shipping, and vendor management.</p>
+          <p class="text-gray-600 mb-4">
+            Developed a full-stack supply chain analytics platform using Python, MongoDB, Streamlit, and Tableau to simulate logistics, forecast inventory with Prophet, and detect shipment delays using anomaly detection and scoring models.
+          </p>
+          <p class="text-gray-600 mb-4">
+            Delivered interactive dashboards with cost optimization, vendor performance radar charts, and real-time KPIs empowering smarter decision-making for inventory, shipping, and vendor management.
+          </p>
           <div class="flex flex-wrap gap-2 mb-4">
             <span class="px-3 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full">Python</span>
             <span class="px-3 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full">Tableau</span>
             <span class="px-3 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full">MongoDB</span>
-            <span class="px-3 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full">Streamlit</span>
+            <span class="px-3 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full">Folium</span>
+            <span class="px-3 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full">Prophet</span>
           </div>
           <div class="flex space-x-3">
             <a href="https://github.com/manasi1102/Supply-Chain-Optimization-Platform.git" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Source Code</a>
@@ -722,20 +759,24 @@
         </div>
       </div>
 
-      <!-- Project 2: LAPD -->
+      <!-- Project 3: LAPD -->
       <div class="project-card rounded-lg overflow-hidden shadow-lg transition-all duration-300">
         <div class="w-full aspect-video overflow-hidden">
           <img src="Assests/LAPD.png" alt="LAPD Crime Dashboard" class="w-full h-full object-cover">
         </div>
         <div class="p-6">
           <h3 class="text-xl font-bold text-blue-900 mb-2">LAPD Crime Dashboard</h3>
-          <p class="text-gray-600 mb-4">Developed an interactive Streamlit dashboard using over 900,000 LAPD crime records to analyze spatial and temporal trends. Integrated advanced visualizations such as time series plots, density heatmaps, geospatial clustering, and interactive cluster maps.</p>
-          <p class="text-gray-600 mb-4">Used stratified sampling for performance and uncovered location-based risk zones and demographic crime patterns to support urban policy and law enforcement.</p>
+          <p class="text-gray-600 mb-4">
+            Developed an interactive Streamlit dashboard using over 900,000 LAPD crime records to analyze spatial and temporal trends. Integrated visualizations such as time series plots, density heatmaps, geospatial clustering, and interactive cluster maps.
+          </p>
+          <p class="text-gray-600 mb-4">
+            Used stratified sampling for performance and uncovered location based risk zones and demographic crime patterns to support urban policy and law enforcement.
+          </p>
           <div class="flex flex-wrap gap-2 mb-4">
             <span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full">Python</span>
             <span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full">Streamlit</span>
-            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full">Geospatial</span>
-            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full">Data Viz</span>
+            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full">Spatial Clustering</span>
+            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full">Stratified Sampling</span>
           </div>
           <div class="flex space-x-3">
             <a href="https://github.com/MahimnaDarji/LAPD-Crime-Dashboard.git" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Source Code</a>
@@ -743,19 +784,48 @@
         </div>
       </div>
 
-      <!-- Project 3: Water Potability -->
-      <div class="project-card rounded-lg overflow-hidden shadow-lg transition-all duration-300">
+      <!-- Project 4: WebAr QR Ad (Initially Hidden) -->
+      <div class="project-card rounded-lg overflow-hidden shadow-lg transition-all duration-300 hidden" id="project-4">
+        <div class="w-full aspect-video overflow-hidden">
+          <img src="Assests/WebAR.png" alt="WebAr QR Ad" class="w-full h-full object-cover">
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-blue-900 mb-2">AR Video Playback on Print Media</h3>
+          <p class="text-gray-600 mb-4">
+            This project turns a printed ad into an interactive experience using WebAR. When users scan the QR code, the browser opens an AR view that detects the printed artwork and plays a stabilized video directly on the page.
+          </p>
+          <p class="text-gray-600 mb-4">
+            The system uses MindAR for image tracking, a custom smoothing layer for steady playback, and a clean camera preview for a realistic AR feel. Everything runs in the browser with no app required, making it easy to deploy and use.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="px-3 py-1 bg-orange-100 text-orange-800 text-xs font-medium rounded-full">WebAR</span>
+            <span class="px-3 py-1 bg-orange-100 text-orange-800 text-xs font-medium rounded-full">JavaScript</span>
+            <span class="px-3 py-1 bg-orange-100 text-orange-800 text-xs font-medium rounded-full">Three.js</span>
+            <span class="px-3 py-1 bg-orange-100 text-orange-800 text-xs font-medium rounded-full">Analytics</span>
+          </div>
+          <div class="flex space-x-3">
+            <a href="https://github.com/MahimnaDarji/Webar-Ad.git" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Source Code</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 5: Water Potability (Hidden) -->
+      <div class="project-card rounded-lg overflow-hidden shadow-lg transition-all duration-300 hidden" id="project-5">
         <div class="w-full aspect-video overflow-hidden">
           <img src="Assests/Water.png" alt="Water Potability Classification" class="w-full h-full object-cover">
         </div>
         <div class="p-6">
           <h3 class="text-xl font-bold text-blue-900 mb-2">Water Potability Classification</h3>
-          <p class="text-gray-600 mb-4">Developed a classification system using Python and Scikit-learn to predict water potability based on chemical attributes. Compared multiple supervised models, applied SHAP and PDP for interpretability, and validated results through ROC curves and stratified cross-validation.</p>
-          <p class="text-gray-600 mb-4">Performed hierarchical clustering, PCA for feature space analysis, and scenario-based testing to assess model robustness and identify influential features like Sulfate and Organic Carbon.</p>
+          <p class="text-gray-600 mb-4">
+            Developed a classification system using Python and Scikit learn to predict water potability based on chemical attributes. Compared multiple supervised models, applied SHAP and PDP for interpretability, and validated results through ROC curves and stratified cross validation.
+          </p>
+          <p class="text-gray-600 mb-4">
+            Performed hierarchical clustering, PCA for feature space analysis, and scenario based testing to assess model robustness and identify influential features like Sulfate and Organic Carbon.
+          </p>
           <div class="flex flex-wrap gap-2 mb-4">
             <span class="px-3 py-1 bg-teal-100 text-teal-800 text-xs font-medium rounded-full">Supervised Learning</span>
             <span class="px-3 py-1 bg-teal-100 text-teal-800 text-xs font-medium rounded-full">Model Interpretability</span>
-            <span class="px-3 py-1 bg-teal-100 text-teal-800 text-xs font-medium rounded-full">Clustering & Segmentation</span>
+            <span class="px-3 py-1 bg-teal-100 text-teal-800 text-xs font-medium rounded-full">Clustering &amp; Segmentation</span>
             <span class="px-3 py-1 bg-teal-100 text-teal-800 text-xs font-medium rounded-full">PCA</span>
           </div>
           <div class="flex space-x-3">
@@ -764,19 +834,23 @@
         </div>
       </div>
 
-      <!-- Project 4: Book Recommendation (Initially Hidden) -->
-      <div class="project-card rounded-lg overflow-hidden shadow-lg transition-all duration-300 hidden" id="project-4">
+      <!-- Project 6: Book Recommendation (Hidden) -->
+      <div class="project-card rounded-lg overflow-hidden shadow-lg transition-all duration-300 hidden" id="project-6">
         <div class="w-full aspect-video overflow-hidden">
           <img src="Assests/BRS.png" alt="Book Recommendation System" class="w-full h-full object-cover">
         </div>
         <div class="p-6">
           <h3 class="text-xl font-bold text-blue-900 mb-2">Book Recommendation System</h3>
-          <p class="text-gray-600 mb-4">Built a book recommendation system using Python, Flask, HTML/CSS and Content Based filtering Recommender System to deliver personalized book suggestions. Built a clean, user-friendly interface with genre browsing and dynamic recommendations.</p>
-          <p class="text-gray-600 mb-4">Used user interaction data to improve suggestions, making book discovery more accurate and personalized.</p>
+          <p class="text-gray-600 mb-4">
+            Built a book recommendation system using Python, Flask, HTML and CSS and a content based recommender to deliver personalized book suggestions. Designed a clean interface with genre browsing and dynamic recommendations.
+          </p>
+          <p class="text-gray-600 mb-4">
+            Used user interaction data to improve suggestions, making book discovery more accurate and personalized.
+          </p>
           <div class="flex flex-wrap gap-2 mb-4">
             <span class="px-3 py-1 bg-purple-100 text-purple-800 text-xs font-medium rounded-full">Python</span>
             <span class="px-3 py-1 bg-purple-100 text-purple-800 text-xs font-medium rounded-full">Flask</span>
-            <span class="px-3 py-1 bg-purple-100 text-purple-800 text-xs font-medium rounded-full">HTML & CSS</span>
+            <span class="px-3 py-1 bg-purple-100 text-purple-800 text-xs font-medium rounded-full">HTML &amp; CSS</span>
             <span class="px-3 py-1 bg-purple-100 text-purple-800 text-xs font-medium rounded-full">Recommender System</span>
           </div>
           <div class="flex space-x-3">
@@ -785,15 +859,19 @@
         </div>
       </div>
 
-      <!-- Project 5: Social Network (Initially Hidden) -->
-      <div class="project-card rounded-lg overflow-hidden shadow-lg transition-all duration-300 hidden" id="project-5">
+      <!-- Project 7: Social Network (Hidden) -->
+      <div class="project-card rounded-lg overflow-hidden shadow-lg transition-all duration-300 hidden" id="project-7">
         <div class="w-full aspect-video overflow-hidden">
           <img src="Assests/SN.png" alt="Social Network Platform" class="w-full h-full object-cover">
         </div>
         <div class="p-6">
           <h3 class="text-xl font-bold text-blue-900 mb-2">Social Network Platform</h3>
-          <p class="text-gray-600 mb-4">Developed a full-stack social networking platform using React.js for frontend and FastAPI for backend, with MongoDB for data storage. Added key features like user login, profile management, content posting, and real-time chat.</p>
-          <p class="text-gray-600 mb-4">Containerized the app using Docker and deployed the backend on Render and frontend on Vercel. This ensured smooth, scalable, and reliable performance across environments.</p>
+          <p class="text-gray-600 mb-4">
+            Developed a full-stack social networking platform using React.js for frontend and FastAPI for backend, with MongoDB for data storage. Added features like user login, profile management, content posting, and real time chat.
+          </p>
+          <p class="text-gray-600 mb-4">
+            Containerized the app using Docker and deployed the backend on Render and frontend on Vercel. This ensured smooth, scalable, and reliable performance across environments.
+          </p>
           <div class="flex flex-wrap gap-2 mb-4">
             <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-xs font-medium rounded-full">React.js</span>
             <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-xs font-medium rounded-full">FastAPI</span>
@@ -802,6 +880,56 @@
           </div>
           <div class="flex space-x-3">
             <a href="https://social-network-frontend-five.vercel.app/login" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Source Code</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 8: Real-time Financial Market Data Pipeline (Hidden) -->
+      <div class="project-card rounded-lg overflow-hidden shadow-lg transition-all duration-300 hidden" id="project-8">
+        <div class="w-full aspect-video overflow-hidden">
+          <img src="Assests/FinPipeline.png" alt="Real-time Financial Market Data Pipeline" class="w-full h-full object-cover">
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-blue-900 mb-2">Real-time Financial Market Data Pipeline</h3>
+          <p class="text-gray-600 mb-4">
+            Built a real time market data pipeline using Finnhub WebSocket, Kafka, Spark Streaming, and Cassandra to capture tick level trade data and compute rolling metrics like moving averages and intraday volatility.
+          </p>
+          <p class="text-gray-600 mb-4">
+            Designed Grafana dashboards on top of Cassandra aggregates so users can monitor price trends, volume spikes, and sentiment scores across tickers in near real time.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="px-3 py-1 bg-yellow-100 text-yellow-800 text-xs font-medium rounded-full">Kafka</span>
+            <span class="px-3 py-1 bg-yellow-100 text-yellow-800 text-xs font-medium rounded-full">Spark</span>
+            <span class="px-3 py-1 bg-yellow-100 text-yellow-800 text-xs font-medium rounded-full">Cassandra</span>
+            <span class="px-3 py-1 bg-yellow-100 text-yellow-800 text-xs font-medium rounded-full">Grafana</span>
+          </div>
+          <div class="flex space-x-3">
+            <a href="https://github.com/MahimnaDarji/real-time-financial-market-data-pipeline" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Source Code</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 9: Universal Job Extractor (Hidden) -->
+      <div class="project-card rounded-lg overflow-hidden shadow-lg transition-all duration-300 hidden" id="project-9">
+        <div class="w-full aspect-video overflow-hidden">
+          <img src="Assests/JobExtractor.png" alt="Universal Job Extractor" class="w-full h-full object-cover">
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-blue-900 mb-2">Universal Job Extractor for ATS Platforms</h3>
+          <p class="text-gray-600 mb-4">
+            Implemented a Python based job extraction engine that auto detects ATS platforms like Greenhouse, Workday, Lever, and SmartRecruiters and scrapes all open roles with title, location, and description into a unified schema.
+          </p>
+          <p class="text-gray-600 mb-4">
+            Added Playwright fallbacks, deduplication with SHA256 hashes, and CSV export so recruiters and analysts can track hiring pipelines across multiple companies from one place.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="px-3 py-1 bg-red-100 text-red-800 text-xs font-medium rounded-full">Python</span>
+            <span class="px-3 py-1 bg-red-100 text-red-800 text-xs font-medium rounded-full">Playwright</span>
+            <span class="px-3 py-1 bg-red-100 text-red-800 text-xs font-medium rounded-full">Web Scraping</span>
+            <span class="px-3 py-1 bg-red-100 text-red-800 text-xs font-medium rounded-full">ETL</span>
+          </div>
+          <div class="flex space-x-3">
+            <a href="https://github.com/MahimnaDarji/universal-job-extractor" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Source Code</a>
           </div>
         </div>
       </div>
@@ -827,22 +955,55 @@
   </div>
 </section>
 
+<script>
+  function toggleProjects(showMore) {
+    const ids = ['project-4', 'project-5', 'project-6', 'project-7', 'project-8', 'project-9'];
+    const viewMoreBtn = document.getElementById('view-more-btn');
+    const showLessBtn = document.getElementById('show-less-btn');
+
+    ids.forEach(id => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      if (showMore) {
+        el.classList.remove('hidden');
+      } else {
+        el.classList.add('hidden');
+      }
+    });
+
+    if (showMore) {
+      viewMoreBtn.classList.add('hidden');
+      showLessBtn.classList.remove('hidden');
+    } else {
+      viewMoreBtn.classList.remove('hidden');
+      showLessBtn.classList.add('hidden');
+    }
+  }
+</script>
+
+
 <!-- Toggle Script -->
 <script>
   function toggleProjects(showMore) {
     const project4 = document.getElementById('project-4');
     const project5 = document.getElementById('project-5');
+    const project6 = document.getElementById('project-6');
+    const project7 = document.getElementById('project-7');
     const viewMoreBtn = document.getElementById('view-more-btn');
     const showLessBtn = document.getElementById('show-less-btn');
 
     if (showMore) {
       project4.classList.remove('hidden');
       project5.classList.remove('hidden');
+      project6.classList.remove('hidden');
+      project7.classList.remove('hidden');
       viewMoreBtn.classList.add('hidden');
       showLessBtn.classList.remove('hidden');
     } else {
       project4.classList.add('hidden');
       project5.classList.add('hidden');
+      project6.classList.add('hidden');
+      project7.classList.add('hidden');
       viewMoreBtn.classList.remove('hidden');
       showLessBtn.classList.add('hidden');
     }
@@ -1023,7 +1184,7 @@
             <span>7 min read</span>
           </div>
           <h3 class="text-xl font-bold text-blue-900 mb-2">Redshift vs BigQuery vs Snowflake: Choosing the Right Data Warehouse for Your Stack</h3>
-          <p class="text-gray-600 mb-4">This blog compares Redshift, BigQuery, and Snowflake — covering their architectures, query performance trade-offs, and pricing models from per-node billing to per-byte scans. It also explores SQL dialect quirks, tooling support, security features, and ecosystem fit and wraps up with guidance on choosing the right warehouse based on cloud alignment, scalability needs, and workload isolation.</p>
+          <p class="text-gray-600 mb-4">This blog compares Redshift, BigQuery, and Snowflake covering their architectures, query performance trade-offs, and pricing models from per-node billing to per-byte scans. It also explores SQL dialect quirks, tooling support, security features, and ecosystem fit and ends with guidance on choosing the right warehouse based on cloud alignment, scalability needs, and workload isolation.</p>
           <a href="https://medium.com/aws-in-plain-english/redshift-vs-bigquery-vs-snowflake-choosing-the-right-data-warehouse-for-your-stack-5b87bdb5a840" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Read More</a>
         </div>
       </div>
@@ -1040,7 +1201,7 @@
             <span>7 min read</span>
           </div>
           <h3 class="text-xl font-bold text-blue-900 mb-2">Do We Even Want to Understand AI Or Just Use It?</h3>
-          <p class="text-gray-600 mb-4">This blog unpacks why most people use AI like ChatGPT without knowing how it works — and whether that’s okay. It explains the model’s inner workings from tokenization and transformers to pretraining and RLHF. It also explores why basic AI literacy matters, highlighting the risks of “black box” technology and urging curiosity over blind convenience.</p>
+          <p class="text-gray-600 mb-4">This blog unpacks why most people use AI like ChatGPT without knowing how it works and whether that is okay. It explains the model’s inner workings from tokenization and transformers to pretraining and RLHF and explores why basic AI literacy matters by highlighting the risks of black box technology and urging curiosity over blind convenience.</p>
           <a href="https://medium.com/aws-in-plain-english/do-we-even-want-to-understand-ai-or-just-use-it-e4018a01d1b1" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Read More</a>
         </div>
       </div>
@@ -1056,8 +1217,8 @@
             <span class="mx-2">•</span>
             <span>5 min read</span>
           </div>
-          <h3 class="text-xl font-bold text-blue-900 mb-2">Is AI Making Life Easier — or Just Narrower?</h3>
-          <p class="text-gray-600 mb-4">This blog explores how AI personalization shapes our online experiences — from reducing decision fatigue with tailored recommendations to risking filter bubbles that narrow perspectives. It also discusses design choices like balancing engagement with diversity and adding features such as “serendipity sliders” to encourage discovery and broaden user horizons.</p>
+          <h3 class="text-xl font-bold text-blue-900 mb-2">Is AI Making Life Easier or Just Narrower?</h3>
+          <p class="text-gray-600 mb-4">This blog explores how AI personalization shapes our online experiences from reducing decision fatigue with tailored recommendations to risking filter bubbles that narrow perspectives. It also discusses design choices like balancing engagement with diversity and adding features such as serendipity sliders to encourage discovery and broaden user horizons.</p>
           <a href="https://medium.com/aws-in-plain-english/is-ai-making-life-easier-or-just-narrower-6a8aaf6bbd23" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Read More</a>
         </div>
       </div>
@@ -1074,7 +1235,7 @@
             <span>6 min read</span>
           </div>
           <h3 class="text-xl font-bold text-blue-900 mb-2">Why Data Centers Are the New Oil Fields: Powering the AI Boom, One Megawatt at a Time</h3>
-          <p class="text-gray-600 mb-4">This blog explores the environmental and geopolitical impact of data centers in the age of AI — covering their energy and water consumption, global infrastructure race, and the urgent need to balance digital growth with real-world sustainability.</p>
+          <p class="text-gray-600 mb-4">This blog explores the environmental and geopolitical impact of data centers in the age of AI covering their energy and water consumption, global infrastructure race, and the urgent need to balance digital growth with real-world sustainability.</p>
           <a href="https://medium.com/aws-in-plain-english/why-data-centers-are-the-new-oil-fields-powering-the-ai-boom-one-megawatt-at-a-time-00244047add7" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Read More</a>
         </div>
       </div>
@@ -1090,7 +1251,7 @@
             <span>6 min read</span>
           </div>
           <h3 class="text-xl font-bold text-blue-900 mb-2">From Models to Pipelines: A Practical Guide to Data Modeling, Architectures, and Engineering Tools</h3>
-          <p class="text-gray-600 mb-4">This blog breaks down essential concepts in data modeling and pipelines — from normalization and Star Schema to Data Vault and OBT. It also covers engineering choices like ETL vs. ELT, Spark vs. Hadoop, and tools like DBT and AWS Glue, with practical analogies and trade-offs.</p>
+          <p class="text-gray-600 mb-4">This blog breaks down essential concepts in data modeling and pipelines from normalization and Star Schema to Data Vault and OBT. It also covers engineering choices like ETL vs ELT, Spark vs Hadoop, and tools like DBT and AWS Glue with practical analogies and trade-offs.</p>
           <a href="https://medium.com/@m2analytics1117/from-models-to-pipelines-a-practical-guide-to-data-modeling-architectures-and-engineering-tools-49a3ff58bc87" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Read More</a>
         </div>
       </div>
@@ -1106,7 +1267,7 @@
             <span>7 min read</span>
           </div>
           <h3 class="text-xl font-bold text-blue-900 mb-2">Data Warehouses, Lakes, and Lakehouses: Diving into the Buckets, Brains, and Bytes of Modern Data Architecture</h3>
-          <p class="text-gray-600 mb-4">This blog breaks down modern data architectures: Warehouses for structured ETL, Lakes for ML-ready schema-on-read, and Lakehouses with ACID, tiered storage, and AWS integrations like Redshift MPP.</p>
+          <p class="text-gray-600 mb-4">This blog breaks down modern data architectures: warehouses for structured ETL, lakes for ML-ready schema-on-read, and lakehouses with ACID, tiered storage, and AWS integrations like Redshift MPP.</p>
           <a href="https://medium.com/aws-in-plain-english/data-warehouses-lakes-and-lakehouses-diving-into-the-buckets-brains-and-bytes-of-modern-data-f81aee997ecc" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Read More</a>
         </div>
       </div>
@@ -1321,7 +1482,6 @@
                     <a href="https://github.com/MahimnaDarji" target="_blank" class="text-blue-200 hover:text-white">
                         <i class="fab fa-github text-xl"></i>
                     </a>
-                    <!-- Medium Blog Profile Link Added -->
                     <a href="https://medium.com/@m2analytics1117" target="_blank" class="text-blue-200 hover:text-white">
                         <i class="fab fa-medium text-xl"></i>
                     </a>
