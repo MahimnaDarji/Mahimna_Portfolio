@@ -1064,7 +1064,6 @@
   }
 </script>
     
-
 <!-- Blog Section -->
 <section id="blog" class="py-20 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1075,167 +1074,183 @@
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="blog-grid">
 
-      <!-- Placeholder Blog 1 -->
+      <!-- Blog 1 (Visible) -->
       <div class="blog-card border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition duration-300">
-        <div class="h-52 bg-gray-100 overflow-hidden">
-          <img src="Assests/blog10.jpg" alt="Blog 10" class="w-full h-full object-cover">
+        <div class="w-full aspect-video bg-gray-100 overflow-hidden">
+          <img src="Assests/blog1.png" alt="LangChain vs LangGraph vs LangSmith vs LangFlow" class="w-full h-full object-cover">
         </div>
         <div class="p-6">
-          <div class="flex items-center text-sm text-gray-500 mb-2">
-            <span>July 29, 2025</span>
+          <div class="flex items-center text-sm text-gray-500">
+            <span>Oct 15, 2025</span>
             <span class="mx-2">•</span>
             <span>7 min read</span>
           </div>
-          <h3 class="text-xl font-bold text-blue-900 mb-2">Redshift vs BigQuery vs Snowflake: Choosing the Right Data Warehouse for Your Stack</h3>
-          <p class="text-gray-600 mb-4">This blog compares Redshift, BigQuery, and Snowflake covering their architectures, query performance trade-offs, and pricing models from per-node billing to per-byte scans. It also explores SQL dialect quirks, tooling support, security features, and ecosystem fit and ends with guidance on choosing the right warehouse based on cloud alignment, scalability needs, and workload isolation.</p>
+          <h3 class="text-xl font-bold text-blue-900 mt-3 mb-4">
+            LangChain vs LangGraph vs LangSmith vs LangFlow: Understanding through a Realtime Project
+          </h3>
+          <a href="https://medium.com/aws-in-plain-english/langchain-vs-langgraph-vs-langsmith-vs-langflow-understanding-through-a-realtime-project-2c3efd1606e7" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Read More</a>
+        </div>
+      </div>
+
+      <!-- Blog 2 (Visible) -->
+      <div class="blog-card border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition duration-300">
+        <div class="w-full aspect-video bg-gray-100 overflow-hidden">
+          <img src="Assests/blog2.png" alt="How Memory Works in Transformer LLMs" class="w-full h-full object-cover">
+        </div>
+        <div class="p-6">
+          <div class="flex items-center text-sm text-gray-500">
+            <span>Sep 2, 2025</span>
+            <span class="mx-2">•</span>
+            <span>6 min read</span>
+          </div>
+          <h3 class="text-xl font-bold text-blue-900 mt-3 mb-4">
+            How Memory Works in Transformer LLMs - And Why Long-Term Memory Is Difficult
+          </h3>
+          <a href="https://medium.com/aws-in-plain-english/how-memory-works-in-transformer-llms-and-why-long-term-memory-is-difficult-5edd4ef5e90b" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Read More</a>
+        </div>
+      </div>
+
+      <!-- Blog 3 (Visible) -->
+      <div class="blog-card border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition duration-300">
+        <div class="w-full aspect-video bg-gray-100 overflow-hidden">
+          <img src="Assests/blog3.png" alt="MCP vs LangChain vs LlamaIndex" class="w-full h-full object-cover">
+        </div>
+        <div class="p-6">
+          <div class="flex items-center text-sm text-gray-500">
+            <span>Aug 26, 2025</span>
+            <span class="mx-2">•</span>
+            <span>5 min read</span>
+          </div>
+          <h3 class="text-xl font-bold text-blue-900 mt-3 mb-4">
+            MCP vs LangChain vs LlamaIndex: Do We Really Need All These Frameworks?
+          </h3>
+          <a href="https://medium.com/aws-in-plain-english/mcp-vs-langchain-vs-llamaindex-do-we-really-need-all-these-frameworks-c485ed127ebb" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Read More</a>
+        </div>
+      </div>
+
+      <!-- Blog 4 (Hidden) -->
+      <div id="blog-1" class="blog-card hidden border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition duration-300">
+        <div class="w-full aspect-video bg-gray-100 overflow-hidden">
+          <img src="Assests/blog4.png" alt="Model Context Protocol as an upgrade to RAG" class="w-full h-full object-cover">
+        </div>
+        <div class="p-6">
+          <div class="flex items-center text-sm text-gray-500">
+            <span>Aug 19, 2025</span>
+            <span class="mx-2">•</span>
+            <span>7 min read</span>
+          </div>
+          <h3 class="text-xl font-bold text-blue-900 mt-3 mb-4">
+            Model Context Protocol(MCP): A Practical Upgrade to RAG for AI Agent Workflows
+          </h3>
+          <a href="https://medium.com/aws-in-plain-english/model-context-protocol-mcp-a-practical-upgrade-to-rag-for-ai-agent-workflows-e4e1ec8945d5" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Read More</a>
+        </div>
+      </div>
+
+      <!-- Blog 5 (Hidden) -->
+      <div id="blog-2" class="blog-card hidden border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition duration-300">
+        <div class="w-full aspect-video bg-gray-100 overflow-hidden">
+          <img src="Assests/blog5.png" alt="Retrieval-Augmented Generation guide" class="w-full h-full object-cover">
+        </div>
+        <div class="p-6">
+          <div class="flex items-center text-sm text-gray-500">
+            <span>Aug 12, 2025</span>
+            <span class="mx-2">•</span>
+            <span>13 min read</span>
+          </div>
+          <h3 class="text-xl font-bold text-blue-900 mt-3 mb-4">
+            Retrieval-Augmented Generation (RAG) in AI: A Complete Beginner-to-Advanced Guide
+          </h3>
+          <a href="https://medium.com/aws-in-plain-english/retrieval-augmented-generation-rag-in-ai-a-complete-beginner-to-advanced-guide-f935bc62250d" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Read More</a>
+        </div>
+      </div>
+
+      <!-- Blog 6 (Hidden) -->
+      <div id="blog-3" class="blog-card hidden border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition duration-300">
+        <div class="w-full aspect-video bg-gray-100 overflow-hidden">
+          <img src="Assests/blog6.png" alt="Redshift vs BigQuery vs Snowflake" class="w-full h-full object-cover">
+        </div>
+        <div class="p-6">
+          <div class="flex items-center text-sm text-gray-500">
+            <span>Jul 29, 2025</span>
+            <span class="mx-2">•</span>
+            <span>7 min read</span>
+          </div>
+          <h3 class="text-xl font-bold text-blue-900 mt-3 mb-4">
+            Redshift vs BigQuery vs Snowflake: Choosing the Right Data Warehouse for Your Stack
+          </h3>
           <a href="https://medium.com/aws-in-plain-english/redshift-vs-bigquery-vs-snowflake-choosing-the-right-data-warehouse-for-your-stack-5b87bdb5a840" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Read More</a>
         </div>
       </div>
 
-      <!-- Placeholder Blog 2 -->
-      <div class="blog-card border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition duration-300">
-        <div class="h-52 bg-gray-100 overflow-hidden">
-          <img src="Assests/blog9.png" alt="Blog 9" class="w-full h-full object-cover">
-        </div>
-        <div class="p-6">
-          <div class="flex items-center text-sm text-gray-500 mb-2">
-            <span>July 22, 2025</span>
-            <span class="mx-2">•</span>
-            <span>7 min read</span>
-          </div>
-          <h3 class="text-xl font-bold text-blue-900 mb-2">Do We Even Want to Understand AI Or Just Use It?</h3>
-          <p class="text-gray-600 mb-4">This blog unpacks why most people use AI like ChatGPT without knowing how it works and whether that is okay. It explains the model’s inner workings from tokenization and transformers to pretraining and RLHF and explores why basic AI literacy matters by highlighting the risks of black box technology and urging curiosity over blind convenience.</p>
-          <a href="https://medium.com/aws-in-plain-english/do-we-even-want-to-understand-ai-or-just-use-it-e4018a01d1b1" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Read More</a>
-        </div>
-      </div>
-
-      <!-- Placeholder Blog 3 -->
-      <div class="blog-card border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition duration-300">
-        <div class="h-52 bg-gray-100 overflow-hidden">
-          <img src="Assests/blog8.jpg" alt="Blog 8" class="w-full h-full object-cover">
-        </div>
-        <div class="p-6">
-          <div class="flex items-center text-sm text-gray-500 mb-2">
-            <span>July 15, 2025</span>
-            <span class="mx-2">•</span>
-            <span>5 min read</span>
-          </div>
-          <h3 class="text-xl font-bold text-blue-900 mb-2">Is AI Making Life Easier or Just Narrower?</h3>
-          <p class="text-gray-600 mb-4">This blog explores how AI personalization shapes our online experiences from reducing decision fatigue with tailored recommendations to risking filter bubbles that narrow perspectives. It also discusses design choices like balancing engagement with diversity and adding features such as serendipity sliders to encourage discovery and broaden user horizons.</p>
-          <a href="https://medium.com/aws-in-plain-english/is-ai-making-life-easier-or-just-narrower-6a8aaf6bbd23" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Read More</a>
-        </div>
-      </div>
-
-      <!-- All Existing Blogs in Hidden Section -->
-      <div id="blog-1" class="blog-card hidden border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition duration-300">
-        <div class="h-52 bg-gray-100 overflow-hidden">
-          <img src="Assests/blog7.png" alt="Blog 7" class="w-full h-full object-cover">
-        </div>
-        <div class="p-6">
-          <div class="flex items-center text-sm text-gray-500 mb-2">
-            <span>July 8, 2025</span>
-            <span class="mx-2">•</span>
-            <span>6 min read</span>
-          </div>
-          <h3 class="text-xl font-bold text-blue-900 mb-2">Why Data Centers Are the New Oil Fields: Powering the AI Boom, One Megawatt at a Time</h3>
-          <p class="text-gray-600 mb-4">This blog explores the environmental and geopolitical impact of data centers in the age of AI covering their energy and water consumption, global infrastructure race, and the urgent need to balance digital growth with real-world sustainability.</p>
-          <a href="https://medium.com/aws-in-plain-english/why-data-centers-are-the-new-oil-fields-powering-the-ai-boom-one-megawatt-at-a-time-00244047add7" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Read More</a>
-        </div>
-      </div>
-
-      <div id="blog-2" class="blog-card hidden border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition duration-300">
-        <div class="h-52 bg-gray-100 overflow-hidden">
-          <img src="Assests/DataVault.png" alt="Data Modeling and Pipelines" class="w-full h-full object-cover">
-        </div>
-        <div class="p-6">
-          <div class="flex items-center text-sm text-gray-500 mb-2">
-            <span>July 3, 2025</span>
-            <span class="mx-2">•</span>
-            <span>6 min read</span>
-          </div>
-          <h3 class="text-xl font-bold text-blue-900 mb-2">From Models to Pipelines: A Practical Guide to Data Modeling, Architectures, and Engineering Tools</h3>
-          <p class="text-gray-600 mb-4">This blog breaks down essential concepts in data modeling and pipelines from normalization and Star Schema to Data Vault and OBT. It also covers engineering choices like ETL vs ELT, Spark vs Hadoop, and tools like DBT and AWS Glue with practical analogies and trade-offs.</p>
-          <a href="https://medium.com/@m2analytics1117/from-models-to-pipelines-a-practical-guide-to-data-modeling-architectures-and-engineering-tools-49a3ff58bc87" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Read More</a>
-        </div>
-      </div>
-
-      <div id="blog-3" class="blog-card hidden border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition duration-300">
-        <div class="h-52 bg-gray-100 overflow-hidden">
-          <img src="Assests/Data Lake.png" alt="Modern Data Architecture Blog" class="w-full h-full object-cover">
-        </div>
-        <div class="p-6">
-          <div class="flex items-center text-sm text-gray-500 mb-2">
-            <span>June 26, 2025</span>
-            <span class="mx-2">•</span>
-            <span>7 min read</span>
-          </div>
-          <h3 class="text-xl font-bold text-blue-900 mb-2">Data Warehouses, Lakes, and Lakehouses: Diving into the Buckets, Brains, and Bytes of Modern Data Architecture</h3>
-          <p class="text-gray-600 mb-4">This blog breaks down modern data architectures: warehouses for structured ETL, lakes for ML-ready schema-on-read, and lakehouses with ACID, tiered storage, and AWS integrations like Redshift MPP.</p>
-          <a href="https://medium.com/aws-in-plain-english/data-warehouses-lakes-and-lakehouses-diving-into-the-buckets-brains-and-bytes-of-modern-data-f81aee997ecc" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Read More</a>
-        </div>
-      </div>
-
+      <!-- Blog 7 (Hidden) -->
       <div id="blog-4" class="blog-card hidden border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition duration-300">
-        <div class="h-52 bg-gray-100 overflow-hidden">
-          <img src="Assests/Blog4.png" alt="Orchestration Blog" class="w-full h-full object-cover">
+        <div class="w-full aspect-video bg-gray-100 overflow-hidden">
+          <img src="Assests/blog7.png" alt="From Models to Pipelines" class="w-full h-full object-cover">
         </div>
         <div class="p-6">
-          <div class="flex items-center text-sm text-gray-500 mb-2">
-            <span>June 11, 2025</span>
-            <span class="mx-2">•</span>
-            <span>5 min read</span>
-          </div>
-          <h3 class="text-xl font-bold text-blue-900 mb-2">From Hard Drives to the Cloud: A Data Engineer’s Journey Through Modern Storage</h3>
-          <p class="text-gray-600 mb-4">This blog breaks down the different types of data storage systems, from HDDs to SSDs and cloud object storage. It explains when to use OLTP vs OLAP, why formats like Parquet outperform CSVs, and how compression and access frequency affect both cost and performance.</p>
-          <a href="https://medium.com/@m2analytics1117/from-hard-drives-to-the-cloud-a-data-engineers-journey-through-modern-storage-978a685932c0" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Read More</a>
-        </div>
-      </div>
-
-      <div id="blog-5" class="blog-card hidden border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition duration-300">
-        <div class="h-52 bg-gray-100 overflow-hidden">
-          <img src="Assests/Airflow.png" alt="Airflow Blog" class="w-full h-full object-cover">
-        </div>
-        <div class="p-6">
-          <div class="flex items-center text-sm text-gray-500 mb-2">
-            <span>June 1, 2025</span>
+          <div class="flex items-center text-sm text-gray-500">
+            <span>Jul 3, 2025</span>
             <span class="mx-2">•</span>
             <span>6 min read</span>
           </div>
-          <h3 class="text-xl font-bold text-blue-900 mb-2">Airflow for Data Engineers: Automate Your Pipelines</h3>
-          <p class="text-gray-600 mb-4">This blog explains why data orchestration matters and how tools like Apache Airflow help run pipelines in the right order with alerts and retries. It shares real examples and best practices that make managing data workflows easier and more reliable.</p>
-          <a href="https://medium.com/@m2analytics1117/airflow-for-data-engineers-automate-your-pipelines-2ae8e5e1c2aa" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Read More</a>
+          <h3 class="text-xl font-bold text-blue-900 mt-3 mb-4">
+            From Models to Pipelines: A Practical Guide to Data Modeling, Architectures, and Engineering Tools
+          </h3>
+          <a href="https://medium.com/aws-in-plain-english/from-models-to-pipelines-a-practical-guide-to-data-modeling-architectures-and-engineering-tools-49a3ff58bc87" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Read More</a>
         </div>
       </div>
 
-      <div id="blog-6" class="blog-card hidden border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition duration-300">
-        <div class="h-52 bg-gray-100 overflow-hidden">
-          <img src="Assests/Ingestion.png" alt="Data Ingestion Blog" class="w-full h-full object-cover">
+      <!-- Blog 8 (Hidden) -->
+      <div id="blog-5" class="blog-card hidden border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition duration-300">
+        <div class="w-full aspect-video bg-gray-100 overflow-hidden">
+          <img src="Assests/blog8.png" alt="Airflow for Data Engineers" class="w-full h-full object-cover">
         </div>
         <div class="p-6">
-          <div class="flex items-center text-sm text-gray-500 mb-2">
+          <div class="flex items-center text-sm text-gray-500">
+            <span>Jun 1, 2025</span>
+            <span class="mx-2">•</span>
+            <span>6 min read</span>
+          </div>
+          <h3 class="text-xl font-bold text-blue-900 mt-3 mb-4">
+            Airflow for Data Engineers: Automate Your Pipelines
+          </h3>
+          <a href="https://medium.com/aws-in-plain-english/airflow-for-data-engineers-automate-your-pipelines-2ae8e5e1c2aa" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Read More</a>
+        </div>
+      </div>
+
+      <!-- Blog 9 (Hidden) -->
+      <div id="blog-6" class="blog-card hidden border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition duration-300">
+        <div class="w-full aspect-video bg-gray-100 overflow-hidden">
+          <img src="Assests/blog9.png" alt="Batch vs Streaming Data Ingestion" class="w-full h-full object-cover">
+        </div>
+        <div class="p-6">
+          <div class="flex items-center text-sm text-gray-500">
             <span>May 25, 2025</span>
             <span class="mx-2">•</span>
             <span>7 min read</span>
           </div>
-          <h3 class="text-xl font-bold text-blue-900 mb-2">Batch vs Streaming Data Ingestion: A Complete Guide for Data Engineers</h3>
-          <p class="text-gray-600 mb-4">This blog explains how batch and streaming data ingestion work in real-world systems using clear examples. It shows how choosing between them depends on speed, volume, and project needs.</p>
-          <a href="https://medium.com/@m2analytics1117/batch-vs-streaming-data-ingestion-a-complete-guide-for-data-engineers-d2a76a78bc44" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Read More</a>
+          <h3 class="text-xl font-bold text-blue-900 mt-3 mb-4">
+            Batch vs Streaming Data Ingestion: A Complete Guide for Data Engineers
+          </h3>
+          <a href="https://medium.com/aws-in-plain-english/batch-vs-streaming-data-ingestion-a-complete-guide-for-data-engineers-d2a76a78bc44" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Read More</a>
         </div>
       </div>
 
+      <!-- Blog 10 (Hidden) -->
       <div id="blog-7" class="blog-card hidden border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition duration-300">
-        <div class="h-52 bg-gray-100 overflow-hidden">
-          <img src="Assests/VPC.png" alt="AWS Networking Blog" class="w-full h-full object-cover">
+        <div class="w-full aspect-video bg-gray-100 overflow-hidden">
+          <img src="Assests/blog10.png" alt="Decoding AWS Networking" class="w-full h-full object-cover">
         </div>
         <div class="p-6">
-          <div class="flex items-center text-sm text-gray-500 mb-2">
+          <div class="flex items-center text-sm text-gray-500">
             <span>May 19, 2025</span>
             <span class="mx-2">•</span>
-            <span>6 min read</span>
+            <span>7 min read</span>
           </div>
-          <h3 class="text-xl font-bold text-blue-900 mb-2">Decoding AWS Networking: VPCs, Subnets, IGWs, NATs & Route Tables Made Simple</h3>
-          <p class="text-gray-600 mb-4">This blog explains cloud networking basics in a simple way for data science students like me. If you're working on cloud pipelines, knowing how VPC, subnets, and gateways work is very important.</p>
-          <a href="https://medium.com/@m2analytics1117/decoding-aws-networking-vpcs-subnets-igws-nats-route-tables-made-simple-e52f4b740c84" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Read More</a>
+          <h3 class="text-xl font-bold text-blue-900 mt-3 mb-4">
+            Decoding AWS Networking: VPCs, Subnets, IGWs, NATs &amp; Route Tables Made Simple
+          </h3>
+          <a href="https://medium.com/aws-in-plain-english/decoding-aws-networking-vpcs-subnets-igws-nats-route-tables-made-simple-e52f4b740c84" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Read More</a>
         </div>
       </div>
 
@@ -1268,18 +1283,15 @@
 
     blogsToToggle.forEach(id => {
       const blog = document.getElementById(id);
-      if (showMore) {
-        blog.classList.remove('hidden');
-      } else {
-        blog.classList.add('hidden');
-      }
+      if (!blog) return;
+      if (showMore) blog.classList.remove('hidden');
+      else blog.classList.add('hidden');
     });
 
     viewMoreBtn.classList.toggle('hidden', showMore);
     showLessBtn.classList.toggle('hidden', !showMore);
   }
 </script>
-
 
 <!-- Contact Section -->
 <section id="contact" class="py-20 bg-gray-50">
