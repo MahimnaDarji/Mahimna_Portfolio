@@ -1,0 +1,213 @@
+:root{
+  --bg:#141312;
+  --surface:#1F1D1B;
+  --text:#E6E1DA;
+  --muted:#A8A39D;
+  --accent:#7A4A32;
+  --accent2:#8C7A52;
+
+  --border:#2B2623;
+  --surface2:#191716;
+  --textSoft:#CFC9C2;
+  --muted2:#8F8A84;
+  --accentHover:#623A28;
+  --accent2Hover:#796844;
+}
+
+body.dark-premium{
+  background:var(--bg) !important;
+  color:var(--text) !important;
+}
+
+/* Global backgrounds */
+body.dark-premium .bg-gray-50,
+body.dark-premium .grid-pattern{ background-color:var(--bg) !important; }
+
+body.dark-premium .bg-white{ background-color:var(--surface) !important; }
+body.dark-premium .bg-gray-100{ background-color:var(--surface) !important; }
+body.dark-premium .bg-slate-900{ background-color:var(--surface2) !important; }
+
+/* Borders */
+body.dark-premium .border-gray-200{ border-color:var(--border) !important; }
+body.dark-premium .border-blue-600{ border-color:var(--accent) !important; }
+body.dark-premium .border-blue-100{ border-color:var(--accent2) !important; }
+
+/* Text colors (map Tailwind utilities to premium palette) */
+body.dark-premium .text-gray-800{ color:var(--text) !important; }
+body.dark-premium .text-gray-700{ color:var(--textSoft) !important; }
+body.dark-premium .text-gray-600{ color:var(--muted) !important; }
+body.dark-premium .text-gray-500{ color:var(--muted2) !important; }
+
+body.dark-premium .text-blue-900{ color:var(--text) !important; }
+body.dark-premium .text-blue-600{ color:var(--accent2) !important; }
+body.dark-premium .hover\:text-blue-600:hover{ color:var(--accent2Hover) !important; }
+body.dark-premium .text-blue-800{ color:var(--accent2Hover) !important; }
+body.dark-premium .hover\:text-blue-800:hover{ color:var(--accent2Hover) !important; }
+
+/* Buttons / primary actions */
+body.dark-premium .bg-blue-600{ background-color:var(--accent) !important; }
+body.dark-premium .hover\:bg-blue-700:hover{ background-color:var(--accentHover) !important; }
+body.dark-premium .text-white{ color:var(--text) !important; }
+
+body.dark-premium .hover\:bg-blue-50:hover{ background-color:rgba(122, 74, 50, 0.16) !important; }
+body.dark-premium .hover\:bg-gray-50:hover{ background-color:rgba(230, 225, 218, 0.05) !important; }
+
+/* Nav */
+body.dark-premium nav.bg-white{ background-color:rgba(20, 19, 18, 0.88) !important; backdrop-filter: blur(10px); }
+body.dark-premium nav.shadow-sm,
+body.dark-premium nav.shadow-lg{ box-shadow: 0 8px 24px rgba(0,0,0,0.45) !important; }
+
+body.dark-premium #mobile-menu.bg-white{ background-color:rgba(20, 19, 18, 0.96) !important; }
+body.dark-premium #mobile-menu a:hover{ background-color:rgba(230, 225, 218, 0.06) !important; }
+
+/* Links underline */
+body.dark-premium .nav-link::after{ background-color:var(--accent2) !important; }
+
+/* Section dividers / headings underline bars */
+body.dark-premium .w-20.h-1.bg-blue-600{ background-color:var(--accent2) !important; }
+
+/* Timeline */
+body.dark-premium .timeline-item{ border-left-color:var(--accent2) !important; }
+body.dark-premium .timeline-item:before{
+  background:var(--accent2) !important;
+  border-color:var(--bg) !important;
+}
+
+/* Skill bars */
+body.dark-premium .skill-bar{ background-color:rgba(230, 225, 218, 0.14) !important; }
+body.dark-premium .skill-progress{
+  background: linear-gradient(90deg, var(--accent), var(--accent2)) !important;
+}
+
+/* Cards hover shadow: keep but darker */
+body.dark-premium .card-hover:hover,
+body.dark-premium .project-card:hover,
+body.dark-premium .blog-card:hover{
+  box-shadow: 0 18px 35px rgba(0,0,0,0.55) !important;
+}
+
+/* Project cards (existing class is glassy; make it richer) */
+body.dark-premium .project-card{
+  background: rgba(31, 29, 27, 0.92) !important;
+  border-color: rgba(230, 225, 218, 0.08) !important;
+}
+
+/* Tech badges */
+body.dark-premium .tech-badge{
+  background: rgba(140, 122, 82, 0.14) !important;
+  color: var(--textSoft) !important;
+  border: 1px solid rgba(140, 122, 82, 0.18);
+}
+body.dark-premium .tech-badge:hover{
+  background: rgba(140, 122, 82, 0.22) !important;
+}
+
+/* Icon circles that were blue */
+body.dark-premium .bg-blue-100{
+  background-color: rgba(140, 122, 82, 0.14) !important;
+}
+body.dark-premium .text-blue-600 i,
+body.dark-premium i.text-blue-600{ color: var(--accent2) !important; }
+
+/* Grid pattern uses blue lines in original; replace with subtle warm lines */
+body.dark-premium .grid-pattern{
+  background-image:
+    linear-gradient(rgba(230, 225, 218, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(230, 225, 218, 0.03) 1px, transparent 1px) !important;
+  background-size: 40px 40px !important;
+}
+
+/* Blob + gradient background: kill the blue vibe, keep motion */
+body.dark-premium .gradient-bg{
+  background: linear-gradient(-45deg, #2A1F1A, #3B2A22, #7A4A32, #8C7A52) !important;
+  background-size: 400% 400% !important;
+}
+body.dark-premium .blob{
+  background: linear-gradient(180deg, rgba(140, 122, 82, 0.22) 0%, rgba(122, 74, 50, 0.10) 100%) !important;
+  filter: blur(60px) !important;
+}
+
+/* Blog cards and certification cards */
+body.dark-premium .blog-card,
+body.dark-premium .cert-card{
+  background-color: var(--surface) !important;
+  border-color: rgba(230, 225, 218, 0.10) !important;
+}
+
+/* Badges inside project cards: normalize to theme */
+body.dark-premium .project-card span.rounded-full{
+  background: rgba(140, 122, 82, 0.14) !important;
+  color: var(--textSoft) !important;
+}
+
+/* Buttons with outline */
+body.dark-premium button.border-blue-600,
+body.dark-premium .border-blue-600.text-blue-600{
+  color: var(--accent2) !important;
+}
+body.dark-premium button.border-blue-600:hover,
+body.dark-premium .border-blue-600.text-blue-600:hover{
+  background-color: rgba(140, 122, 82, 0.12) !important;
+}
+
+/* Images: keep as is, but ensure surrounding frames match */
+body.dark-premium .shadow-md,
+body.dark-premium .shadow-lg,
+body.dark-premium .shadow-xl{
+  box-shadow: 0 12px 30px rgba(0,0,0,0.50) !important;
+}
+
+/* Keep focus visible */
+body.dark-premium a:focus,
+body.dark-premium button:focus{
+  outline: 2px solid rgba(140, 122, 82, 0.55);
+  outline-offset: 2px;
+}
+
+/* ===============================
+   FOOTER OVERRIDES (PREMIUM DARK)
+   =============================== */
+
+body.dark-premium footer,
+body.dark-premium footer.bg-blue-900,
+body.dark-premium footer.bg-indigo-900,
+body.dark-premium footer.bg-slate-900,
+body.dark-premium footer.bg-blue-800,
+body.dark-premium footer.bg-blue-700 {
+  background-color: var(--surface2) !important;
+  color: var(--textSoft) !important;
+}
+
+/* Footer headings / name */
+body.dark-premium footer h1,
+body.dark-premium footer h2,
+body.dark-premium footer h3,
+body.dark-premium footer h4 {
+  color: var(--text) !important;
+}
+
+/* Footer text */
+body.dark-premium footer p,
+body.dark-premium footer span {
+  color: var(--textMuted, var(--muted)) !important;
+}
+
+/* Footer links */
+body.dark-premium footer a {
+  color: var(--accent2) !important;
+}
+
+body.dark-premium footer a:hover {
+  color: var(--text) !important;
+}
+
+/* Footer icons */
+body.dark-premium footer i,
+body.dark-premium footer svg {
+  color: var(--accent2) !important;
+}
+
+/* Footer divider / hr */
+body.dark-premium footer hr {
+  border-color: var(--border) !important;
+}

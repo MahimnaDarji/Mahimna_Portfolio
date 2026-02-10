@@ -166,8 +166,9 @@
             background-size: 40px 40px;
         }
     </style>
+    <link rel="stylesheet" href="theme-dark.css">
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-gray-50 text-gray-800 dark-premium">
     <!-- Navigation -->
     <nav class="fixed w-full bg-white shadow-sm z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -220,15 +221,10 @@
             <div class="md:w-1/2 mb-12 md:mb-0">
                 <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-blue-900 mb-4 title-font">Mahimna Darji</h1>
                 <h2 class="text-2xl md:text-3xl text-blue-600 mb-6">Turning data into decisions.</h2>
-                <p class="text-lg text-gray-600 mb-8 max-w-lg">
-                    I'm a Data Science graduate student passionate about solving real-world problems through data, machine learning, and impactful visualizations.
-                </p>
                 <div class="flex space-x-4">
                     <a href="#projects" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md font-medium transition duration-300">View Projects</a>
-                    <!-- Changed from Contact Me to My Resume with download attribute and updated styling -->
                     <a href="Assests/Mahimna Resume.pdf" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md font-medium transition duration-300">My Resume</a>
                 </div>
-                <!-- Social Icons in Hero Section - Removed Medium link -->
             </div>
             <div class="md:w-1/2 flex justify-center">
                 <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-blue-100 shadow-xl floating flex items-center justify-center">
@@ -243,34 +239,41 @@
 
 <!-- About Section -->
 <section id="about" class="py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-            <h2 class="text-3xl font-bold text-blue-900 mb-4 title-font">About Me</h2>
-            <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
-        </div>
-        <div class="flex flex-col md:flex-row items-center">
-            <div class="md:w-1/3 mb-8 md:mb-0 flex justify-center">
-                <div class="w-64 h-64 rounded-full overflow-hidden border-4 border-blue-100 shadow-lg">
-                    <img src="Assests\DP1.jpg" alt="Mahimna Darji" class="w-full h-full object-cover" />
-                </div>
-            </div>
-            <div class="md:w-2/3 md:pl-12">
-                <p class="text-lg text-gray-600 mb-6">
-                    Aspiring Data Science professional with a strong foundation in Machine Learning and Computer Science. Experienced in developing real-time AQI prediction systems and image classification models using data-driven techniques.
-                </p>
-                <p class="text-lg text-gray-600 mb-6">
-                    Successfully optimized models to enhance prediction accuracy and integrated them into practical applications. Eager to leverage analytical skills and technical expertise to contribute to impactful solutions across data science, analytics, and engineering domains.
-                </p>
-                <div class="flex flex-wrap gap-3">
-                    <span class="px-4 py-2 rounded-full tech-badge">Machine Learning</span>
-                    <span class="px-4 py-2 rounded-full tech-badge">Data Visualization</span>
-                    <span class="px-4 py-2 rounded-full tech-badge">NLP</span>
-                    <span class="px-4 py-2 rounded-full tech-badge">Computer Vision</span>
-                    <span class="px-4 py-2 rounded-full tech-badge">Big Data</span>
-                </div>
-            </div>
-        </div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl font-bold text-blue-900 mb-4 title-font">About Me</h2>
+      <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
     </div>
+
+    <div class="flex flex-col md:flex-row items-center">
+      <div class="md:w-1/3 mb-8 md:mb-0 flex justify-center">
+        <div class="w-64 h-64 rounded-full overflow-hidden border-4 border-blue-100 shadow-lg">
+          <img src="Assests/DP1.jpg" alt="Mahimna Darji" class="w-full h-full object-cover" />
+        </div>
+      </div>
+
+      <div class="md:w-2/3 md:pl-12">
+        <p class="text-lg text-gray-600 mb-4">
+          I am working as a Data Scientist at Project 990 Inc., where I build ETL workflows across multiple sources and organize grant records so teams can track funding patterns by year and region. Earlier, I was a Machine Learning Intern at ManekTech, where I built a backend for real-time AQI forecasting, and a Data Science & Business Analytics Intern at Start Tech Academy, where I worked on image and text classification.
+        </p>
+        <p class="text-lg text-gray-600 mb-4">
+          I have also worked on projects such as a RAG-based AI Knowledge Assistant, Recommender Systems, AR Video playback on print media and Social Network Platform. Alongside project work, I regularly write technical blogs focused on data engineering, RAG pipelines, LLM frameworks, AI systems, and modern ML infrastructure. I hold a Master’s degree in Data Science from Indiana University and a Bachelor’s degree in Computer Science from Indus University.
+        </p>
+        
+          <div class="flex flex-wrap gap-3">
+            <span class="px-4 py-2 rounded-full tech-badge">Python</span>
+            <span class="px-4 py-2 rounded-full tech-badge">SQL</span>
+            <span class="px-4 py-2 rounded-full tech-badge">PySpark</span>
+            <span class="px-4 py-2 rounded-full tech-badge">Tableau</span>
+            <span class="px-4 py-2 rounded-full tech-badge">Power BI</span>
+            <span class="px-4 py-2 rounded-full tech-badge">TensorFlow</span>
+            <span class="px-4 py-2 rounded-full tech-badge">Docker</span>
+            <span class="px-4 py-2 rounded-full tech-badge">PostgreSQL</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
     <!-- Experience Section -->
@@ -287,17 +290,15 @@
                     <div class="bg-white p-6 rounded-lg shadow-md">
                         <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
                             <h3 class="text-xl font-bold text-blue-900 flex items-center">
-                                <!-- Replaced Font Awesome icon with an image tag for company logo -->
                                 <img src="Assests/Project990.jpg" alt="Project 990 Inc. Logo" class="w-10 h-10 rounded-full mr-2 object-contain"> Project 990 Inc.
                             </h3>
                             <span class="text-blue-600 font-medium">Jan 2025 - Present</span>
                         </div>
                         <h4 class="text-lg font-semibold text-gray-700 mb-3">Data Scientist</h4>
                         <ul class="list-disc pl-5 space-y-2 text-gray-600">
-                            <li>Prepared and cleaned financial data to ensure accuracy and consistency for analysis. This facilitated uncovering trends in charitable giving and identifying disparities across 53 nonprofit organizations using time-series analysis and geospatial mapping on grant records from 2013 to 2021</li>
-                            <li>Developed interactive Tableau dashboards to visualize donation patterns, funding disparities, and correlations between
-                                nonprofit funding and socioeconomic factors, enhancing stakeholders’ understanding of financial trends.
-                                </li>
+                            <li>Implement scalable data pipelines to ingest financial grant data from 7 different sources spanning from 2013 to 2021, reducing processing time by 40% and enabling data warehousing.</li>
+                            <li>Use SQL to merge and validate datasets, then apply Python to model and transform over 130,000 records, performing time-series and geospatial analysis to identify grant distribution patterns for resource allocation and forecasting.</li>
+                            <li>Develop interactive Tableau dashboards to visualize and communicate donation trends and funding disparities. Consult with executive leadership to define KPIs. Ensure data reproducibility by documenting data pipelines and maintaining version control using Git.</li>
                         </ul>
                     </div>
                 </div>
@@ -307,16 +308,15 @@
                     <div class="bg-white p-6 rounded-lg shadow-md">
                         <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
                             <h3 class="text-xl font-bold text-blue-900 flex items-center">
-                                <!-- Replaced Font Awesome icon with an image tag for company logo -->
                                 <img src="Assests/ManekTech.jpg" alt="ManekTech Logo" class="w-10 h-10 rounded-full mr-2 object-contain"> ManekTech
                             </h3>
                             <span class="text-blue-600 font-medium">May 2024 - Aug 2024</span>
                         </div>
                         <h4 class="text-lg font-semibold text-gray-700 mb-3">Machine Learning Intern</h4>
                         <ul class="list-disc pl-5 space-y-2 text-gray-600">
-                            <li>Developed a predictive model to forecast Air Quality Index (AQI) using historical air quality data, weather patterns, and pollutant concentrations. </li>
-                            <li>Enhanced the accuracy and efficiency of AQI predictions by optimizing four machine learning models, conducting in-depth data analysis across multiple datasets, and improving model performance by 7.6%.</li>
-                            <li>Integrated the optimized predictive model into a real-time AQI monitoring system, enabling continuous tracking of pollution levels and providing early warnings for hazardous air conditions.</li>
+                            <li>Built a Python backend for AQI forecasting with automated data ingestion from REST APIs and developed a React.js interface to monitor air quality trends in real time.</li>
+                            <li>Refined preprocessing logic for Linear Regression and Decision Tree models, then improved model accuracy by 7.6% through model optimization methods such as hyperparameter tuning and feature selection.</li>
+                            <li>Enabled early alerts for hazardous conditions using data modeling techniques and deployed the trained model into a production pipeline with custom monitoring scripts using Docker.</li>
                         </ul>
                     </div>
                 </div>
@@ -326,16 +326,16 @@
                     <div class="bg-white p-6 rounded-lg shadow-md">
                         <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
                             <h3 class="text-xl font-bold text-blue-900 flex items-center">
-                                <!-- Replaced Font Awesome icon with an image tag for company logo -->
                                 <img src="Assests/StartTech.jpg" alt="Start Tech Academy Logo" class="w-10 h-10 rounded-full mr-2 object-contain"> Start Tech Academy
                             </h3>
                             <span class="text-blue-600 font-medium">Jul 2022 - Sep 2022</span>
                         </div>
                         <h4 class="text-lg font-semibold text-gray-700 mb-3">Data Science & Business Analytics Intern</h4>
                         <ul class="list-disc pl-5 space-y-2 text-gray-600">
-                            <li>Developed an image classification model using convolutional neural networks (CNNs) to accurately identify and categorize visual inputs.</li>
-                            <li>Extended the project by integrating natural language processing to analyze and extract insights from related textual data, including captions and descriptions.</li>
+                            <li>Built an image classification model using Convolutional Neural Networks and applied Natural Language Processing techniques to analyze 2,000 image-text pairs from educational materials. Optimized the solution using TensorFlow and Transformers, improving prediction accuracy by 11% for text classification tasks.</li>
+                            <li>Designed backend-to-frontend data pipelines to track model performance and deliver insights. Deployed Power BI dashboards with interactive visualizations used for decision making.</li>
                         </ul>
+
                     </div>
                 </div>
             </div>
@@ -344,50 +344,52 @@
 
 <!-- Education Section -->
 <section id="education" class="py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-            <h2 class="text-3xl font-bold text-blue-900 mb-4 title-font">Education</h2>
-            <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
-        </div>
-
-        <!-- Use horizontal layout with more spacing on md+ screens -->
-        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-y-8 md:gap-x-16">
-            <!-- Education 1 -->
-            <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-blue-600">
-                <div class="flex items-center mb-4">
-                    <!-- Replaced Font Awesome icon with an image tag for university logo -->
-                    <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mr-4 overflow-hidden">
-                        <img src="Assests/IUB.png" alt="Indiana University Logo" class="w-full h-full object-contain">
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-bold text-blue-900">Indiana University, Bloomington</h3>
-                        <p class="text-gray-600">Aug 2023 - May 2025</p>
-                    </div>
-                </div>
-                <h4 class="text-lg font-semibold text-gray-700 mb-2">Master of Science in Data Science</h4>
-                <p class="text-lg font-semibold text-gray-700 mb-2">GPA: 3.73 / 4.0</p>
-                <p class="text-gray-600"><span class="font-semibold">Coursework:</span> Machine Learning, Data Visualization, Data Mining, Advanced Database Concepts, Usable Artificial Intelligence, Statistics</p>
-            </div>
-
-            <!-- Education 2 -->
-            <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-blue-600">
-                <div class="flex items-center mb-4">
-                    <!-- Replaced Font Awesome icon with an image tag for university logo -->
-                    <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mr-4 overflow-hidden">
-                        <img src="Assests/IU.jpg" alt="Indus University Logo" class="w-full h-full object-contain">
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-bold text-blue-900">Indus University, Ahmedabad</h3>
-                        <p class="text-gray-600">Jul 2019 - Apr 2023</p>
-                    </div>
-                </div>
-                <h4 class="text-lg font-semibold text-gray-700 mb-2">Bachelor of Technology in Computer Science</h4>
-                <p class="text-lg font-semibold text-gray-700 mb-2">GPA: 3.93 /4.0</p>
-                <p class="text-gray-600"><span class="font-semibold">Coursework:</span> Machine Learning, Software Engineering, Soft Computing, Database Management, Cloud Computing, Internet of Things, Operating Systems</p>
-            </div>
-        </div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl font-bold text-blue-900 mb-4 title-font">Education</h2>
+      <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
     </div>
+
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-y-8 md:gap-x-16">
+      <!-- Education 1: Indiana University -->
+      <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-blue-600">
+        <div class="flex items-center mb-4">
+          <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mr-4 overflow-hidden">
+            <img src="Assests/IUB.png" alt="Indiana University Logo" class="w-full h-full object-contain">
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-blue-900">Indiana University Bloomington</h3>
+            <p class="text-gray-600">Aug 2023 - May 2025</p>
+          </div>
+        </div>
+        <h4 class="text-lg font-semibold text-gray-700 mb-2">Master of Science in Data Science</h4>
+        <p class="text-lg font-semibold text-gray-700 mb-2">GPA: 3.73 / 4.0</p>
+        <p class="text-gray-600">
+          <span class="font-semibold">Coursework:</span> Machine Learning, Data Visualization, Data Mining, Advanced Database Concepts, Usable Artificial Intelligence, Statistics
+        </p>
+      </div>
+
+      <!-- Education 2: Indus University -->
+      <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-blue-600">
+        <div class="flex items-center mb-4">
+          <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mr-4 overflow-hidden">
+            <img src="Assests/IU.jpg" alt="Indus University Logo" class="w-full h-full object-contain">
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-blue-900">Indus University</h3>
+            <p class="text-gray-600">Jul 2019 - Apr 2023</p>
+          </div>
+        </div>
+        <h4 class="text-lg font-semibold text-gray-700 mb-2">Bachelor of Technology in Computer Science</h4>
+        <p class="text-lg font-semibold text-gray-700 mb-2">GPA: 3.93 / 4.0</p>
+        <p class="text-gray-600">
+          <span class="font-semibold">Coursework:</span> Machine Learning, Software Engineering, Soft Computing, Database Management, Cloud Computing, Internet of Things, Operating Systems
+        </p>
+      </div>
+    </div>
+  </div>
 </section>
+
 
     <!-- Skills Section -->
     <section id="skills" class="py-20 bg-gray-50">
@@ -673,20 +675,63 @@
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="project-grid">
 
-      <!-- Project 1: Supply Chain -->
+      <!-- Project 1: Insightify (RAG Assistant) -->
+      <div class="project-card rounded-lg overflow-hidden shadow-lg transition-all duration-300">
+        <div class="w-full bg-slate-900 flex items-center justify-center">
+          <img
+            src="Assests/Insightify.png"
+            alt="Insightify RAG Based AI Knowledge Assistant"
+            class="max-h-56 w-auto object-contain"
+          />
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-blue-900 mb-2">
+            Insightify – RAG Based AI Knowledge Assistant
+          </h3>
+          <p class="text-gray-600 mb-4">
+            Designed an AI knowledge assistant with a full RAG pipeline to convert 10,000+ unstructured enterprise documents including PDFs, TXT and emails into searchable insights using LangChain for chunking and Sentence Transformers for embeddings.
+          </p>
+          <p class="text-gray-600 mb-4">
+            Created a FAISS vector index with metadata for fast semantic search. Integrated Hugging Face T5 models for context-aware answers, delivering 20% faster, more accurate queries on enterprise data.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="px-3 py-1 bg-sky-100 text-sky-800 text-xs font-medium rounded-full">RAG</span>
+            <span class="px-3 py-1 bg-sky-100 text-sky-800 text-xs font-medium rounded-full">FAISS</span>
+            <span class="px-3 py-1 bg-sky-100 text-sky-800 text-xs font-medium rounded-full">LangChain</span>
+            <span class="px-3 py-1 bg-sky-100 text-sky-800 text-xs font-medium rounded-full">Hugging Face</span>
+            <span class="px-3 py-1 bg-sky-100 text-sky-800 text-xs font-medium rounded-full">Semantic Search</span>
+          </div>
+          <div class="flex space-x-3">
+            <a
+              href="https://github.com/MahimnaDarji/Insightify-AI.git"
+              target="_blank"
+              class="text-blue-600 hover:text-blue-800 font-medium text-sm"
+            >
+              Source Code
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2: Supply Chain -->
       <div class="project-card rounded-lg overflow-hidden shadow-lg transition-all duration-300">
         <div class="w-full aspect-video overflow-hidden">
           <img src="Assests/SC.png" alt="Supply Chain Optimization Platform" class="w-full h-full object-cover">
         </div>
         <div class="p-6">
           <h3 class="text-xl font-bold text-blue-900 mb-2">Supply Chain Optimization Platform</h3>
-          <p class="text-gray-600 mb-4">Developed a full-stack supply chain analytics platform using Python, MongoDB, Streamlit, and Tableau to simulate logistics, forecast inventory with Prophet, and detect shipment delays using anomaly detection and scoring models.</p>
-          <p class="text-gray-600 mb-4">Delivered interactive dashboards with cost optimization, vendor performance radar charts, and real-time KPIs—empowering smarter decision-making for inventory, shipping, and vendor management.</p>
+          <p class="text-gray-600 mb-4">
+            Developed a full-stack supply chain analytics platform using Python, MongoDB, Streamlit, and Tableau to simulate logistics, forecast inventory with Prophet, and detect shipment delays using anomaly detection and scoring models.
+          </p>
+          <p class="text-gray-600 mb-4">
+            Delivered interactive dashboards with cost optimization, vendor performance radar charts, and real-time KPIs empowering smarter decision-making for inventory, shipping, and vendor management.
+          </p>
           <div class="flex flex-wrap gap-2 mb-4">
             <span class="px-3 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full">Python</span>
             <span class="px-3 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full">Tableau</span>
             <span class="px-3 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full">MongoDB</span>
-            <span class="px-3 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full">Streamlit</span>
+            <span class="px-3 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full">Folium</span>
+            <span class="px-3 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full">Prophet</span>
           </div>
           <div class="flex space-x-3">
             <a href="https://github.com/manasi1102/Supply-Chain-Optimization-Platform.git" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Source Code</a>
@@ -694,20 +739,49 @@
         </div>
       </div>
 
-      <!-- Project 2: LAPD -->
+      <!-- Project 3: Hospital Analysis Dashboard -->
       <div class="project-card rounded-lg overflow-hidden shadow-lg transition-all duration-300">
+        <div class="w-full aspect-video overflow-hidden">
+          <img src="Assests/Overview Page.png" alt="Hospital Analysis Dashboard" class="w-full h-full object-cover">
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-blue-900 mb-2">Hospital Analysis Dashboard</h3>
+          <p class="text-gray-600 mb-4">
+            Built a multi-page hospital analytics dashboard in Power BI covering operations, patient flow, doctor performance, and finance. Designed separate modules for Overview, Patient, Doctor, Hospital, and Finance to support quick reporting and decision-making.
+          </p>
+          <p class="text-gray-600 mb-4">
+            Tracked KPIs such as billing volume, patient discharge trends, bed occupancy, revenue by charge type, medicine usage, and supplier stock status. 
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="px-3 py-1 bg-violet-100 text-violet-800 text-xs font-medium rounded-full">Power BI</span>
+            <span class="px-3 py-1 bg-violet-100 text-violet-800 text-xs font-medium rounded-full">DAX</span>
+            <span class="px-3 py-1 bg-violet-100 text-violet-800 text-xs font-medium rounded-full">Healthcare Analytics</span>
+            <span class="px-3 py-1 bg-violet-100 text-violet-800 text-xs font-medium rounded-full">KPI Reporting</span>
+          </div>
+          <div class="flex space-x-3">
+            <a href="https://github.com/MahimnaDarji/Hospital-Analysis-Dashboard.git" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Source Code</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 4: LAPD (Hidden by default) -->
+      <div class="project-card rounded-lg overflow-hidden shadow-lg transition-all duration-300 hidden" id="project-4">
         <div class="w-full aspect-video overflow-hidden">
           <img src="Assests/LAPD.png" alt="LAPD Crime Dashboard" class="w-full h-full object-cover">
         </div>
         <div class="p-6">
           <h3 class="text-xl font-bold text-blue-900 mb-2">LAPD Crime Dashboard</h3>
-          <p class="text-gray-600 mb-4">Developed an interactive Streamlit dashboard using over 900,000 LAPD crime records to analyze spatial and temporal trends. Integrated advanced visualizations such as time series plots, density heatmaps, geospatial clustering, and interactive cluster maps.</p>
-          <p class="text-gray-600 mb-4">Used stratified sampling for performance and uncovered location-based risk zones and demographic crime patterns to support urban policy and law enforcement.</p>
+          <p class="text-gray-600 mb-4">
+            Developed an interactive Streamlit dashboard using over 900,000 LAPD crime records to analyze spatial and temporal trends. Integrated visualizations such as time series plots, density heatmaps, geospatial clustering, and interactive cluster maps.
+          </p>
+          <p class="text-gray-600 mb-4">
+            Used stratified sampling for performance and uncovered location based risk zones and demographic crime patterns to support urban policy and law enforcement.
+          </p>
           <div class="flex flex-wrap gap-2 mb-4">
             <span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full">Python</span>
             <span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full">Streamlit</span>
-            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full">Geospatial</span>
-            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full">Data Viz</span>
+            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full">Spatial Clustering</span>
+            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full">Stratified Sampling</span>
           </div>
           <div class="flex space-x-3">
             <a href="https://github.com/MahimnaDarji/LAPD-Crime-Dashboard.git" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Source Code</a>
@@ -715,19 +789,48 @@
         </div>
       </div>
 
-      <!-- Project 3: Water Potability -->
-      <div class="project-card rounded-lg overflow-hidden shadow-lg transition-all duration-300">
+      <!-- Project 5: WebAr QR Ad (Hidden by default) -->
+      <div class="project-card rounded-lg overflow-hidden shadow-lg transition-all duration-300 hidden" id="project-5">
+        <div class="w-full aspect-video overflow-hidden">
+          <img src="Assests/WebAR.png" alt="WebAr QR Ad" class="w-full h-full object-cover">
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-blue-900 mb-2">AR Video Playback on Print Media</h3>
+          <p class="text-gray-600 mb-4">
+            This project turns a printed ad into an interactive experience using WebAR. When users scan the QR code, the browser opens an AR view that detects the printed artwork and plays a stabilized video directly on the page.
+          </p>
+          <p class="text-gray-600 mb-4">
+            The system uses MindAR for image tracking, a custom smoothing layer for steady playback, and a clean camera preview for a realistic AR feel. Everything runs in the browser with no app required, making it easy to deploy and use.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="px-3 py-1 bg-orange-100 text-orange-800 text-xs font-medium rounded-full">WebAR</span>
+            <span class="px-3 py-1 bg-orange-100 text-orange-800 text-xs font-medium rounded-full">JavaScript</span>
+            <span class="px-3 py-1 bg-orange-100 text-orange-800 text-xs font-medium rounded-full">Three.js</span>
+            <span class="px-3 py-1 bg-orange-100 text-orange-800 text-xs font-medium rounded-full">Analytics</span>
+          </div>
+          <div class="flex space-x-3">
+            <a href="https://github.com/MahimnaDarji/Webar-Ad.git" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Source Code</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 6: Water Potability (Hidden by default) -->
+      <div class="project-card rounded-lg overflow-hidden shadow-lg transition-all duration-300 hidden" id="project-6">
         <div class="w-full aspect-video overflow-hidden">
           <img src="Assests/Water.png" alt="Water Potability Classification" class="w-full h-full object-cover">
         </div>
         <div class="p-6">
           <h3 class="text-xl font-bold text-blue-900 mb-2">Water Potability Classification</h3>
-          <p class="text-gray-600 mb-4">Developed a classification system using Python and Scikit-learn to predict water potability based on chemical attributes. Compared multiple supervised models, applied SHAP and PDP for interpretability, and validated results through ROC curves and stratified cross-validation.</p>
-          <p class="text-gray-600 mb-4">Performed hierarchical clustering, PCA for feature space analysis, and scenario-based testing to assess model robustness and identify influential features like Sulfate and Organic Carbon.</p>
+          <p class="text-gray-600 mb-4">
+            Developed a classification system using Python and Scikit learn to predict water potability based on chemical attributes. Compared multiple supervised models, applied SHAP and PDP for interpretability, and validated results through ROC curves and stratified cross validation.
+          </p>
+          <p class="text-gray-600 mb-4">
+            Performed hierarchical clustering, PCA for feature space analysis, and scenario based testing to assess model robustness and identify influential features like Sulfate and Organic Carbon.
+          </p>
           <div class="flex flex-wrap gap-2 mb-4">
             <span class="px-3 py-1 bg-teal-100 text-teal-800 text-xs font-medium rounded-full">Supervised Learning</span>
             <span class="px-3 py-1 bg-teal-100 text-teal-800 text-xs font-medium rounded-full">Model Interpretability</span>
-            <span class="px-3 py-1 bg-teal-100 text-teal-800 text-xs font-medium rounded-full">Clustering & Segmentation</span>
+            <span class="px-3 py-1 bg-teal-100 text-teal-800 text-xs font-medium rounded-full">Clustering &amp; Segmentation</span>
             <span class="px-3 py-1 bg-teal-100 text-teal-800 text-xs font-medium rounded-full">PCA</span>
           </div>
           <div class="flex space-x-3">
@@ -736,19 +839,23 @@
         </div>
       </div>
 
-      <!-- Project 4: Book Recommendation (Initially Hidden) -->
-      <div class="project-card rounded-lg overflow-hidden shadow-lg transition-all duration-300 hidden" id="project-4">
+      <!-- Project 7: Book Recommendation System (Hidden by default) -->
+      <div class="project-card rounded-lg overflow-hidden shadow-lg transition-all duration-300 hidden" id="project-7">
         <div class="w-full aspect-video overflow-hidden">
           <img src="Assests/BRS.png" alt="Book Recommendation System" class="w-full h-full object-cover">
         </div>
         <div class="p-6">
           <h3 class="text-xl font-bold text-blue-900 mb-2">Book Recommendation System</h3>
-          <p class="text-gray-600 mb-4">Built a book recommendation system using Python, Flask, HTML/CSS and Content Based filtering Recommender System to deliver personalized book suggestions. Built a clean, user-friendly interface with genre browsing and dynamic recommendations.</p>
-          <p class="text-gray-600 mb-4">Used user interaction data to improve suggestions, making book discovery more accurate and personalized.</p>
+          <p class="text-gray-600 mb-4">
+            Built a book recommendation system using Python, Flask, HTML and CSS and a content based recommender to deliver personalized book suggestions. Designed a clean interface with genre browsing and dynamic recommendations.
+          </p>
+          <p class="text-gray-600 mb-4">
+            Used user interaction data to improve suggestions, making book discovery more accurate and personalized.
+          </p>
           <div class="flex flex-wrap gap-2 mb-4">
             <span class="px-3 py-1 bg-purple-100 text-purple-800 text-xs font-medium rounded-full">Python</span>
             <span class="px-3 py-1 bg-purple-100 text-purple-800 text-xs font-medium rounded-full">Flask</span>
-            <span class="px-3 py-1 bg-purple-100 text-purple-800 text-xs font-medium rounded-full">HTML & CSS</span>
+            <span class="px-3 py-1 bg-purple-100 text-purple-800 text-xs font-medium rounded-full">HTML &amp; CSS</span>
             <span class="px-3 py-1 bg-purple-100 text-purple-800 text-xs font-medium rounded-full">Recommender System</span>
           </div>
           <div class="flex space-x-3">
@@ -757,15 +864,19 @@
         </div>
       </div>
 
-      <!-- Project 5: Social Network (Initially Hidden) -->
-      <div class="project-card rounded-lg overflow-hidden shadow-lg transition-all duration-300 hidden" id="project-5">
+      <!-- Project 8: Social Network Platform (Hidden by default) -->
+      <div class="project-card rounded-lg overflow-hidden shadow-lg transition-all duration-300 hidden" id="project-8">
         <div class="w-full aspect-video overflow-hidden">
           <img src="Assests/SN.png" alt="Social Network Platform" class="w-full h-full object-cover">
         </div>
         <div class="p-6">
           <h3 class="text-xl font-bold text-blue-900 mb-2">Social Network Platform</h3>
-          <p class="text-gray-600 mb-4">Developed a full-stack social networking platform using React.js for frontend and FastAPI for backend, with MongoDB for data storage. Added key features like user login, profile management, content posting, and real-time chat.</p>
-          <p class="text-gray-600 mb-4">Containerized the app using Docker and deployed the backend on Render and frontend on Vercel. This ensured smooth, scalable, and reliable performance across environments.</p>
+          <p class="text-gray-600 mb-4">
+            Developed a full-stack social networking platform using React.js for frontend and FastAPI for backend, with MongoDB for data storage. Added features like user login, profile management, content posting, and real time chat.
+          </p>
+          <p class="text-gray-600 mb-4">
+            Containerized the app using Docker and deployed the backend on Render and frontend on Vercel. This ensured smooth, scalable, and reliable performance across environments.
+          </p>
           <div class="flex flex-wrap gap-2 mb-4">
             <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-xs font-medium rounded-full">React.js</span>
             <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-xs font-medium rounded-full">FastAPI</span>
@@ -799,181 +910,160 @@
   </div>
 </section>
 
-<!-- Toggle Script -->
 <script>
   function toggleProjects(showMore) {
-    const project4 = document.getElementById('project-4');
-    const project5 = document.getElementById('project-5');
+    const ids = ['project-4', 'project-5', 'project-6', 'project-7', 'project-8'];
     const viewMoreBtn = document.getElementById('view-more-btn');
     const showLessBtn = document.getElementById('show-less-btn');
 
+    ids.forEach(id => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      if (showMore) el.classList.remove('hidden');
+      else el.classList.add('hidden');
+    });
+
     if (showMore) {
-      project4.classList.remove('hidden');
-      project5.classList.remove('hidden');
       viewMoreBtn.classList.add('hidden');
       showLessBtn.classList.remove('hidden');
     } else {
-      project4.classList.add('hidden');
-      project5.classList.add('hidden');
       viewMoreBtn.classList.remove('hidden');
       showLessBtn.classList.add('hidden');
     }
   }
 </script>
 
-
-    
-
 <!-- Certifications Section -->
 <section id="certifications" class="py-20 bg-gray-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl font-bold text-blue-900 mb-4 title-font">Certifications</h2>
-        <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
-      </div>
-    
-      <!-- Grid Container -->
-      <div id="certification-wrapper">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" id="certification-grid">
-    
-          <!-- First 4 Certificates -->
-          <div class="cert-card bg-white p-6 rounded-lg shadow-md text-center flex flex-col items-center">
-            <div class="w-full h-60 flex items-center justify-center mb-6">
-              <img src="Assests/Data Engineering.jpg" alt="Coursera" class="w-50 h-50 object-contain">
-            </div>
-            <h3 class="text-lg font-semibold text-blue-900 mb-1">DeepLearning.AI Data Engineering</h3>
-            <p class="text-gray-500 text-sm font-semibold">Coursera</p>
-          </div>
-    
-          <div class="cert-card bg-white p-6 rounded-lg shadow-md text-center flex flex-col items-center">
-            <div class="w-full h-60 flex items-center justify-center mb-6">
-              <img src="Assests/Tableau.png" alt="Internshala" class="w-50 h-50 object-contain">
-            </div>
-            <h3 class="text-lg font-semibold text-blue-900 mb-1">Tableau</h3>
-            <p class="text-gray-500 text-sm font-semibold">Internshala</p>
-          </div>
-    
-          <div class="cert-card bg-white p-6 rounded-lg shadow-md text-center flex flex-col items-center">
-            <div class="w-full h-60 flex items-center justify-center mb-6">
-              <img src="Assests/Sql Fundamentals.png" alt="DataCamp" class="w-50 h-50 object-contain">
-            </div>
-            <h3 class="text-lg font-semibold text-blue-900 mb-1">SQL Fundamentals</h3>
-            <p class="text-gray-500 text-sm font-semibold">DataCamp</p>
-          </div>
-    
-          <div class="cert-card bg-white p-6 rounded-lg shadow-md text-center flex flex-col items-center">
-            <div class="w-full h-60 flex items-center justify-center mb-6">
-              <img src="Assests/Intro to DS.png" alt="Cisco" class="w-50 h-50 object-contain">
-            </div>
-            <h3 class="text-lg font-semibold text-blue-900 mb-1">Intro to Data Science</h3>
-            <p class="text-gray-500 text-sm font-semibold">Cisco Networking Academy</p>
-          </div>
-        </div>
-    
-        <!-- Hidden Certificates -->
-        <div id="cert-extra" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-6 hidden">
-          <div class="cert-card bg-white p-6 rounded-lg shadow-md text-center flex flex-col items-center">
-            <div class="w-full h-60 flex items-center justify-center mb-6">
-              <img src="Assests/BCG.png" alt="BCG" class="w-50 h-50 object-contain">
-            </div>
-            <h3 class="text-lg font-semibold text-blue-900 mb-1">Data Science & Analytics</h3>
-            <p class="text-gray-500 text-sm font-semibold">Boston Consulting Group</p>
-          </div>
-    
-          <div class="cert-card bg-white p-6 rounded-lg shadow-md text-center flex flex-col items-center">
-            <div class="w-full h-60 flex items-center justify-center mb-6">
-              <img src="Assests/Database.png" alt="Coursera" class="w-50 h-50 object-contain">
-            </div>
-            <h3 class="text-lg font-semibold text-blue-900 mb-1">Databases and SQL for Data Science with Python</h3>
-            <p class="text-gray-500 text-sm font-semibold">Coursera</p>
-          </div>
-    
-          <div class="cert-card bg-white p-6 rounded-lg shadow-md text-center flex flex-col items-center">
-            <div class="w-full h-60 flex items-center justify-center mb-6">
-              <img src="Assests/DS Methodology.png" alt="Internshala" class="w-50 h-50 object-contain">
-            </div>
-            <h3 class="text-lg font-semibold text-blue-900 mb-1">Data Science Methodology</h3>
-            <p class="text-gray-500 text-sm font-semibold">Coursera</p>
-          </div>
-    
-          <div class="cert-card bg-white p-6 rounded-lg shadow-md text-center flex flex-col items-center">
-            <div class="w-full h-60 flex items-center justify-center mb-6">
-              <img src="Assests/Tools for DS.png" alt="Internshala" class="w-50 h-50 object-contain">
-            </div>
-            <h3 class="text-lg font-semibold text-blue-900 mb-1">Tools for Data Science</h3>
-            <p class="text-gray-500 text-sm font-semibold">Coursera</p>
-          </div>
-    
-          <div class="cert-card bg-white p-6 rounded-lg shadow-md text-center flex flex-col items-center">
-            <div class="w-full h-60 flex items-center justify-center mb-6">
-              <img src="Assests/Sql for analytics.png" alt="Internshala" class="w-50 h-50 object-contain">
-            </div>
-            <h3 class="text-lg font-semibold text-blue-900 mb-1">SQL for Data Analytics</h3>
-            <p class="text-gray-500 text-sm font-semibold">Internshala</p>
-          </div>
-    
-          <div class="cert-card bg-white p-6 rounded-lg shadow-md text-center flex flex-col items-center">
-            <div class="w-full h-60 flex items-center justify-center mb-6">
-              <img src="Assests/Data Storage.png" alt="Coursera" class="w-50 h-50 object-contain">
-            </div>
-            <h3 class="text-lg font-semibold text-blue-900 mb-1">Data Storage and Queries</h3>
-            <p class="text-gray-500 text-sm font-semibold">Coursera</p>
-          </div>
-    
-          <div class="cert-card bg-white p-6 rounded-lg shadow-md text-center flex flex-col items-center">
-            <div class="w-full h-60 flex items-center justify-center mb-6">
-              <img src="Assests/Cloud.png" alt="Internshala" class="w-50 h-50 object-contain">
-            </div>
-            <h3 class="text-lg font-semibold text-blue-900 mb-1">Basics of Cloud Computing with AWS</h3>
-            <p class="text-gray-500 text-sm font-semibold">Internshala</p>
-          </div>
-    
-          <div class="cert-card bg-white p-6 rounded-lg shadow-md text-center flex flex-col items-center">
-            <div class="w-full h-60 flex items-center justify-center mb-6">
-              <img src="Assests/Source System.png" alt="Coursera" class="w-50 h-50 object-contain">
-            </div>
-            <h3 class="text-lg font-semibold text-blue-900 mb-1">Source Systems, Data Ingestion, and Pipelines</h3>
-            <p class="text-gray-500 text-sm font-semibold">Coursera</p>
-          </div>
-    
-          <div class="cert-card bg-white p-6 rounded-lg shadow-md text-center flex flex-col items-center">
-            <div class="w-full h-60 flex items-center justify-center mb-6">
-              <img src="Assests/What is DS.png" alt="Coursera" class="w-50 h-50 object-contain">
-            </div>
-            <h3 class="text-lg font-semibold text-blue-900 mb-1">What is Data Science?</h3>
-            <p class="text-gray-500 text-sm font-semibold">Coursera</p>
-          </div>
-        </div>
-    
-        <!-- Toggle Buttons -->
-        <div class="text-center mt-10">
-          <button id="showMoreBtn" onclick="toggleCerts(true)" class="px-6 py-3 border border-blue-600 text-blue-600 rounded-md font-medium hover:bg-blue-50">View All Certificates<i class="fas fa-arrow-down ml-2"></i></button>
-          <button id="showLessBtn" onclick="toggleCerts(false)" class="px-6 py-3 border border-blue-600 text-blue-600 rounded-md font-medium hover:bg-blue-50 hidden">Show Less Certificates<i class="fas fa-arrow-up ml-2"></i></button>
-        </div>
-      </div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl font-bold text-blue-900 mb-4 title-font">Certifications</h2>
+      <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
     </div>
-    </section>
-    
-    <script>
-      function toggleCerts(show) {
-        const extra = document.getElementById('cert-extra');
-        const moreBtn = document.getElementById('showMoreBtn');
-        const lessBtn = document.getElementById('showLessBtn');
-    
-        if (show) {
-          extra.classList.remove('hidden');
-          moreBtn.classList.add('hidden');
-          lessBtn.classList.remove('hidden');
-        } else {
-          extra.classList.add('hidden');
-          moreBtn.classList.remove('hidden');
-          lessBtn.classList.add('hidden');
-        }
-      }
-    </script>
-    
 
+    <div id="certification-wrapper">
+      <!-- Public Certificates -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" id="certification-grid">
 
+        <div class="cert-card bg-white p-6 rounded-lg shadow-md text-center flex flex-col items-center">
+          <div class="w-full h-60 flex items-center justify-center mb-6">
+            <img src="Assests/Data Science Oracle.png" alt="Oracle" class="w-50 h-50 object-contain">
+          </div>
+          <h3 class="text-lg font-semibold text-blue-900 mb-1">Data Science Professional</h3>
+          <p class="text-gray-500 text-sm font-semibold">Oracle</p>
+        </div>
+
+        <div class="cert-card bg-white p-6 rounded-lg shadow-md text-center flex flex-col items-center">
+          <div class="w-full h-60 flex items-center justify-center mb-6">
+            <img src="Assests/Data Engineering.jpg" alt="Coursera" class="w-50 h-50 object-contain">
+          </div>
+          <h3 class="text-lg font-semibold text-blue-900 mb-1">Data Engineering</h3>
+          <p class="text-gray-500 text-sm font-semibold">AWS</p>
+        </div>
+
+        <div class="cert-card bg-white p-6 rounded-lg shadow-md text-center flex flex-col items-center">
+          <div class="w-full h-60 flex items-center justify-center mb-6">
+            <img src="Assests/Sql Fundamentals.png" alt="DataCamp" class="w-50 h-50 object-contain">
+          </div>
+          <h3 class="text-lg font-semibold text-blue-900 mb-1">SQL Fundamentals</h3>
+          <p class="text-gray-500 text-sm font-semibold">DataCamp</p>
+        </div>
+
+        <div class="cert-card bg-white p-6 rounded-lg shadow-md text-center flex flex-col items-center">
+          <div class="w-full h-60 flex items-center justify-center mb-6">
+            <img src="Assests/Intro to DS.png" alt="Cisco" class="w-50 h-50 object-contain">
+          </div>
+          <h3 class="text-lg font-semibold text-blue-900 mb-1">Intro to Data Science</h3>
+          <p class="text-gray-500 text-sm font-semibold">Cisco Networking Academy</p>
+        </div>
+
+      </div>
+
+      <!-- Hidden Certificates -->
+      <div id="cert-extra" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-6 hidden">
+
+        <div class="cert-card bg-white p-6 rounded-lg shadow-md text-center flex flex-col items-center">
+          <div class="w-full h-60 flex items-center justify-center mb-6">
+            <img src="Assests/BCG.png" alt="BCG" class="w-50 h-50 object-contain">
+          </div>
+          <h3 class="text-lg font-semibold text-blue-900 mb-1">Data Science & Analytics</h3>
+          <p class="text-gray-500 text-sm font-semibold">Boston Consulting Group</p>
+        </div>
+
+        <div class="cert-card bg-white p-6 rounded-lg shadow-md text-center flex flex-col items-center">
+          <div class="w-full h-60 flex items-center justify-center mb-6">
+            <img src="Assests/GenAI.png" alt="Indiana University" class="w-50 h-50 object-contain">
+          </div>
+          <h3 class="text-lg font-semibold text-blue-900 mb-1">GenAI Certificate</h3>
+          <p class="text-gray-500 text-sm font-semibold">Indiana University</p>
+        </div>
+
+        <div class="cert-card bg-white p-6 rounded-lg shadow-md text-center flex flex-col items-center">
+          <div class="w-full h-60 flex items-center justify-center mb-6">
+            <img src="Assests/Tableau.png" alt="Internshala" class="w-50 h-50 object-contain">
+          </div>
+          <h3 class="text-lg font-semibold text-blue-900 mb-1">Tableau</h3>
+          <p class="text-gray-500 text-sm font-semibold">Internshala</p>
+        </div>
+
+        <div class="cert-card bg-white p-6 rounded-lg shadow-md text-center flex flex-col items-center">
+          <div class="w-full h-60 flex items-center justify-center mb-6">
+            <img src="Assests/Database.png" alt="Coursera" class="w-50 h-50 object-contain">
+          </div>
+          <h3 class="text-lg font-semibold text-blue-900 mb-1">Databases and SQL for Data Science with Python</h3>
+          <p class="text-gray-500 text-sm font-semibold">Coursera</p>
+        </div>
+
+        <div class="cert-card bg-white p-6 rounded-lg shadow-md text-center flex flex-col items-center">
+          <div class="w-full h-60 flex items-center justify-center mb-6">
+            <img src="Assests/DS Methodology.png" alt="Coursera" class="w-50 h-50 object-contain">
+          </div>
+          <h3 class="text-lg font-semibold text-blue-900 mb-1">Data Science Methodology</h3>
+          <p class="text-gray-500 text-sm font-semibold">Coursera</p>
+        </div>
+
+        <div class="cert-card bg-white p-6 rounded-lg shadow-md text-center flex flex-col items-center">
+          <div class="w-full h-60 flex items-center justify-center mb-6">
+            <img src="Assests/Tools for DS.png" alt="Coursera" class="w-50 h-50 object-contain">
+          </div>
+          <h3 class="text-lg font-semibold text-blue-900 mb-1">Tools for Data Science</h3>
+          <p class="text-gray-500 text-sm font-semibold">Coursera</p>
+        </div>
+
+      </div>
+
+      <!-- Toggle Buttons -->
+      <div class="text-center mt-10">
+        <button id="showMoreBtn" onclick="toggleCerts(true)" class="px-6 py-3 border border-blue-600 text-blue-600 rounded-md font-medium hover:bg-blue-50">
+          View All Certificates <i class="fas fa-arrow-down ml-2"></i>
+        </button>
+        <button id="showLessBtn" onclick="toggleCerts(false)" class="px-6 py-3 border border-blue-600 text-blue-600 rounded-md font-medium hover:bg-blue-50 hidden">
+          Show Less Certificates <i class="fas fa-arrow-up ml-2"></i>
+        </button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+  function toggleCerts(show) {
+    const extra = document.getElementById("cert-extra");
+    const moreBtn = document.getElementById("showMoreBtn");
+    const lessBtn = document.getElementById("showLessBtn");
+
+    if (show) {
+      extra.classList.remove("hidden");
+      moreBtn.classList.add("hidden");
+      lessBtn.classList.remove("hidden");
+    } else {
+      extra.classList.add("hidden");
+      moreBtn.classList.remove("hidden");
+      lessBtn.classList.add("hidden");
+    }
+  }
+</script>
+    
 <!-- Blog Section -->
 <section id="blog" class="py-20 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -984,90 +1074,186 @@
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="blog-grid">
 
-      <!-- Blog 1 (New Blog) -->
+      <!-- Blog 1 (Visible) -->
       <div class="blog-card border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition duration-300">
-        <div class="h-52 bg-gray-100 overflow-hidden">
-          <img src="Assests/Data Lake.png" alt="Modern Data Architecture Blog" class="w-full h-full object-cover">
+        <div class="w-full aspect-video bg-gray-100 overflow-hidden">
+          <img src="Assests/blog1.png" alt="LangChain vs LangGraph vs LangSmith vs LangFlow" class="w-full h-full object-cover">
         </div>
         <div class="p-6">
-          <div class="flex items-center text-sm text-gray-500 mb-2">
-            <span>June 26, 2025</span>
+          <div class="flex items-center text-sm text-gray-500">
+            <span>Oct 15, 2025</span>
             <span class="mx-2">•</span>
             <span>7 min read</span>
           </div>
-          <h3 class="text-xl font-bold text-blue-900 mb-2">Data Warehouses, Lakes, and Lakehouses: Diving into the Buckets, Brains, and Bytes of Modern Data Architecture</h3>
-          <p class="text-gray-600 mb-4">This blog breaks down modern data architectures: Warehouses for structured ETL, Lakes for ML-ready schema-on-read, and Lakehouses with ACID, tiered storage, and AWS integrations like Redshift MPP.</p>
-          <a href="https://medium.com/aws-in-plain-english/data-warehouses-lakes-and-lakehouses-diving-into-the-buckets-brains-and-bytes-of-modern-data-f81aee997ecc" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Read More</a>
+          <h3 class="text-xl font-bold text-blue-900 mt-3 mb-4">
+            LangChain vs LangGraph vs LangSmith vs LangFlow: Understanding through a Realtime Project
+          </h3>
+          <a href="https://medium.com/aws-in-plain-english/langchain-vs-langgraph-vs-langsmith-vs-langflow-understanding-through-a-realtime-project-2c3efd1606e7" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Read More</a>
         </div>
       </div>
 
-      <!-- Blog 2 -->
+      <!-- Blog 2 (Visible) -->
       <div class="blog-card border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition duration-300">
-        <div class="h-52 bg-gray-100 overflow-hidden">
-          <img src="Assests/Blog4.png" alt="Orchestration Blog" class="w-full h-full object-cover">
+        <div class="w-full aspect-video bg-gray-100 overflow-hidden">
+          <img src="Assests/blog2.png" alt="How Memory Works in Transformer LLMs" class="w-full h-full object-cover">
         </div>
         <div class="p-6">
-          <div class="flex items-center text-sm text-gray-500 mb-2">
-            <span>June 11, 2025</span>
-            <span class="mx-2">•</span>
-            <span>5 min read</span>
-          </div>
-          <h3 class="text-xl font-bold text-blue-900 mb-2">From Hard Drives to the Cloud: A Data Engineer’s Journey Through Modern Storage</h3>
-          <p class="text-gray-600 mb-4">This blog breaks down the different types of data storage systems, from HDDs to SSDs and cloud object storage. It explains when to use OLTP vs OLAP, why formats like Parquet outperform CSVs, and how compression and access frequency affect both cost and performance.</p>
-          <a href="https://medium.com/@m2analytics1117/from-hard-drives-to-the-cloud-a-data-engineers-journey-through-modern-storage-978a685932c0" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Read More</a>
-        </div>
-      </div>
-
-      <!-- Blog 3 -->
-      <div class="blog-card border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition duration-300">
-        <div class="h-52 bg-gray-100 overflow-hidden">
-          <img src="Assests/Airflow.png" alt="Airflow Blog" class="w-full h-full object-cover">
-        </div>
-        <div class="p-6">
-          <div class="flex items-center text-sm text-gray-500 mb-2">
-            <span>June 1, 2025</span>
+          <div class="flex items-center text-sm text-gray-500">
+            <span>Sep 2, 2025</span>
             <span class="mx-2">•</span>
             <span>6 min read</span>
           </div>
-          <h3 class="text-xl font-bold text-blue-900 mb-2">Airflow for Data Engineers: Automate Your Pipelines</h3>
-          <p class="text-gray-600 mb-4">This blog explains why data orchestration matters and how tools like Apache Airflow help run pipelines in the right order with alerts and retries. It shares real examples and best practices that make managing data workflows easier and more reliable.</p>
-          <a href="https://medium.com/@m2analytics1117/airflow-for-data-engineers-automate-your-pipelines-2ae8e5e1c2aa" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Read More</a>
+          <h3 class="text-xl font-bold text-blue-900 mt-3 mb-4">
+            How Memory Works in Transformer LLMs - And Why Long-Term Memory Is Difficult
+          </h3>
+          <a href="https://medium.com/aws-in-plain-english/how-memory-works-in-transformer-llms-and-why-long-term-memory-is-difficult-5edd4ef5e90b" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Read More</a>
         </div>
       </div>
 
-      <!-- Blog 4 (Initially Hidden) -->
-      <div id="blog-4" class="blog-card border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition duration-300 hidden">
-        <div class="h-52 bg-gray-100 overflow-hidden">
-          <img src="Assests/Ingestion.png" alt="Data Ingestion Blog" class="w-full h-full object-cover">
+      <!-- Blog 3 (Visible) -->
+      <div class="blog-card border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition duration-300">
+        <div class="w-full aspect-video bg-gray-100 overflow-hidden">
+          <img src="Assests/blog3.png" alt="MCP vs LangChain vs LlamaIndex" class="w-full h-full object-cover">
         </div>
         <div class="p-6">
-          <div class="flex items-center text-sm text-gray-500 mb-2">
+          <div class="flex items-center text-sm text-gray-500">
+            <span>Aug 26, 2025</span>
+            <span class="mx-2">•</span>
+            <span>5 min read</span>
+          </div>
+          <h3 class="text-xl font-bold text-blue-900 mt-3 mb-4">
+            MCP vs LangChain vs LlamaIndex: Do We Really Need All These Frameworks?
+          </h3>
+          <a href="https://medium.com/aws-in-plain-english/mcp-vs-langchain-vs-llamaindex-do-we-really-need-all-these-frameworks-c485ed127ebb" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Read More</a>
+        </div>
+      </div>
+
+      <!-- Blog 4 (Hidden) -->
+      <div id="blog-1" class="blog-card hidden border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition duration-300">
+        <div class="w-full aspect-video bg-gray-100 overflow-hidden">
+          <img src="Assests/blog4.png" alt="Model Context Protocol as an upgrade to RAG" class="w-full h-full object-cover">
+        </div>
+        <div class="p-6">
+          <div class="flex items-center text-sm text-gray-500">
+            <span>Aug 19, 2025</span>
+            <span class="mx-2">•</span>
+            <span>7 min read</span>
+          </div>
+          <h3 class="text-xl font-bold text-blue-900 mt-3 mb-4">
+            Model Context Protocol(MCP): A Practical Upgrade to RAG for AI Agent Workflows
+          </h3>
+          <a href="https://medium.com/aws-in-plain-english/model-context-protocol-mcp-a-practical-upgrade-to-rag-for-ai-agent-workflows-e4e1ec8945d5" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Read More</a>
+        </div>
+      </div>
+
+      <!-- Blog 5 (Hidden) -->
+      <div id="blog-2" class="blog-card hidden border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition duration-300">
+        <div class="w-full aspect-video bg-gray-100 overflow-hidden">
+          <img src="Assests/blog5.png" alt="Retrieval-Augmented Generation guide" class="w-full h-full object-cover">
+        </div>
+        <div class="p-6">
+          <div class="flex items-center text-sm text-gray-500">
+            <span>Aug 12, 2025</span>
+            <span class="mx-2">•</span>
+            <span>13 min read</span>
+          </div>
+          <h3 class="text-xl font-bold text-blue-900 mt-3 mb-4">
+            Retrieval-Augmented Generation (RAG) in AI: A Complete Beginner-to-Advanced Guide
+          </h3>
+          <a href="https://medium.com/aws-in-plain-english/retrieval-augmented-generation-rag-in-ai-a-complete-beginner-to-advanced-guide-f935bc62250d" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Read More</a>
+        </div>
+      </div>
+
+      <!-- Blog 6 (Hidden) -->
+      <div id="blog-3" class="blog-card hidden border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition duration-300">
+        <div class="w-full aspect-video bg-gray-100 overflow-hidden">
+          <img src="Assests/blog6.png" alt="Redshift vs BigQuery vs Snowflake" class="w-full h-full object-cover">
+        </div>
+        <div class="p-6">
+          <div class="flex items-center text-sm text-gray-500">
+            <span>Jul 29, 2025</span>
+            <span class="mx-2">•</span>
+            <span>7 min read</span>
+          </div>
+          <h3 class="text-xl font-bold text-blue-900 mt-3 mb-4">
+            Redshift vs BigQuery vs Snowflake: Choosing the Right Data Warehouse for Your Stack
+          </h3>
+          <a href="https://medium.com/aws-in-plain-english/redshift-vs-bigquery-vs-snowflake-choosing-the-right-data-warehouse-for-your-stack-5b87bdb5a840" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Read More</a>
+        </div>
+      </div>
+
+      <!-- Blog 7 (Hidden) -->
+      <div id="blog-4" class="blog-card hidden border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition duration-300">
+        <div class="w-full aspect-video bg-gray-100 overflow-hidden">
+          <img src="Assests/blog7.png" alt="From Models to Pipelines" class="w-full h-full object-cover">
+        </div>
+        <div class="p-6">
+          <div class="flex items-center text-sm text-gray-500">
+            <span>Jul 3, 2025</span>
+            <span class="mx-2">•</span>
+            <span>6 min read</span>
+          </div>
+          <h3 class="text-xl font-bold text-blue-900 mt-3 mb-4">
+            From Models to Pipelines: A Practical Guide to Data Modeling, Architectures, and Engineering Tools
+          </h3>
+          <a href="https://medium.com/aws-in-plain-english/from-models-to-pipelines-a-practical-guide-to-data-modeling-architectures-and-engineering-tools-49a3ff58bc87" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Read More</a>
+        </div>
+      </div>
+
+      <!-- Blog 8 (Hidden) -->
+      <div id="blog-5" class="blog-card hidden border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition duration-300">
+        <div class="w-full aspect-video bg-gray-100 overflow-hidden">
+          <img src="Assests/blog8.png" alt="Airflow for Data Engineers" class="w-full h-full object-cover">
+        </div>
+        <div class="p-6">
+          <div class="flex items-center text-sm text-gray-500">
+            <span>Jun 1, 2025</span>
+            <span class="mx-2">•</span>
+            <span>6 min read</span>
+          </div>
+          <h3 class="text-xl font-bold text-blue-900 mt-3 mb-4">
+            Airflow for Data Engineers: Automate Your Pipelines
+          </h3>
+          <a href="https://medium.com/aws-in-plain-english/airflow-for-data-engineers-automate-your-pipelines-2ae8e5e1c2aa" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Read More</a>
+        </div>
+      </div>
+
+      <!-- Blog 9 (Hidden) -->
+      <div id="blog-6" class="blog-card hidden border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition duration-300">
+        <div class="w-full aspect-video bg-gray-100 overflow-hidden">
+          <img src="Assests/blog9.png" alt="Batch vs Streaming Data Ingestion" class="w-full h-full object-cover">
+        </div>
+        <div class="p-6">
+          <div class="flex items-center text-sm text-gray-500">
             <span>May 25, 2025</span>
             <span class="mx-2">•</span>
             <span>7 min read</span>
           </div>
-          <h3 class="text-xl font-bold text-blue-900 mb-2">Batch vs Streaming Data Ingestion: A Complete Guide for Data Engineers</h3>
-          <p class="text-gray-600 mb-4">This blog explains how batch and streaming data ingestion work in real-world systems using clear examples. It shows how choosing between them depends on speed, volume, and project needs.</p>
-          <a href="https://medium.com/@m2analytics1117/batch-vs-streaming-data-ingestion-a-complete-guide-for-data-engineers-d2a76a78bc44" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Read More</a>
+          <h3 class="text-xl font-bold text-blue-900 mt-3 mb-4">
+            Batch vs Streaming Data Ingestion: A Complete Guide for Data Engineers
+          </h3>
+          <a href="https://medium.com/aws-in-plain-english/batch-vs-streaming-data-ingestion-a-complete-guide-for-data-engineers-d2a76a78bc44" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Read More</a>
         </div>
       </div>
 
-      <!-- Blog 5 (Initially Hidden) -->
-      <div id="blog-5" class="blog-card border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition duration-300 hidden">
-        <div class="h-52 bg-gray-100 overflow-hidden">
-          <img src="Assests/VPC.png" alt="AWS Networking Blog" class="w-full h-full object-cover">
+      <!-- Blog 10 (Hidden) -->
+      <div id="blog-7" class="blog-card hidden border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition duration-300">
+        <div class="w-full aspect-video bg-gray-100 overflow-hidden">
+          <img src="Assests/blog10.png" alt="Decoding AWS Networking" class="w-full h-full object-cover">
         </div>
         <div class="p-6">
-          <div class="flex items-center text-sm text-gray-500 mb-2">
+          <div class="flex items-center text-sm text-gray-500">
             <span>May 19, 2025</span>
             <span class="mx-2">•</span>
-            <span>6 min read</span>
+            <span>7 min read</span>
           </div>
-          <h3 class="text-xl font-bold text-blue-900 mb-2">Decoding AWS Networking: VPCs, Subnets, IGWs, NATs & Route Tables Made Simple</h3>
-          <p class="text-gray-600 mb-4">This blog explains cloud networking basics in a simple way for data science students like me. If you're working on cloud pipelines, knowing how VPC, subnets, and gateways work is very important.</p>
-          <a href="https://medium.com/@m2analytics1117/decoding-aws-networking-vpcs-subnets-igws-nats-route-tables-made-simple-e52f4b740c84" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Read More</a>
+          <h3 class="text-xl font-bold text-blue-900 mt-3 mb-4">
+            Decoding AWS Networking: VPCs, Subnets, IGWs, NATs &amp; Route Tables Made Simple
+          </h3>
+          <a href="https://medium.com/aws-in-plain-english/decoding-aws-networking-vpcs-subnets-igws-nats-route-tables-made-simple-e52f4b740c84" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Read More</a>
         </div>
       </div>
+
     </div>
 
     <!-- Toggle Buttons -->
@@ -1091,26 +1277,21 @@
 
 <script>
   function toggleBlogs(showMore) {
-    const blog4 = document.getElementById('blog-4');
-    const blog5 = document.getElementById('blog-5');
+    const blogsToToggle = ['blog-1', 'blog-2', 'blog-3', 'blog-4', 'blog-5', 'blog-6', 'blog-7'];
     const viewMoreBtn = document.getElementById('view-more-blog-btn');
     const showLessBtn = document.getElementById('show-less-blog-btn');
 
-    if (showMore) {
-      blog4.classList.remove('hidden');
-      blog5.classList.remove('hidden');
-      viewMoreBtn.classList.add('hidden');
-      showLessBtn.classList.remove('hidden');
-    } else {
-      blog4.classList.add('hidden');
-      blog5.classList.add('hidden');
-      viewMoreBtn.classList.remove('hidden');
-      showLessBtn.classList.add('hidden');
-    }
+    blogsToToggle.forEach(id => {
+      const blog = document.getElementById(id);
+      if (!blog) return;
+      if (showMore) blog.classList.remove('hidden');
+      else blog.classList.add('hidden');
+    });
+
+    viewMoreBtn.classList.toggle('hidden', showMore);
+    showLessBtn.classList.toggle('hidden', !showMore);
   }
 </script>
-
-
 
 <!-- Contact Section -->
 <section id="contact" class="py-20 bg-gray-50">
@@ -1216,7 +1397,6 @@
                     <a href="https://github.com/MahimnaDarji" target="_blank" class="text-blue-200 hover:text-white">
                         <i class="fab fa-github text-xl"></i>
                     </a>
-                    <!-- Medium Blog Profile Link Added -->
                     <a href="https://medium.com/@m2analytics1117" target="_blank" class="text-blue-200 hover:text-white">
                         <i class="fab fa-medium text-xl"></i>
                     </a>
