@@ -690,6 +690,7 @@
           </h3>
           <p class="text-gray-600 mb-4">
             Designed an AI knowledge assistant with a full RAG pipeline to convert 10,000+ unstructured enterprise documents including PDFs, TXT and emails into searchable insights using LangChain for chunking and Sentence Transformers for embeddings.
+          </p>
           <p class="text-gray-600 mb-4">
             Created a FAISS vector index with metadata for fast semantic search. Integrated Hugging Face T5 models for context-aware answers, delivering 20% faster, more accurate queries on enterprise data.
           </p>
@@ -738,8 +739,33 @@
         </div>
       </div>
 
-      <!-- Project 3: LAPD -->
+      <!-- Project 3: Hospital Analysis Dashboard -->
       <div class="project-card rounded-lg overflow-hidden shadow-lg transition-all duration-300">
+        <div class="w-full aspect-video overflow-hidden">
+          <img src="Assests/Overview Page.png" alt="Hospital Analysis Dashboard" class="w-full h-full object-cover">
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-blue-900 mb-2">Hospital Analysis Dashboard</h3>
+          <p class="text-gray-600 mb-4">
+            Built a multi-page hospital analytics dashboard in Power BI covering operations, patient flow, doctor performance, and finance. Designed separate modules for Overview, Patient, Doctor, Hospital, and Finance to support quick reporting and decision-making.
+          </p>
+          <p class="text-gray-600 mb-4">
+            Tracked KPIs such as billing volume, patient discharge trends, bed occupancy, revenue by charge type, medicine usage, and supplier stock status. 
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="px-3 py-1 bg-violet-100 text-violet-800 text-xs font-medium rounded-full">Power BI</span>
+            <span class="px-3 py-1 bg-violet-100 text-violet-800 text-xs font-medium rounded-full">DAX</span>
+            <span class="px-3 py-1 bg-violet-100 text-violet-800 text-xs font-medium rounded-full">Healthcare Analytics</span>
+            <span class="px-3 py-1 bg-violet-100 text-violet-800 text-xs font-medium rounded-full">KPI Reporting</span>
+          </div>
+          <div class="flex space-x-3">
+            <a href="https://github.com/MahimnaDarji/Hospital-Analysis-Dashboard.git" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Source Code</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 4: LAPD (Hidden by default) -->
+      <div class="project-card rounded-lg overflow-hidden shadow-lg transition-all duration-300 hidden" id="project-4">
         <div class="w-full aspect-video overflow-hidden">
           <img src="Assests/LAPD.png" alt="LAPD Crime Dashboard" class="w-full h-full object-cover">
         </div>
@@ -763,8 +789,8 @@
         </div>
       </div>
 
-      <!-- Project 4: WebAr QR Ad (Initially Hidden) -->
-      <div class="project-card rounded-lg overflow-hidden shadow-lg transition-all duration-300 hidden" id="project-4">
+      <!-- Project 5: WebAr QR Ad (Hidden by default) -->
+      <div class="project-card rounded-lg overflow-hidden shadow-lg transition-all duration-300 hidden" id="project-5">
         <div class="w-full aspect-video overflow-hidden">
           <img src="Assests/WebAR.png" alt="WebAr QR Ad" class="w-full h-full object-cover">
         </div>
@@ -788,8 +814,8 @@
         </div>
       </div>
 
-      <!-- Project 5: Water Potability (Hidden) -->
-      <div class="project-card rounded-lg overflow-hidden shadow-lg transition-all duration-300 hidden" id="project-5">
+      <!-- Project 6: Water Potability (Hidden by default) -->
+      <div class="project-card rounded-lg overflow-hidden shadow-lg transition-all duration-300 hidden" id="project-6">
         <div class="w-full aspect-video overflow-hidden">
           <img src="Assests/Water.png" alt="Water Potability Classification" class="w-full h-full object-cover">
         </div>
@@ -813,8 +839,8 @@
         </div>
       </div>
 
-      <!-- Project 6: Book Recommendation (Hidden) -->
-      <div class="project-card rounded-lg overflow-hidden shadow-lg transition-all duration-300 hidden" id="project-6">
+      <!-- Project 7: Book Recommendation System (Hidden by default) -->
+      <div class="project-card rounded-lg overflow-hidden shadow-lg transition-all duration-300 hidden" id="project-7">
         <div class="w-full aspect-video overflow-hidden">
           <img src="Assests/BRS.png" alt="Book Recommendation System" class="w-full h-full object-cover">
         </div>
@@ -838,8 +864,8 @@
         </div>
       </div>
 
-      <!-- Project 7: Social Network (Hidden) -->
-      <div class="project-card rounded-lg overflow-hidden shadow-lg transition-all duration-300 hidden" id="project-7">
+      <!-- Project 8: Social Network Platform (Hidden by default) -->
+      <div class="project-card rounded-lg overflow-hidden shadow-lg transition-all duration-300 hidden" id="project-8">
         <div class="w-full aspect-video overflow-hidden">
           <img src="Assests/SN.png" alt="Social Network Platform" class="w-full h-full object-cover">
         </div>
@@ -862,7 +888,6 @@
           </div>
         </div>
       </div>
-
 
     </div>
 
@@ -887,18 +912,15 @@
 
 <script>
   function toggleProjects(showMore) {
-    const ids = ['project-4', 'project-5', 'project-6', 'project-7', 'project-8', 'project-9'];
+    const ids = ['project-4', 'project-5', 'project-6', 'project-7', 'project-8'];
     const viewMoreBtn = document.getElementById('view-more-btn');
     const showLessBtn = document.getElementById('show-less-btn');
 
     ids.forEach(id => {
       const el = document.getElementById(id);
       if (!el) return;
-      if (showMore) {
-        el.classList.remove('hidden');
-      } else {
-        el.classList.add('hidden');
-      }
+      if (showMore) el.classList.remove('hidden');
+      else el.classList.add('hidden');
     });
 
     if (showMore) {
@@ -910,38 +932,6 @@
     }
   }
 </script>
-
-
-<!-- Toggle Script -->
-<script>
-  function toggleProjects(showMore) {
-    const project4 = document.getElementById('project-4');
-    const project5 = document.getElementById('project-5');
-    const project6 = document.getElementById('project-6');
-    const project7 = document.getElementById('project-7');
-    const viewMoreBtn = document.getElementById('view-more-btn');
-    const showLessBtn = document.getElementById('show-less-btn');
-
-    if (showMore) {
-      project4.classList.remove('hidden');
-      project5.classList.remove('hidden');
-      project6.classList.remove('hidden');
-      project7.classList.remove('hidden');
-      viewMoreBtn.classList.add('hidden');
-      showLessBtn.classList.remove('hidden');
-    } else {
-      project4.classList.add('hidden');
-      project5.classList.add('hidden');
-      project6.classList.add('hidden');
-      project7.classList.add('hidden');
-      viewMoreBtn.classList.remove('hidden');
-      showLessBtn.classList.add('hidden');
-    }
-  }
-</script>
-
-
-    
 
 <!-- Certifications Section -->
 <section id="certifications" class="py-20 bg-gray-50">
@@ -1402,7 +1392,7 @@
             </div>
             
             <div class="mt-8 pt-8 border-t border-blue-800 text-center text-blue-300 text-sm">
-                <p>&copy; 2026 Mahimna Darji. All rights reserved.</p>
+                <p>&copy; 2025 Mahimna Darji. All rights reserved.</p>
             </div>
         </div>
     </footer>
