@@ -666,8 +666,11 @@
     </section>
 
 <!-- Projects Section -->
+
 <section id="projects" class="py-20 bg-white">
+
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
     <div class="text-center mb-16">
       <h2 class="text-3xl font-bold text-blue-900 mb-4 title-font">Featured Projects</h2>
       <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
@@ -677,11 +680,11 @@
 
       <!-- Project 1: Insightify (RAG Assistant) -->
       <div class="project-card rounded-lg overflow-hidden shadow-lg transition-all duration-300">
-        <div class="w-full bg-slate-900 flex items-center justify-center">
+        <div class="w-full h-56 bg-slate-900 overflow-hidden relative">
           <img
             src="Assests/Insightify.png"
             alt="Insightify RAG Based AI Knowledge Assistant"
-            class="max-h-56 w-auto object-contain"
+            class="absolute inset-0 w-full h-full object-contain"
           />
         </div>
         <div class="p-6">
@@ -713,10 +716,73 @@
         </div>
       </div>
 
-      <!-- Project 2: Supply Chain -->
+      <!-- Project 2: Satellite Based Land Classification -->
       <div class="project-card rounded-lg overflow-hidden shadow-lg transition-all duration-300">
-        <div class="w-full aspect-video overflow-hidden">
-          <img src="Assests/SC.png" alt="Supply Chain Optimization Platform" class="w-full h-full object-cover">
+        <div class="w-full h-56 bg-slate-900 overflow-hidden relative">
+          <img
+            src="Assests/Satellite.png"
+            alt="Satellite Based Land Classification"
+            class="absolute inset-0 w-full h-full object-contain"
+          >
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-blue-900 mb-2">Satellite Based Land Classification</h3>
+          <p class="text-gray-600 mb-4">
+            Built a satellite land use classification system using ResNet18 with transfer learning to classify images into Agriculture, Forest, Urban, and Water. Achieved 96% test accuracy and validated results using class wise evaluation.
+          </p>
+          <p class="text-gray-600 mb-4">
+            Added Grad-CAM visualizations to show which image regions drive predictions and created a tile based overlay map to convert patch level outputs into a larger land use view. Combined all outputs into a final dashboard for quick review.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="px-3 py-1 bg-amber-100 text-amber-800 text-xs font-medium rounded-full">CNN Architecture</span>
+            <span class="px-3 py-1 bg-amber-100 text-amber-800 text-xs font-medium rounded-full">ResNet18</span>
+            <span class="px-3 py-1 bg-amber-100 text-amber-800 text-xs font-medium rounded-full">Grad-CAM</span>
+            <span class="px-3 py-1 bg-amber-100 text-amber-800 text-xs font-medium rounded-full">Image Preprocessing</span>
+            <span class="px-3 py-1 bg-amber-100 text-amber-800 text-xs font-medium rounded-full">Computer Vision</span>
+          </div>
+          <div class="flex space-x-3">
+            <a href="https://github.com/MahimnaDarji/Satellite-Based-Land-Use-Classification.git" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Source Code</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3: Hospital Analysis Dashboard -->
+      <div class="project-card rounded-lg overflow-hidden shadow-lg transition-all duration-300">
+        <div class="w-full h-56 bg-slate-900 overflow-hidden relative">
+          <img
+            src="Assests/Overview Page.png"
+            alt="Hospital Analysis Dashboard"
+            class="absolute inset-0 w-full h-full object-contain"
+          >
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-blue-900 mb-2">Hospital Analysis Dashboard</h3>
+          <p class="text-gray-600 mb-4">
+            Built a multi-page hospital analytics dashboard in Power BI covering operations, patient flow, doctor performance, and finance. Designed separate modules for Overview, Patient, Doctor, Hospital, and Finance to support quick reporting and decision-making.
+          </p>
+          <p class="text-gray-600 mb-4">
+            Tracked KPIs such as billing volume, patient discharge trends, bed occupancy, revenue by charge type, medicine usage, and supplier stock status.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="px-3 py-1 bg-violet-100 text-violet-800 text-xs font-medium rounded-full">Power BI</span>
+            <span class="px-3 py-1 bg-violet-100 text-violet-800 text-xs font-medium rounded-full">DAX</span>
+            <span class="px-3 py-1 bg-violet-100 text-violet-800 text-xs font-medium rounded-full">Healthcare Analytics</span>
+            <span class="px-3 py-1 bg-violet-100 text-violet-800 text-xs font-medium rounded-full">KPI Reporting</span>
+          </div>
+          <div class="flex space-x-3">
+            <a href="https://github.com/MahimnaDarji/Hospital-Analysis-Dashboard.git" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Source Code</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 4: Supply Chain (Hidden by default) -->
+      <div class="project-card rounded-lg overflow-hidden shadow-lg transition-all duration-300 hidden" id="project-4">
+        <div class="w-full h-56 bg-slate-900 overflow-hidden relative">
+          <img
+            src="Assests/SC.png"
+            alt="Supply Chain Optimization Platform"
+            class="absolute inset-0 w-full h-full object-contain"
+          >
         </div>
         <div class="p-6">
           <h3 class="text-xl font-bold text-blue-900 mb-2">Supply Chain Optimization Platform</h3>
@@ -734,40 +800,19 @@
             <span class="px-3 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full">Prophet</span>
           </div>
           <div class="flex space-x-3">
-            <a href="https://github.com/manasi1102/Supply-Chain-Optimization-Platform.git" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Source Code</a>
+            <a href="https://github.com/MahimnaDarji/Supply-Chain-Optimization-Platform.git" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Source Code</a>
           </div>
         </div>
       </div>
 
-      <!-- Project 3: Hospital Analysis Dashboard -->
-      <div class="project-card rounded-lg overflow-hidden shadow-lg transition-all duration-300">
-        <div class="w-full aspect-video overflow-hidden">
-          <img src="Assests/Overview Page.png" alt="Hospital Analysis Dashboard" class="w-full h-full object-cover">
-        </div>
-        <div class="p-6">
-          <h3 class="text-xl font-bold text-blue-900 mb-2">Hospital Analysis Dashboard</h3>
-          <p class="text-gray-600 mb-4">
-            Built a multi-page hospital analytics dashboard in Power BI covering operations, patient flow, doctor performance, and finance. Designed separate modules for Overview, Patient, Doctor, Hospital, and Finance to support quick reporting and decision-making.
-          </p>
-          <p class="text-gray-600 mb-4">
-            Tracked KPIs such as billing volume, patient discharge trends, bed occupancy, revenue by charge type, medicine usage, and supplier stock status. 
-          </p>
-          <div class="flex flex-wrap gap-2 mb-4">
-            <span class="px-3 py-1 bg-violet-100 text-violet-800 text-xs font-medium rounded-full">Power BI</span>
-            <span class="px-3 py-1 bg-violet-100 text-violet-800 text-xs font-medium rounded-full">DAX</span>
-            <span class="px-3 py-1 bg-violet-100 text-violet-800 text-xs font-medium rounded-full">Healthcare Analytics</span>
-            <span class="px-3 py-1 bg-violet-100 text-violet-800 text-xs font-medium rounded-full">KPI Reporting</span>
-          </div>
-          <div class="flex space-x-3">
-            <a href="https://github.com/MahimnaDarji/Hospital-Analysis-Dashboard.git" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Source Code</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project 4: LAPD (Hidden by default) -->
-      <div class="project-card rounded-lg overflow-hidden shadow-lg transition-all duration-300 hidden" id="project-4">
-        <div class="w-full aspect-video overflow-hidden">
-          <img src="Assests/LAPD.png" alt="LAPD Crime Dashboard" class="w-full h-full object-cover">
+      <!-- Project 5: LAPD (Hidden by default) -->
+      <div class="project-card rounded-lg overflow-hidden shadow-lg transition-all duration-300 hidden" id="project-5">
+        <div class="w-full h-56 bg-slate-900 overflow-hidden relative">
+          <img
+            src="Assests/LAPD.png"
+            alt="LAPD Crime Dashboard"
+            class="absolute inset-0 w-full h-full object-contain"
+          >
         </div>
         <div class="p-6">
           <h3 class="text-xl font-bold text-blue-900 mb-2">LAPD Crime Dashboard</h3>
@@ -789,10 +834,14 @@
         </div>
       </div>
 
-      <!-- Project 5: WebAr QR Ad (Hidden by default) -->
-      <div class="project-card rounded-lg overflow-hidden shadow-lg transition-all duration-300 hidden" id="project-5">
-        <div class="w-full aspect-video overflow-hidden">
-          <img src="Assests/WebAR.png" alt="WebAr QR Ad" class="w-full h-full object-cover">
+      <!-- Project 6: WebAr QR Ad (Hidden by default) -->
+      <div class="project-card rounded-lg overflow-hidden shadow-lg transition-all duration-300 hidden" id="project-6">
+        <div class="w-full h-56 bg-slate-900 overflow-hidden relative">
+          <img
+            src="Assests/WebAR.png"
+            alt="WebAr QR Ad"
+            class="absolute inset-0 w-full h-full object-contain"
+          >
         </div>
         <div class="p-6">
           <h3 class="text-xl font-bold text-blue-900 mb-2">AR Video Playback on Print Media</h3>
@@ -814,10 +863,14 @@
         </div>
       </div>
 
-      <!-- Project 6: Water Potability (Hidden by default) -->
-      <div class="project-card rounded-lg overflow-hidden shadow-lg transition-all duration-300 hidden" id="project-6">
-        <div class="w-full aspect-video overflow-hidden">
-          <img src="Assests/Water.png" alt="Water Potability Classification" class="w-full h-full object-cover">
+      <!-- Project 7: Water Potability (Hidden by default) -->
+      <div class="project-card rounded-lg overflow-hidden shadow-lg transition-all duration-300 hidden" id="project-7">
+        <div class="w-full h-56 bg-slate-900 overflow-hidden relative">
+          <img
+            src="Assests/Water.png"
+            alt="Water Potability Classification"
+            class="absolute inset-0 w-full h-full object-contain"
+          >
         </div>
         <div class="p-6">
           <h3 class="text-xl font-bold text-blue-900 mb-2">Water Potability Classification</h3>
@@ -839,10 +892,14 @@
         </div>
       </div>
 
-      <!-- Project 7: Book Recommendation System (Hidden by default) -->
-      <div class="project-card rounded-lg overflow-hidden shadow-lg transition-all duration-300 hidden" id="project-7">
-        <div class="w-full aspect-video overflow-hidden">
-          <img src="Assests/BRS.png" alt="Book Recommendation System" class="w-full h-full object-cover">
+      <!-- Project 8: Book Recommendation System (Hidden by default) -->
+      <div class="project-card rounded-lg overflow-hidden shadow-lg transition-all duration-300 hidden" id="project-8">
+        <div class="w-full h-56 bg-slate-900 overflow-hidden relative">
+          <img
+            src="Assests/BRS.png"
+            alt="Book Recommendation System"
+            class="absolute inset-0 w-full h-full object-contain"
+          >
         </div>
         <div class="p-6">
           <h3 class="text-xl font-bold text-blue-900 mb-2">Book Recommendation System</h3>
@@ -864,10 +921,14 @@
         </div>
       </div>
 
-      <!-- Project 8: Social Network Platform (Hidden by default) -->
-      <div class="project-card rounded-lg overflow-hidden shadow-lg transition-all duration-300 hidden" id="project-8">
-        <div class="w-full aspect-video overflow-hidden">
-          <img src="Assests/SN.png" alt="Social Network Platform" class="w-full h-full object-cover">
+      <!-- Project 9: Social Network Platform (Hidden by default) -->
+      <div class="project-card rounded-lg overflow-hidden shadow-lg transition-all duration-300 hidden" id="project-9">
+        <div class="w-full h-56 bg-slate-900 overflow-hidden relative">
+          <img
+            src="Assests/SN.png"
+            alt="Social Network Platform"
+            class="absolute inset-0 w-full h-full object-contain"
+          >
         </div>
         <div class="p-6">
           <h3 class="text-xl font-bold text-blue-900 mb-2">Social Network Platform</h3>
@@ -907,12 +968,14 @@
         <i class="fas fa-arrow-up ml-2"></i>
       </button>
     </div>
+
   </div>
+
 </section>
 
 <script>
   function toggleProjects(showMore) {
-    const ids = ['project-4', 'project-5', 'project-6', 'project-7', 'project-8'];
+    const ids = ['project-4', 'project-5', 'project-6', 'project-7', 'project-8', 'project-9'];
     const viewMoreBtn = document.getElementById('view-more-btn');
     const showLessBtn = document.getElementById('show-less-btn');
 
@@ -1131,7 +1194,7 @@
       <!-- Blog 4 (Hidden) -->
       <div id="blog-1" class="blog-card hidden border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition duration-300">
         <div class="w-full aspect-video bg-gray-100 overflow-hidden">
-          <img src="Assests/Blog4.png" alt="Model Context Protocol as an upgrade to RAG" class="w-full h-full object-cover">
+          <img src="Assests/blog4.png" alt="Model Context Protocol as an upgrade to RAG" class="w-full h-full object-cover">
         </div>
         <div class="p-6">
           <div class="flex items-center text-sm text-gray-500">
