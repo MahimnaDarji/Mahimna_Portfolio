@@ -157,11 +157,50 @@ body.dark-premium .shadow-xl{
   box-shadow: 0 12px 30px rgba(0,0,0,0.50) !important;
 }
 
-/* Keep focus visible */
+/* Keep focus visible for keyboard nav only */
 body.dark-premium a:focus,
 body.dark-premium button:focus{
   outline: 2px solid rgba(140, 122, 82, 0.55);
   outline-offset: 2px;
+}
+
+/* Remove the rectangle box on nav links when clicked with mouse */
+body.dark-premium .nav-link:focus {
+  outline: none;
+  box-shadow: none;
+}
+body.dark-premium .nav-link:focus-visible {
+  outline: 2px solid rgba(140, 122, 82, 0.55);
+  outline-offset: 2px;
+}
+
+/* ===============================
+   CONTACT FORM (PREMIUM DARK)
+   =============================== */
+
+body.dark-premium #contact-form input,
+body.dark-premium #contact-form textarea {
+  background-color: var(--bg) !important;
+  border-color: var(--border) !important;
+  color: var(--text) !important;
+}
+body.dark-premium #contact-form input::placeholder,
+body.dark-premium #contact-form textarea::placeholder {
+  color: var(--muted2) !important;
+}
+body.dark-premium #contact-form input:focus,
+body.dark-premium #contact-form textarea:focus {
+  border-color: var(--accent2) !important;
+  box-shadow: 0 0 0 2px rgba(140, 122, 82, 0.25) !important;
+}
+body.dark-premium #contact-form label {
+  color: var(--textSoft) !important;
+}
+body.dark-premium #contact-form button[type="submit"] {
+  background-color: var(--accent) !important;
+}
+body.dark-premium #contact-form button[type="submit"]:hover {
+  background-color: var(--accentHover) !important;
 }
 
 /* ===============================
