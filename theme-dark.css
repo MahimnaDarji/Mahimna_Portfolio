@@ -88,8 +88,19 @@ body.dark-premium .blog-card:hover{
 
 /* Project cards (existing class is glassy; make it richer) */
 body.dark-premium .project-card{
-  background: rgba(31, 29, 27, 0.92) !important;
-  border-color: rgba(230, 225, 218, 0.08) !important;
+  background: var(--surface) !important;
+  border-color: rgba(230, 225, 218, 0.12) !important;
+}
+
+/* Education cards */
+body.dark-premium .edu-card{
+  background-color: var(--surface) !important;
+  border-color: rgba(230, 225, 218, 0.12) !important;
+}
+
+/* Skill / generic hover cards */
+body.dark-premium .card-hover{
+  background-color: var(--surface) !important;
 }
 
 /* Tech badges */
@@ -131,7 +142,7 @@ body.dark-premium .blob{
 body.dark-premium .blog-card,
 body.dark-premium .cert-card{
   background-color: var(--surface) !important;
-  border-color: rgba(230, 225, 218, 0.10) !important;
+  border-color: rgba(230, 225, 218, 0.12) !important;
 }
 
 /* Badges inside project cards: normalize to theme */

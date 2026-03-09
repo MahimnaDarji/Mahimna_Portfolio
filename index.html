@@ -33,6 +33,7 @@
         transform: translateY(20px);
         filter: blur(4px);
       }
+
       100% {
         opacity: 1;
         transform: translateY(0);
@@ -41,8 +42,15 @@
     }
 
     @keyframes nameGlow {
-      0%, 100% { text-shadow: none; }
-      50% { text-shadow: 0 0 20px rgba(197, 160, 89, 0.3), 0 0 40px rgba(197, 160, 89, 0.1); }
+
+      0%,
+      100% {
+        text-shadow: none;
+      }
+
+      50% {
+        text-shadow: 0 0 20px rgba(197, 160, 89, 0.3), 0 0 40px rgba(197, 160, 89, 0.1);
+      }
     }
 
     .name-letter {
@@ -105,9 +113,9 @@
 
     .project-card {
       transition: all 0.3s ease;
-      background: rgba(255, 255, 255, 0.05);
+      background: rgba(255, 255, 255, 0.85);
       backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.18);
     }
 
     .project-card:hover {
@@ -296,8 +304,17 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-24">
       <div class="flex flex-col md:flex-row items-center">
         <div class="md:w-1/2 mb-12 md:mb-0">
-          <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-blue-900 mb-4 title-font hero-name whitespace-nowrap">
-              <span class="name-letter" style="--delay: 0.1s">M</span><span class="name-letter" style="--delay: 0.15s">a</span><span class="name-letter" style="--delay: 0.2s">h</span><span class="name-letter" style="--delay: 0.25s">i</span><span class="name-letter" style="--delay: 0.3s">m</span><span class="name-letter" style="--delay: 0.35s">n</span><span class="name-letter" style="--delay: 0.4s">a</span><span class="name-letter space" style="--delay: 0.5s"> </span><span class="name-letter" style="--delay: 0.6s">D</span><span class="name-letter" style="--delay: 0.65s">a</span><span class="name-letter" style="--delay: 0.7s">r</span><span class="name-letter" style="--delay: 0.75s">j</span><span class="name-letter" style="--delay: 0.8s">i</span>
+          <h1
+            class="text-3xl md:text-4xl lg:text-5xl font-bold text-blue-900 mb-4 title-font hero-name whitespace-nowrap">
+            <span class="name-letter" style="--delay: 0.1s">M</span><span class="name-letter"
+              style="--delay: 0.15s">a</span><span class="name-letter" style="--delay: 0.2s">h</span><span
+              class="name-letter" style="--delay: 0.25s">i</span><span class="name-letter"
+              style="--delay: 0.3s">m</span><span class="name-letter" style="--delay: 0.35s">n</span><span
+              class="name-letter" style="--delay: 0.4s">a</span><span class="name-letter space" style="--delay: 0.5s">
+            </span><span class="name-letter" style="--delay: 0.6s">D</span><span class="name-letter"
+              style="--delay: 0.65s">a</span><span class="name-letter" style="--delay: 0.7s">r</span><span
+              class="name-letter" style="--delay: 0.75s">j</span><span class="name-letter"
+              style="--delay: 0.8s">i</span>
           </h1>
           <h2 class="text-2xl md:text-3xl text-blue-600 mb-6">Turning data into decisions.</h2>
           <div class="flex space-x-4">
@@ -1997,7 +2014,7 @@
 
           // Die if life exceeded or out of bounds
           if (this.life >= this.maxLife || this.alpha <= 0 ||
-              this.x < -50 || this.x > W + 50 || this.y < -50 || this.y > H + 50) {
+            this.x < -50 || this.x > W + 50 || this.y < -50 || this.y > H + 50) {
             this.alive = false;
           }
         }
@@ -2147,7 +2164,7 @@
             if (i !== j) {
               const exists = edges.some(e => e.alive &&
                 ((e.a === nearCursor[i] && e.b === nearCursor[j]) ||
-                 (e.a === nearCursor[j] && e.b === nearCursor[i])));
+                  (e.a === nearCursor[j] && e.b === nearCursor[i])));
               if (!exists) {
                 edges.push(new Edge(nearCursor[i], nearCursor[j]));
               }
