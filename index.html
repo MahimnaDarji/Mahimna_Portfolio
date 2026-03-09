@@ -15,6 +15,51 @@
       scroll-behavior: smooth;
     }
 
+    /* Knowledge Graph Background Canvas */
+    #kg-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 40;
+      pointer-events: none;
+    }
+
+    /* Name Reveal Animation */
+    @keyframes letterReveal {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+        filter: blur(4px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+      }
+    }
+
+    @keyframes nameGlow {
+      0%, 100% { text-shadow: none; }
+      50% { text-shadow: 0 0 20px rgba(197, 160, 89, 0.3), 0 0 40px rgba(197, 160, 89, 0.1); }
+    }
+
+    .name-letter {
+      display: inline-block;
+      opacity: 0;
+      animation: letterReveal 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      animation-delay: var(--delay);
+    }
+
+    .name-letter.space {
+      width: 0.3em;
+    }
+
+    .hero-name {
+      animation: nameGlow 4s ease-in-out 2s infinite;
+    }
+
     .title-font {
       font-family: 'Space Grotesk', sans-serif;
     }
@@ -184,6 +229,9 @@
 </head>
 
 <body class="bg-gray-50 text-gray-800 dark-premium">
+  <!-- Knowledge Graph Background -->
+  <canvas id="kg-canvas"></canvas>
+
   <!-- Navigation -->
   <nav class="fixed w-full bg-white shadow-sm z-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -248,7 +296,9 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-24">
       <div class="flex flex-col md:flex-row items-center">
         <div class="md:w-1/2 mb-12 md:mb-0">
-          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-blue-900 mb-4 title-font">Mahimna Darji</h1>
+          <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-blue-900 mb-4 title-font hero-name whitespace-nowrap">
+              <span class="name-letter" style="--delay: 0.1s">M</span><span class="name-letter" style="--delay: 0.15s">a</span><span class="name-letter" style="--delay: 0.2s">h</span><span class="name-letter" style="--delay: 0.25s">i</span><span class="name-letter" style="--delay: 0.3s">m</span><span class="name-letter" style="--delay: 0.35s">n</span><span class="name-letter" style="--delay: 0.4s">a</span><span class="name-letter space" style="--delay: 0.5s"> </span><span class="name-letter" style="--delay: 0.6s">D</span><span class="name-letter" style="--delay: 0.65s">a</span><span class="name-letter" style="--delay: 0.7s">r</span><span class="name-letter" style="--delay: 0.75s">j</span><span class="name-letter" style="--delay: 0.8s">i</span>
+          </h1>
           <h2 class="text-2xl md:text-3xl text-blue-600 mb-6">Turning data into decisions.</h2>
           <div class="flex space-x-4">
             <a href="#projects"
@@ -1847,6 +1897,311 @@
         document.activeElement.blur();
       }
     });
+  </script>
+
+  <!-- Knowledge Graph Background Animation -->
+  <script>
+    (function () {
+      const canvas = document.getElementById('kg-canvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+
+      let W, H, mouseX = -9999, mouseY = -9999;
+      function resize() {
+        W = canvas.width = window.innerWidth;
+        H = canvas.height = window.innerHeight;
+      }
+      resize();
+      window.addEventListener('resize', resize);
+
+      // Track cursor for interaction
+      window.addEventListener('mousemove', e => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+      });
+      window.addEventListener('mouseleave', () => {
+        mouseX = -9999;
+        mouseY = -9999;
+      });
+
+      // ─── Colors ───
+      const COLORS = [
+        { r: 214, g: 183, b: 122 }, // soft gold #d6b77a
+        { r: 230, g: 230, b: 230 }, // soft white #e6e6e6
+        { r: 168, g: 163, b: 157 }, // warm gray
+      ];
+
+      // ─── Configuration ───
+      const MAX_NODES = 65;
+      const EDGE_DISTANCE = 150;       // px: max distance between connected nodes
+      const EDGE_DURATION = [180, 360]; // frames: 3-6s at 60fps
+      const NODE_LIFE = [360, 720];     // frames: 6-12s at 60fps
+      const CURSOR_RADIUS = 120;
+      const CLUSTER_INTERVAL = [600, 1200]; // frames: 10-20s
+
+      // ─── Node Class ───
+      class Node {
+        constructor(x, y, isCluster) {
+          this.x = x !== undefined ? x : Math.random() * W;
+          this.y = y !== undefined ? y : Math.random() * H;
+          this.radius = 2 + Math.random() * 1; // 2-3px
+          this.color = COLORS[Math.floor(Math.random() * COLORS.length)];
+          this.maxAlpha = 0.25 + Math.random() * 0.15; // 0.25-0.40
+          this.alpha = 0;
+
+          // Lifecycle
+          const lifeRange = NODE_LIFE[1] - NODE_LIFE[0];
+          this.maxLife = NODE_LIFE[0] + Math.random() * lifeRange;
+          this.life = 0;
+          this.fadeInEnd = this.maxLife * 0.12;   // first 12% = fade in
+          this.fadeOutStart = this.maxLife * 0.80; // last 20% = fade out
+
+          // Slow floating drift
+          this.vx = (Math.random() - 0.5) * 0.15;
+          this.vy = (Math.random() - 0.5) * 0.15;
+
+          // Slight sine-wave sway
+          this.sinePhase = Math.random() * Math.PI * 2;
+          this.sineAmp = 0.05 + Math.random() * 0.08;
+          this.sineFreq = 0.008 + Math.random() * 0.006;
+
+          this.alive = true;
+          this.isCluster = isCluster || false;
+        }
+
+        update() {
+          this.life++;
+
+          // Lifecycle alpha
+          if (this.life < this.fadeInEnd) {
+            this.alpha = this.maxAlpha * (this.life / this.fadeInEnd);
+          } else if (this.life < this.fadeOutStart) {
+            this.alpha = this.maxAlpha;
+          } else {
+            const fadeProgress = (this.life - this.fadeOutStart) / (this.maxLife - this.fadeOutStart);
+            this.alpha = this.maxAlpha * (1 - fadeProgress);
+          }
+
+          // Drift
+          this.x += this.vx + Math.sin(this.life * this.sineFreq + this.sinePhase) * this.sineAmp;
+          this.y += this.vy + Math.cos(this.life * this.sineFreq * 0.7 + this.sinePhase) * this.sineAmp;
+
+          // Cursor interaction: brighten if near cursor
+          const dx = this.x - mouseX;
+          const dy = this.y - mouseY;
+          const distMouse = Math.sqrt(dx * dx + dy * dy);
+          if (distMouse < CURSOR_RADIUS) {
+            const proximity = 1 - (distMouse / CURSOR_RADIUS);
+            this.alpha = Math.min(0.7, this.alpha + proximity * 0.25);
+          }
+
+          // Die if life exceeded or out of bounds
+          if (this.life >= this.maxLife || this.alpha <= 0 ||
+              this.x < -50 || this.x > W + 50 || this.y < -50 || this.y > H + 50) {
+            this.alive = false;
+          }
+        }
+
+        draw() {
+          if (this.alpha <= 0) return;
+          const { r, g, b } = this.color;
+
+          // Soft glow
+          ctx.beginPath();
+          ctx.arc(this.x, this.y, this.radius * 3, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(${r}, ${g}, ${b}, ${(this.alpha * 0.1).toFixed(4)})`;
+          ctx.fill();
+
+          // Core dot
+          ctx.beginPath();
+          ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(${r}, ${g}, ${b}, ${this.alpha.toFixed(4)})`;
+          ctx.fill();
+        }
+      }
+
+      // ─── Edge Class ───
+      class Edge {
+        constructor(a, b) {
+          this.a = a;
+          this.b = b;
+          const durRange = EDGE_DURATION[1] - EDGE_DURATION[0];
+          this.maxLife = EDGE_DURATION[0] + Math.random() * durRange;
+          this.life = 0;
+          this.maxAlpha = 0.15 + Math.random() * 0.10; // 0.15-0.25
+          this.alpha = 0;
+          this.alive = true;
+        }
+
+        update() {
+          this.life++;
+          const fadeIn = this.maxLife * 0.15;
+          const fadeOut = this.maxLife * 0.70;
+
+          if (this.life < fadeIn) {
+            this.alpha = this.maxAlpha * (this.life / fadeIn);
+          } else if (this.life < fadeOut) {
+            this.alpha = this.maxAlpha;
+          } else {
+            this.alpha = this.maxAlpha * (1 - (this.life - fadeOut) / (this.maxLife - fadeOut));
+          }
+
+          // Die if life exceeded or either node died
+          if (this.life >= this.maxLife || !this.a.alive || !this.b.alive) {
+            this.alive = false;
+          }
+        }
+
+        draw() {
+          if (this.alpha <= 0 || !this.a.alive || !this.b.alive) return;
+
+          // Use average color of two nodes
+          const c = this.a.color;
+          ctx.beginPath();
+          ctx.moveTo(this.a.x, this.a.y);
+          ctx.lineTo(this.b.x, this.b.y);
+          ctx.strokeStyle = `rgba(${c.r}, ${c.g}, ${c.b}, ${this.alpha.toFixed(4)})`;
+          ctx.lineWidth = 1;
+          ctx.stroke();
+        }
+      }
+
+      // ─── State ───
+      const nodes = [];
+      const edges = [];
+      let nextCluster = 300 + Math.random() * 400;
+      let frameCount = 0;
+
+      // Initialize some nodes
+      for (let i = 0; i < 30; i++) {
+        const n = new Node();
+        n.life = Math.floor(Math.random() * n.maxLife * 0.4);
+        nodes.push(n);
+      }
+
+      // ─── Cluster Spawner ───
+      function spawnCluster() {
+        const cx = 100 + Math.random() * (W - 200);
+        const cy = 100 + Math.random() * (H - 200);
+        const count = 4 + Math.floor(Math.random() * 4); // 4-7 nodes
+        const clusterNodes = [];
+
+        for (let i = 0; i < count; i++) {
+          const x = cx + (Math.random() - 0.5) * 120;
+          const y = cy + (Math.random() - 0.5) * 120;
+          const n = new Node(x, y, true);
+          nodes.push(n);
+          clusterNodes.push(n);
+        }
+
+        // Connect cluster nodes
+        for (let i = 0; i < clusterNodes.length; i++) {
+          for (let j = i + 1; j < clusterNodes.length; j++) {
+            if (Math.random() < 0.5) {
+              edges.push(new Edge(clusterNodes[i], clusterNodes[j]));
+            }
+          }
+        }
+      }
+
+      // ─── Edge forming (for non-cluster) ───
+      let edgeTimer = 0;
+      function tryFormEdges() {
+        edgeTimer++;
+        if (edgeTimer < 30) return; // every 0.5s
+        edgeTimer = 0;
+
+        // Find pairs of nearby nodes without an existing edge
+        const aliveNodes = nodes.filter(n => n.alive && n.alpha > 0.1);
+        if (aliveNodes.length < 2) return;
+
+        const a = aliveNodes[Math.floor(Math.random() * aliveNodes.length)];
+        for (let i = 0; i < aliveNodes.length; i++) {
+          const b = aliveNodes[i];
+          if (a === b) continue;
+          const dx = a.x - b.x;
+          const dy = a.y - b.y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+
+          if (dist < EDGE_DISTANCE && Math.random() < 0.25) {
+            // Check if edge already exists
+            const exists = edges.some(e => e.alive &&
+              ((e.a === a && e.b === b) || (e.a === b && e.b === a)));
+            if (!exists) {
+              edges.push(new Edge(a, b));
+              break; // Only one new edge per cycle
+            }
+          }
+        }
+
+        // Cursor-triggered connections
+        if (mouseX > 0 && mouseY > 0) {
+          const nearCursor = aliveNodes.filter(n => {
+            const dx = n.x - mouseX;
+            const dy = n.y - mouseY;
+            return Math.sqrt(dx * dx + dy * dy) < CURSOR_RADIUS;
+          });
+          if (nearCursor.length >= 2 && Math.random() < 0.3) {
+            const i = Math.floor(Math.random() * nearCursor.length);
+            let j = Math.floor(Math.random() * nearCursor.length);
+            if (i !== j) {
+              const exists = edges.some(e => e.alive &&
+                ((e.a === nearCursor[i] && e.b === nearCursor[j]) ||
+                 (e.a === nearCursor[j] && e.b === nearCursor[i])));
+              if (!exists) {
+                edges.push(new Edge(nearCursor[i], nearCursor[j]));
+              }
+            }
+          }
+        }
+      }
+
+      // ─── Animation Loop ───
+      function animate() {
+        ctx.clearRect(0, 0, W, H);
+        frameCount++;
+
+        // Spawn new nodes to maintain population
+        const aliveCount = nodes.filter(n => n.alive).length;
+        if (aliveCount < MAX_NODES && Math.random() < 0.08) {
+          nodes.push(new Node());
+        }
+
+        // Cluster spawning
+        if (frameCount >= nextCluster) {
+          spawnCluster();
+          const intRange = CLUSTER_INTERVAL[1] - CLUSTER_INTERVAL[0];
+          nextCluster = frameCount + CLUSTER_INTERVAL[0] + Math.random() * intRange;
+        }
+
+        // Try forming edges
+        tryFormEdges();
+
+        // Update and draw edges (behind nodes)
+        for (let i = edges.length - 1; i >= 0; i--) {
+          edges[i].update();
+          if (!edges[i].alive) {
+            edges.splice(i, 1);
+          } else {
+            edges[i].draw();
+          }
+        }
+
+        // Update and draw nodes
+        for (let i = nodes.length - 1; i >= 0; i--) {
+          nodes[i].update();
+          if (!nodes[i].alive) {
+            nodes.splice(i, 1);
+          } else {
+            nodes[i].draw();
+          }
+        }
+
+        requestAnimationFrame(animate);
+      }
+
+      requestAnimationFrame(animate);
+    })();
   </script>
 </body>
 
