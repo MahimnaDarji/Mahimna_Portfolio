@@ -118,11 +118,64 @@
       background: rgba(255, 255, 255, 0.85);
       backdrop-filter: blur(10px);
       border: 1px solid rgba(255, 255, 255, 0.18);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
     }
 
     .project-card:hover {
       transform: translateY(-10px);
       box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    }
+
+    #project-grid .project-card > div:first-child {
+      flex: 0 0 14rem;
+      height: 14rem;
+      overflow: hidden;
+    }
+
+    #project-grid .project-card > div:first-child img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+    }
+
+    #project-grid .project-card > .p-6 {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+    }
+
+    #project-grid .project-card > .p-6 > .flex.space-x-3 {
+      margin-top: auto;
+    }
+
+    #project-grid .project-card > .p-6 > .flex.flex-wrap {
+      align-items: flex-start;
+      align-content: flex-start;
+    }
+
+    @media (min-width: 768px) {
+      #project-grid .project-card > .p-6 {
+        gap: 0.75rem;
+      }
+
+      #project-grid .project-card > .p-6 > h3 {
+        min-height: 3.5rem;
+      }
+
+      #project-grid .project-card > .p-6 > p:first-of-type {
+        min-height: 7rem;
+      }
+
+      #project-grid .project-card > .p-6 > p:nth-of-type(2) {
+        min-height: 5.5rem;
+      }
+
+      #project-grid .project-card > .p-6 > .flex.flex-wrap {
+        min-height: 3.5rem;
+      }
     }
 
     .nav-link {
@@ -355,10 +408,11 @@
 
         <div class="md:w-2/3 md:pl-12">
           <p class="text-lg text-gray-600 mb-4">
-            I am working as a Data Scientist at Project 990 Inc., where I build ETL workflows across multiple sources
-            and organize grant records so teams can track funding patterns by year and region. Earlier, I was a Machine
-            Learning Intern at ManekTech, where I built a backend for real-time AQI forecasting, and a Data Science &
-            Business Analytics Intern at Start Tech Academy, where I worked on image and text classification.
+            I am working as a Data Scientist at Project 990 Inc., building scalable ETL pipelines, validating grant
+            datasets, and creating Tableau dashboards that support multi-year financial analysis. Earlier, I was a
+            Machine Learning Intern at ManekTech, where I built an AQI forecasting backend and model deployment
+            workflow, and a Data Analytics and Machine Learning Intern at Start Tech Academy, where I worked on image
+            classification and text analytics.
           </p>
           <p class="text-lg text-gray-600 mb-4">
             I have also worked on projects such as a RAG-based AI Knowledge Assistant, Recommender Systems, AR Video
@@ -404,10 +458,10 @@
               <span class="text-blue-600 font-medium">Jan 2025 &ndash; Present</span>
             </div>
             <h4 class="text-lg font-semibold text-gray-700 mb-1">Data Scientist</h4>
-            <p class="text-sm text-gray-500 mb-3">Norwalk, Connecticut, USA</p>
+            <p class="text-sm text-gray-500 mb-3">Columbus, Ohio, USA</p>
             <ul class="list-disc pl-5 space-y-2 text-gray-600">
-              <li>Implement scalable ETL pipelines to ingest IRS financial grant data from 7 different sources spanning from 2013 to 2021, reducing processing time by 40% and enabling structured data warehousing in Snowflake for multi-year financial analysis.</li>
-              <li>Merge and validate datasets containing grant amounts and donor information using SQL. Transform over 130,000 records using Python and conduct time series and geospatial analysis to identify grant distribution trends that support resource allocation and forecasting.</li>
+              <li>Implement scalable ETL pipelines on Databricks to ingest financial grant data from 7 different sources spanning from 2013 to 2021, reducing processing time by 40% and enabling structured data warehousing in Snowflake for multi-year financial analysis.</li>
+              <li>Merge and validate datasets containing grant amounts and donor information using SQL. Transform over 130,000 records using Python, applying predictive modeling and time series analysis to identify grant distribution trends that supports resource allocation and forecasting.</li>
               <li>Develop interactive Tableau dashboards to visualize donation trends, assets to grant distribution ratios, and funding disparities. Consult with executive leadership to define KPIs and ensure data reproducibility by documenting pipelines and maintaining version control using Git.</li>
             </ul>
           </div>
@@ -889,7 +943,41 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="project-grid">
 
-        <!-- Project 1: Insightify (RAG Assistant) -->
+        <!-- Project 1: Fraud Pattern Detection in Digital Payments -->
+        <div class="project-card rounded-lg overflow-hidden shadow-lg transition-all duration-300">
+          <div class="w-full h-56 bg-slate-900 overflow-hidden relative">
+            <img src="Assests/Graphs.jpeg" alt="Fraud Pattern Detection in Digital Payments"
+              class="absolute inset-0 w-full h-full object-contain" />
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-blue-900 mb-2">
+              Fraud Pattern Detection in Digital Payments
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Built a real time fraud detection pipeline using Kafka, PySpark and XGBoost to process over 590,000
+              transactions. Created window based features for transaction velocity, user activity, and risk patterns.
+              Improved short burst fraud detection by 22%.
+            </p>
+            <p class="text-gray-600 mb-4">
+              Implemented fraud scoring with Isolation Forest, Statistical Rules, Graph Based risk signals and achieved
+              8% fraud detection coverage. Used NetworkX to identify fraud rings and burst patterns. Built a React
+              Dashboard to display alerts, risk signals, and investigation timelines.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-3 py-1 bg-red-100 text-red-800 text-xs font-medium rounded-full">Kafka</span>
+              <span class="px-3 py-1 bg-red-100 text-red-800 text-xs font-medium rounded-full">PySpark</span>
+              <span class="px-3 py-1 bg-red-100 text-red-800 text-xs font-medium rounded-full">XGBoost</span>
+              <span class="px-3 py-1 bg-red-100 text-red-800 text-xs font-medium rounded-full">NetworkX</span>
+              <span class="px-3 py-1 bg-red-100 text-red-800 text-xs font-medium rounded-full">React</span>
+            </div>
+            <div class="flex space-x-3">
+              <a href="https://github.com/MahimnaDarji/Fraud-Pattern-Detection-in-Digital-Payments" target="_blank"
+                class="text-blue-600 hover:text-blue-800 font-medium text-sm">Source Code</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: Insightify (RAG Assistant) -->
         <div class="project-card rounded-lg overflow-hidden shadow-lg transition-all duration-300">
           <div class="w-full h-56 bg-slate-900 overflow-hidden relative">
             <img src="Assests/Insightify.png" alt="Insightify RAG Based AI Knowledge Assistant"
@@ -897,12 +985,12 @@
           </div>
           <div class="p-6">
             <h3 class="text-xl font-bold text-blue-900 mb-2">
-              Insightify – RAG Based AI Knowledge Assistant
+              Insightify - RAG Based AI Knowledge Assistant
             </h3>
             <p class="text-gray-600 mb-4">
               Designed an AI knowledge assistant with a full RAG pipeline to convert 10,000+ unstructured enterprise
-              documents including PDFs, TXT and emails into searchable insights using LangChain for chunking and
-              Sentence Transformers for embeddings.
+              documents including PDFs, TXT and emails into searchable insights. Used LangChain for chunking,
+              LangGraph for orchestration, and Sentence Transformers for embeddings.
             </p>
             <p class="text-gray-600 mb-4">
               Created a FAISS vector index with metadata for fast semantic search. Integrated Hugging Face T5 models for
@@ -924,23 +1012,24 @@
           </div>
         </div>
 
-        <!-- Project 2: Satellite Based Land Classification -->
+        <!-- Project 3: Satellite Based Land Classification -->
         <div class="project-card rounded-lg overflow-hidden shadow-lg transition-all duration-300">
           <div class="w-full h-56 bg-slate-900 overflow-hidden relative">
             <img src="Assests/Satellite.png" alt="Satellite Based Land Classification"
               class="absolute inset-0 w-full h-full object-contain">
           </div>
           <div class="p-6">
-            <h3 class="text-xl font-bold text-blue-900 mb-2">Satellite Based Land Classification</h3>
+            <h3 class="text-xl font-bold text-blue-900 mb-2">Satellite Based Land Use Classification</h3>
             <p class="text-gray-600 mb-4">
-              Built a satellite land use classification system using ResNet18 with transfer learning to classify images
-              into Agriculture, Forest, Urban, and Water. Achieved 96% test accuracy and validated results using class
-              wise evaluation.
+              Built a satellite image classification system using ResNet18 with transfer learning to classify land
+              patches into four categories including Agriculture, Forest, Urban, and Water. Mapped 10 raw dataset
+              folders into final classes with a 224x224 input pipeline trained using Cross Entropy loss and Adam
+              optimizer.
             </p>
             <p class="text-gray-600 mb-4">
-              Added Grad-CAM visualizations to show which image regions drive predictions and created a tile based
-              overlay map to convert patch level outputs into a larger land use view. Combined all outputs into a final
-              dashboard for quick review.
+              Achieved 96% test accuracy on unseen data using a CNN based evaluation pipeline and generated visual
+              outputs including Grad-CAM visualizations, prediction and misclassification galleries, a confusion matrix,
+              and a tile based overlay map that converts patch level predictions into a larger land use view.
             </p>
             <div class="flex flex-wrap gap-2 mb-4">
               <span class="px-3 py-1 bg-amber-100 text-amber-800 text-xs font-medium rounded-full">CNN
@@ -959,8 +1048,9 @@
           </div>
         </div>
 
-        <!-- Project 3: Hospital Analysis Dashboard -->
-        <div class="project-card rounded-lg overflow-hidden shadow-lg transition-all duration-300">
+        <!-- Project 4: Hospital Analysis Dashboard (Hidden by default) -->
+        <div class="project-card rounded-lg overflow-hidden shadow-lg transition-all duration-300 hidden"
+          id="project-4">
           <div class="w-full h-56 bg-slate-900 overflow-hidden relative">
             <img src="Assests/Overview Page.png" alt="Hospital Analysis Dashboard"
               class="absolute inset-0 w-full h-full object-contain">
@@ -968,13 +1058,14 @@
           <div class="p-6">
             <h3 class="text-xl font-bold text-blue-900 mb-2">Hospital Analysis Dashboard</h3>
             <p class="text-gray-600 mb-4">
-              Built a multi-page hospital analytics dashboard in Power BI covering operations, patient flow, doctor
-              performance, and finance. Designed separate modules for Overview, Patient, Doctor, Hospital, and Finance
-              to support quick reporting and decision-making.
+              Developed a Power BI dashboard covering patient flow, surgery details, patient tests, doctor appointments,
+              revenue by charge type, bed occupancy, and medicine sales. Consolidated 18,400 records into a single
+              reporting view and reduced manual reporting time by 22%.
             </p>
             <p class="text-gray-600 mb-4">
-              Tracked KPIs such as billing volume, patient discharge trends, bed occupancy, revenue by charge type,
-              medicine usage, and supplier stock status.
+              Created commission calculators, monthly discharge trend analysis, and surgery outcome monitoring to
+              track doctor payouts and treatment patterns. Identified high-revenue services and low-stock medicines
+              early, reducing the risk of billing errors and inventory shortages.
             </p>
             <div class="flex flex-wrap gap-2 mb-4">
               <span class="px-3 py-1 bg-violet-100 text-violet-800 text-xs font-medium rounded-full">Power BI</span>
@@ -991,9 +1082,9 @@
           </div>
         </div>
 
-        <!-- Project 4: Supply Chain (Hidden by default) -->
+        <!-- Project 5: Supply Chain (Hidden by default) -->
         <div class="project-card rounded-lg overflow-hidden shadow-lg transition-all duration-300 hidden"
-          id="project-4">
+          id="project-5">
           <div class="w-full h-56 bg-slate-900 overflow-hidden relative">
             <img src="Assests/SC.png" alt="Supply Chain Optimization Platform"
               class="absolute inset-0 w-full h-full object-contain">
@@ -1001,13 +1092,14 @@
           <div class="p-6">
             <h3 class="text-xl font-bold text-blue-900 mb-2">Supply Chain Optimization Platform</h3>
             <p class="text-gray-600 mb-4">
-              Developed a full-stack supply chain analytics platform using Python, MongoDB, Streamlit, and Tableau to
-              simulate logistics, forecast inventory with Prophet, and detect shipment delays using anomaly detection
-              and scoring models.
+              Developed an interactive supply chain analytics platform in Python and simulated logistics across 50,000
+              shipment records from a US warehouse network. Generated demand forecasts using Prophet, detected shipment
+              delays using Z-score trends and created heatmaps with Folium.
             </p>
             <p class="text-gray-600 mb-4">
-              Delivered interactive dashboards with cost optimization, vendor performance radar charts, and real-time
-              KPIs empowering smarter decision-making for inventory, shipping, and vendor management.
+              Calculated Stability Score and Efficiency Index to identify and monitor high-risk SKUs. Designed Tableau
+              dashboards and Excel pivot tables for scenario-based analysis. Increased on-time delivery prediction
+              accuracy by 15% through data forecasting and anomaly detection techniques.
             </p>
             <div class="flex flex-wrap gap-2 mb-4">
               <span class="px-3 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full">Python</span>
@@ -1023,23 +1115,24 @@
           </div>
         </div>
 
-        <!-- Project 5: LAPD (Hidden by default) -->
+        <!-- Project 6: LAPD (Hidden by default) -->
         <div class="project-card rounded-lg overflow-hidden shadow-lg transition-all duration-300 hidden"
-          id="project-5">
+          id="project-6">
           <div class="w-full h-56 bg-slate-900 overflow-hidden relative">
             <img src="Assests/LAPD.png" alt="LAPD Crime Dashboard"
               class="absolute inset-0 w-full h-full object-contain">
           </div>
           <div class="p-6">
-            <h3 class="text-xl font-bold text-blue-900 mb-2">LAPD Crime Dashboard</h3>
+            <h3 class="text-xl font-bold text-blue-900 mb-2">LAPD Crime Detection</h3>
             <p class="text-gray-600 mb-4">
-              Developed an interactive Streamlit dashboard using over 900,000 LAPD crime records to analyze spatial and
-              temporal trends. Integrated visualizations such as time series plots, density heatmaps, geospatial
-              clustering, and interactive cluster maps.
+              Built scalable predictive models on 900,000 LAPD crime records using stratified sampling and spatial
+              clustering. Applied data modeling techniques to organize datasets, improving hotspot detection accuracy by
+              18% and identifying key patterns from unstructured geospatial data.
             </p>
             <p class="text-gray-600 mb-4">
-              Used stratified sampling for performance and uncovered location based risk zones and demographic crime
-              patterns to support urban policy and law enforcement.
+              Optimized distributed Apache Spark pipelines with security measures and applied heatmap and clustering
+              methods to study risk zones, demographics and crime trends. Deployed results through a Streamlit dashboard
+              for location-based analysis and visualization.
             </p>
             <div class="flex flex-wrap gap-2 mb-4">
               <span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full">Python</span>
@@ -1056,9 +1149,9 @@
           </div>
         </div>
 
-        <!-- Project 6: WebAr QR Ad (Hidden by default) -->
+        <!-- Project 7: WebAr QR Ad (Hidden by default) -->
         <div class="project-card rounded-lg overflow-hidden shadow-lg transition-all duration-300 hidden"
-          id="project-6">
+          id="project-7">
           <div class="w-full h-56 bg-slate-900 overflow-hidden relative">
             <img src="Assests/WebAR.png" alt="WebAr QR Ad" class="absolute inset-0 w-full h-full object-contain">
           </div>
@@ -1087,9 +1180,9 @@
           </div>
         </div>
 
-        <!-- Project 7: Water Potability (Hidden by default) -->
+        <!-- Project 8: Water Potability (Hidden by default) -->
         <div class="project-card rounded-lg overflow-hidden shadow-lg transition-all duration-300 hidden"
-          id="project-7">
+          id="project-8">
           <div class="w-full h-56 bg-slate-900 overflow-hidden relative">
             <img src="Assests/Water.png" alt="Water Potability Classification"
               class="absolute inset-0 w-full h-full object-contain">
@@ -1097,13 +1190,16 @@
           <div class="p-6">
             <h3 class="text-xl font-bold text-blue-900 mb-2">Water Potability Classification</h3>
             <p class="text-gray-600 mb-4">
-              Developed a classification system using Python and Scikit learn to predict water potability based on
-              chemical attributes. Compared multiple supervised models, applied SHAP and PDP for interpretability, and
-              validated results through ROC curves and stratified cross validation.
+              Developed a machine learning model to classify water samples as potable or non-potable using 30,000+
+              records with chemical attributes. Trained Random Forest, Logistic Regression, SVM, KNN, and Gradient
+              Boosting models, achieving 87% accuracy with a focus on maximizing recall to minimize false safe
+              predictions.
             </p>
             <p class="text-gray-600 mb-4">
-              Performed hierarchical clustering, PCA for feature space analysis, and scenario based testing to assess
-              model robustness and identify influential features like Sulfate and Organic Carbon.
+              Engineered features such as pH-Sulfate ratio and evaluated model stability using Stratified K-Fold Cross-
+              Validation. Applied SHAP and Partial Dependence Plots to identify key drivers of water safety, improving
+              recall by 12%, and tested model performance on edge cases with extreme contamination levels to improve
+              reliability.
             </p>
             <div class="flex flex-wrap gap-2 mb-4">
               <span class="px-3 py-1 bg-teal-100 text-teal-800 text-xs font-medium rounded-full">Supervised
@@ -1121,9 +1217,9 @@
           </div>
         </div>
 
-        <!-- Project 8: Book Recommendation System (Hidden by default) -->
+        <!-- Project 9: Book Recommendation System (Hidden by default) -->
         <div class="project-card rounded-lg overflow-hidden shadow-lg transition-all duration-300 hidden"
-          id="project-8">
+          id="project-9">
           <div class="w-full h-56 bg-slate-900 overflow-hidden relative">
             <img src="Assests/BRS.png" alt="Book Recommendation System"
               class="absolute inset-0 w-full h-full object-contain">
@@ -1131,12 +1227,14 @@
           <div class="p-6">
             <h3 class="text-xl font-bold text-blue-900 mb-2">Book Recommendation System</h3>
             <p class="text-gray-600 mb-4">
-              Built a book recommendation system using Python, Flask, HTML and CSS and a content based recommender to
-              deliver personalized book suggestions. Designed a clean interface with genre browsing and dynamic
-              recommendations.
+              Built a full stack book recommendation system using Python and Flask that generates personalized
+              suggestions using a content based filtering algorithm based on attributes such as genre, author and user
+              interactions.
             </p>
             <p class="text-gray-600 mb-4">
-              Used user interaction data to improve suggestions, making book discovery more accurate and personalized.
+              Implemented recommendation logic across 31 book genres and designed genre-based pages that allow users to
+              explore books by category. Processed over 50,000 user interactions to refine recommendation logic and
+              improved recommendation accuracy by 14%.
             </p>
             <div class="flex flex-wrap gap-2 mb-4">
               <span class="px-3 py-1 bg-purple-100 text-purple-800 text-xs font-medium rounded-full">Python</span>
@@ -1153,9 +1251,9 @@
           </div>
         </div>
 
-        <!-- Project 9: Social Network Platform (Hidden by default) -->
+        <!-- Project 10: Social Network Platform (Hidden by default) -->
         <div class="project-card rounded-lg overflow-hidden shadow-lg transition-all duration-300 hidden"
-          id="project-9">
+          id="project-10">
           <div class="w-full h-56 bg-slate-900 overflow-hidden relative">
             <img src="Assests/SN.png" alt="Social Network Platform"
               class="absolute inset-0 w-full h-full object-contain">
@@ -1207,7 +1305,7 @@
 
   <script>
     function toggleProjects(showMore) {
-      const ids = ['project-4', 'project-5', 'project-6', 'project-7', 'project-8', 'project-9'];
+      const ids = ['project-4', 'project-5', 'project-6', 'project-7', 'project-8', 'project-9', 'project-10'];
       const viewMoreBtn = document.getElementById('view-more-btn');
       const showLessBtn = document.getElementById('show-less-btn');
 
