@@ -613,10 +613,11 @@
     .company-title img {
       width: 42px;
       height: 42px;
-      object-fit: contain;
+      object-fit: cover;
+      display: block;
       background: var(--cream);
       border: 1px solid var(--rule);
-      padding: 4px;
+      padding: 0;
     }
 
     .date-label,
@@ -1501,6 +1502,31 @@
         </div>
 
         <div class="timeline">
+          <article class="timeline-item reveal">
+            <div class="timeline-card">
+              <div class="timeline-top">
+                <h3 class="company-title">
+                  <img src="Assests/BrandAid.jpg" alt="Brand Aid Pvt. Ltd. Logo">
+                  Brand Aid Pvt. Ltd.
+                </h3>
+                <span class="date-label">Jun 2026 &ndash; Present</span>
+              </div>
+
+              <h4 class="role-title">Generative AI Engineer (Contract)</h4>
+              <p class="location-text">Ahmedabad, Gujarat, India</p>
+
+              <ul class="bullet-list">
+                <li>Designed a natural language AI Assistant using Python, Flask and LLMs to answer business questions
+                  across 11 business modules and reduced manual SQL and reporting effort by 30%.</li>
+                <li>Built a RAG pipeline with a vector database to index 44,000 CRM activities, enabling semantic
+                  retrieval of unstructured information for context-aware responses.</li>
+                <li>Engineered a modular query engine with intent detection, dynamic SQL generation, and follow-up
+                  question handling to support over 80 natural language query patterns and achieved 94% query-response
+                  success rate during testing.</li>
+              </ul>
+            </div>
+          </article>
+
           <article class="timeline-item reveal">
             <div class="timeline-card">
               <div class="timeline-top">
