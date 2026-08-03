@@ -4,7 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mahimna Darji | Data Scientist</title>
+  <title>Mahimna Darji</title>
+
+  <!-- Favicon for all devices (Desktop, Mobile, Tablet, iOS, Android, Mac) -->
+  <link rel="icon" type="image/png" sizes="32x32" href="Assests/Favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="Assests/Favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="Assests/Favicon.png">
+  <link rel="shortcut icon" href="Assests/Favicon.png" type="image/png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,15 +47,12 @@
 
     html {
       scroll-behavior: smooth;
-      background: var(--ink);
+      background: #000000;
     }
 
     body {
       font-family: var(--sans);
-      background:
-        radial-gradient(circle at 10% 5%, rgba(201, 169, 110, 0.08), transparent 28%),
-        radial-gradient(circle at 90% 8%, rgba(201, 169, 110, 0.05), transparent 26%),
-        var(--ink);
+      background: transparent;
       color: var(--text);
       overflow-x: hidden;
       -webkit-font-smoothing: antialiased;
@@ -75,7 +78,7 @@
       inset: 0;
       z-index: -2;
       pointer-events: none;
-      background: linear-gradient(to bottom, rgba(14, 13, 11, 0.1), rgba(14, 13, 11, 0.9));
+      background: linear-gradient(to bottom, rgba(14, 13, 11, 0.1), rgba(14, 13, 11, 0.6));
     }
 
     ::selection {
@@ -104,17 +107,61 @@
       margin: 0 auto;
     }
 
-    /* Custom cursor removed: styles omitted to preserve native hover effects */
-
-    #kg-canvas {
+    /* Gravity Stars Background Styles */
+    .gravity-stars-background {
       position: fixed;
       inset: 0;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      background: radial-gradient(ellipse at bottom, #1e1c18 0%, #0e0d0b 100%);
+      z-index: -10;
+      pointer-events: none;
+    }
+
+    #gravity-stars-canvas {
+      display: block;
       width: 100%;
       height: 100%;
-      z-index: -1;
-      pointer-events: none;
-      opacity: 0.28;
-      mix-blend-mode: screen;
+    }
+
+    /* Animated Phone Icon */
+    .phone-animated-icon {
+      width: 20px;
+      height: 20px;
+      display: block;
+      color: var(--gold);
+      overflow: visible;
+    }
+
+    .phone-wave {
+      transition: opacity 0.2s ease, transform 0.2s ease;
+      transform-origin: 13px 11px;
+    }
+
+    .contact-item:hover .phone-wave.wave-1 {
+      animation: phoneWavePulse 0.4s ease-in-out;
+    }
+
+    .contact-item:hover .phone-wave.wave-2 {
+      animation: phoneWavePulse 0.4s ease-in-out 0.15s;
+    }
+
+    @keyframes phoneWavePulse {
+      0% {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      50% {
+        opacity: 0;
+        transform: scale(0);
+      }
+
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
     }
 
     .site-nav {
@@ -341,6 +388,45 @@
       color: var(--gold);
       border-color: var(--gold);
       background: rgba(201, 169, 110, 0.06);
+    }
+
+    /* Ripple Button Effect */
+    .btn-ripple {
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      isolation: isolate;
+      border-radius: 6px;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+    }
+
+    .btn-ripple:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(201, 169, 110, 0.25);
+    }
+
+    .btn-ripple .ripple-wave {
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+      background: var(--ripple-button-ripple-color, rgba(255, 255, 255, 0.45));
+      transform: scale(0);
+      animation: rippleExpand 0.65s cubic-bezier(0, 0, 0.2, 1);
+    }
+
+    .btn-primary.btn-ripple {
+      --ripple-button-ripple-color: rgba(14, 13, 11, 0.45);
+    }
+
+    .btn-secondary.btn-ripple {
+      --ripple-button-ripple-color: rgba(201, 169, 110, 0.55);
+    }
+
+    @keyframes rippleExpand {
+      to {
+        transform: scale(3.5);
+        opacity: 0;
+      }
     }
 
     .hero-visual {
@@ -1373,7 +1459,9 @@
 </head>
 
 <body>
-  <canvas id="kg-canvas"></canvas>
+  <div data-slot="gravity-stars-background" id="gravity-stars-background" class="gravity-stars-background">
+    <canvas id="gravity-stars-canvas"></canvas>
+  </div>
 
   <nav class="site-nav">
     <div class="nav-inner">
@@ -1417,12 +1505,13 @@
         <div class="hero-grid">
           <div class="hero-copy reveal">
             <div class="hero-eyebrow">Data Scientist</div>
-            <h1 class="hero-name">Mahimna <em>Darji</em></h1>
+            <h1 class="hero-name"><em>Mahimna Darji</em></h1>
             <p class="hero-tagline">Turning data into decisions.</p>
 
             <div class="hero-actions">
-              <a href="#projects" class="btn btn-primary">View Projects</a>
-              <a href="Assests/Mahimna Resume.pdf" target="_blank" class="btn btn-secondary">My Resume</a>
+              <a href="#projects" class="btn btn-primary btn-ripple"><span>View Projects</span></a>
+              <a href="Assests/Mahimna Resume.pdf" target="_blank" class="btn btn-secondary btn-ripple"><span>My
+                  Resume</span></a>
             </div>
             <!-- Add hero stats here -->
             <div class="hero-stats">
@@ -1447,7 +1536,6 @@
             <div class="hero-frame">
               <img src="Assests/DP2.png" alt="Mahimna Darji">
             </div>
-            <div class="hero-label">Open to Opportunities</div>
           </div>
         </div>
       </div>
@@ -2556,7 +2644,14 @@
 
               <div class="contact-item">
                 <div class="contact-icon">
-                  <i class="fas fa-phone"></i>
+                  <svg class="phone-animated-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path class="phone-wave wave-1" d="M13 6a5 5 0 0 1 5 5"></path>
+                    <path class="phone-wave wave-2" d="M13 2a9 9 0 0 1 9 9"></path>
+                    <path class="phone-body"
+                      d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384">
+                    </path>
+                  </svg>
                 </div>
                 <div>
                   <h4>Phone</h4>
@@ -2833,261 +2928,184 @@
         });
       }
 
-      /* Custom cursor script removed to restore native cursor behavior. */
+      // Ripple Button Click Effect
+      document.querySelectorAll('.btn-ripple').forEach(function (button) {
+        button.addEventListener('click', function (e) {
+          const rect = button.getBoundingClientRect();
+          const size = Math.max(rect.width, rect.height);
+          const x = e.clientX - rect.left - size / 2;
+          const y = e.clientY - rect.top - size / 2;
+
+          const ripple = document.createElement('span');
+          ripple.className = 'ripple-wave';
+          ripple.style.width = size + 'px';
+          ripple.style.height = size + 'px';
+          ripple.style.left = x + 'px';
+          ripple.style.top = y + 'px';
+
+          const oldRipple = button.querySelector('.ripple-wave');
+          if (oldRipple) oldRipple.remove();
+
+          button.appendChild(ripple);
+
+          setTimeout(function () {
+            ripple.remove();
+          }, 650);
+        });
+      });
     });
   </script>
 
   <script>
     (function () {
-      const canvas = document.getElementById('kg-canvas');
-      if (!canvas) return;
+      const container = document.getElementById('gravity-stars-background');
+      const canvas = document.getElementById('gravity-stars-canvas');
+      if (!canvas || !container) return;
 
       const ctx = canvas.getContext('2d');
-      let width;
-      let height;
-      let mouseX = -9999;
-      let mouseY = -9999;
+      if (!ctx) return;
+
+      let width = window.innerWidth;
+      let height = window.innerHeight;
+      let dpr = Math.max(1, Math.min(window.devicePixelRatio || 1, 2));
+
+      const starsCount = 110;
+      const starsSize = 2.2;
+      const starsOpacity = 0.8;
+      const glowIntensity = 15;
+      const movementSpeed = 0.35;
+      const mouseInfluence = 120;
+      const mouseGravity = 'attract';
+      const gravityStrength = 75;
+
+      const mouse = { x: -9999, y: -9999 };
+      const stars = [];
 
       function resize() {
-        width = canvas.width = window.innerWidth;
-        height = canvas.height = window.innerHeight;
+        width = window.innerWidth;
+        height = window.innerHeight;
+        dpr = Math.max(1, Math.min(window.devicePixelRatio || 1, 2));
+
+        canvas.width = Math.floor(width * dpr);
+        canvas.height = Math.floor(height * dpr);
+        canvas.style.width = width + 'px';
+        canvas.style.height = height + 'px';
+      }
+
+      function initStars() {
+        stars.length = 0;
+        for (let i = 0; i < starsCount; i++) {
+          const angle = Math.random() * Math.PI * 2;
+          const speed = movementSpeed * (0.5 + Math.random() * 0.5);
+          stars.push({
+            x: Math.random() * width,
+            y: Math.random() * height,
+            vx: Math.cos(angle) * speed,
+            vy: Math.sin(angle) * speed,
+            size: Math.random() * starsSize + 1,
+            opacity: starsOpacity,
+            baseOpacity: starsOpacity,
+            mass: Math.random() * 0.5 + 0.5,
+            glowMultiplier: 1,
+            glowVelocity: 0
+          });
+        }
       }
 
       resize();
-      window.addEventListener('resize', resize);
+      initStars();
 
-      window.addEventListener('mousemove', e => {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
+      window.addEventListener('resize', function () {
+        resize();
+        for (let i = 0; i < stars.length; i++) {
+          stars[i].x = Math.random() * width;
+          stars[i].y = Math.random() * height;
+        }
       });
 
-      window.addEventListener('mouseleave', () => {
-        mouseX = -9999;
-        mouseY = -9999;
+      window.addEventListener('mousemove', function (e) {
+        mouse.x = e.clientX;
+        mouse.y = e.clientY;
       });
 
-      const colors = [
-        { r: 201, g: 169, b: 110 },
-        { r: 232, g: 213, b: 176 },
-        { r: 168, g: 163, b: 157 }
-      ];
+      window.addEventListener('mouseleave', function () {
+        mouse.x = -9999;
+        mouse.y = -9999;
+      });
 
-      const maxNodes = 55;
-      const edgeDistance = 145;
-      const cursorRadius = 120;
-      const nodes = [];
-      const edges = [];
+      function updateStars() {
+        for (let i = 0; i < stars.length; i++) {
+          const p = stars[i];
+          const dx = mouse.x - p.x;
+          const dy = mouse.y - p.y;
+          const dist = Math.hypot(dx, dy);
 
-      class Node {
-        constructor(x, y) {
-          this.x = x !== undefined ? x : Math.random() * width;
-          this.y = y !== undefined ? y : Math.random() * height;
-          this.radius = 1.5 + Math.random() * 1.2;
-          this.color = colors[Math.floor(Math.random() * colors.length)];
-          this.alpha = 0;
-          this.maxAlpha = 0.18 + Math.random() * 0.2;
-          this.life = 0;
-          this.maxLife = 420 + Math.random() * 420;
-          this.vx = (Math.random() - 0.5) * 0.12;
-          this.vy = (Math.random() - 0.5) * 0.12;
-          this.alive = true;
-        }
+          if (dist < mouseInfluence && dist > 0) {
+            const force = (mouseInfluence - dist) / mouseInfluence;
+            const nx = dx / dist;
+            const ny = dy / dist;
+            const g = force * (gravityStrength * 0.001);
 
-        update() {
-          this.life++;
-
-          if (this.life < 60) {
-            this.alpha = this.maxAlpha * (this.life / 60);
-          } else if (this.life > this.maxLife - 120) {
-            this.alpha = this.maxAlpha * Math.max(0, (this.maxLife - this.life) / 120);
-          } else {
-            this.alpha = this.maxAlpha;
-          }
-
-          this.x += this.vx;
-          this.y += this.vy;
-
-          const dx = this.x - mouseX;
-          const dy = this.y - mouseY;
-          const distance = Math.sqrt(dx * dx + dy * dy);
-
-          if (distance < cursorRadius) {
-            this.alpha = Math.min(0.58, this.alpha + (1 - distance / cursorRadius) * 0.22);
-          }
-
-          if (
-            this.life >= this.maxLife ||
-            this.x < -50 ||
-            this.x > width + 50 ||
-            this.y < -50 ||
-            this.y > height + 50
-          ) {
-            this.alive = false;
-          }
-        }
-
-        draw() {
-          if (this.alpha <= 0) return;
-
-          const { r, g, b } = this.color;
-
-          ctx.beginPath();
-          ctx.arc(this.x, this.y, this.radius * 3, 0, Math.PI * 2);
-          ctx.fillStyle = `rgba(${r}, ${g}, ${b}, ${this.alpha * 0.08})`;
-          ctx.fill();
-
-          ctx.beginPath();
-          ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-          ctx.fillStyle = `rgba(${r}, ${g}, ${b}, ${this.alpha})`;
-          ctx.fill();
-        }
-      }
-
-      class Edge {
-        constructor(a, b) {
-          this.a = a;
-          this.b = b;
-          this.life = 0;
-          this.maxLife = 160 + Math.random() * 220;
-          this.alpha = 0;
-          this.maxAlpha = 0.08 + Math.random() * 0.12;
-          this.alive = true;
-        }
-
-        update() {
-          this.life++;
-
-          if (!this.a.alive || !this.b.alive || this.life >= this.maxLife) {
-            this.alive = false;
-            return;
-          }
-
-          if (this.life < 45) {
-            this.alpha = this.maxAlpha * (this.life / 45);
-          } else if (this.life > this.maxLife - 80) {
-            this.alpha = this.maxAlpha * Math.max(0, (this.maxLife - this.life) / 80);
-          } else {
-            this.alpha = this.maxAlpha;
-          }
-        }
-
-        draw() {
-          if (this.alpha <= 0) return;
-
-          const color = this.a.color;
-          ctx.beginPath();
-          ctx.moveTo(this.a.x, this.a.y);
-          ctx.lineTo(this.b.x, this.b.y);
-          ctx.strokeStyle = `rgba(${color.r}, ${color.g}, ${color.b}, ${this.alpha})`;
-          ctx.lineWidth = 1;
-          ctx.stroke();
-        }
-      }
-
-      for (let i = 0; i < 28; i++) {
-        const node = new Node();
-        node.life = Math.floor(Math.random() * 140);
-        nodes.push(node);
-      }
-
-      let edgeTimer = 0;
-      let clusterTimer = 0;
-
-      function spawnCluster() {
-        const cx = 120 + Math.random() * Math.max(100, width - 240);
-        const cy = 120 + Math.random() * Math.max(100, height - 240);
-        const cluster = [];
-
-        for (let i = 0; i < 5; i++) {
-          const node = new Node(
-            cx + (Math.random() - 0.5) * 130,
-            cy + (Math.random() - 0.5) * 130
-          );
-
-          nodes.push(node);
-          cluster.push(node);
-        }
-
-        for (let i = 0; i < cluster.length; i++) {
-          for (let j = i + 1; j < cluster.length; j++) {
-            if (Math.random() < 0.45) {
-              edges.push(new Edge(cluster[i], cluster[j]));
+            if (mouseGravity === 'attract') {
+              p.vx += nx * g;
+              p.vy += ny * g;
+            } else if (mouseGravity === 'repel') {
+              p.vx -= nx * g;
+              p.vy -= ny * g;
             }
+
+            p.opacity = Math.min(1, p.baseOpacity + force * 0.4);
+            const targetGlow = 1 + force * 2.5;
+            const currentGlow = p.glowMultiplier || 1;
+            p.glowMultiplier = currentGlow + (targetGlow - currentGlow) * 0.15;
+          } else {
+            p.opacity = Math.max(p.baseOpacity * 0.4, p.opacity - 0.02);
+            const targetGlow = 1;
+            const currentGlow = p.glowMultiplier || 1;
+            p.glowMultiplier = Math.max(1, currentGlow + (targetGlow - currentGlow) * 0.08);
           }
+
+          p.x += p.vx;
+          p.y += p.vy;
+
+          p.vx += (Math.random() - 0.5) * 0.001;
+          p.vy += (Math.random() - 0.5) * 0.001;
+
+          p.vx *= 0.999;
+          p.vy *= 0.999;
+
+          if (p.x < 0) p.x = width;
+          if (p.x > width) p.x = 0;
+          if (p.y < 0) p.y = height;
+          if (p.y > height) p.y = 0;
         }
       }
 
-      function tryCreateEdge() {
-        edgeTimer++;
+      function drawStars() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        const color = '#ede8df';
 
-        if (edgeTimer < 35) return;
-        edgeTimer = 0;
-
-        const aliveNodes = nodes.filter(node => node.alive && node.alpha > 0.1);
-        if (aliveNodes.length < 2) return;
-
-        const a = aliveNodes[Math.floor(Math.random() * aliveNodes.length)];
-
-        for (const b of aliveNodes) {
-          if (a === b) continue;
-
-          const dx = a.x - b.x;
-          const dy = a.y - b.y;
-          const distance = Math.sqrt(dx * dx + dy * dy);
-
-          if (distance < edgeDistance && Math.random() < 0.2) {
-            const alreadyExists = edges.some(edge =>
-              edge.alive && ((edge.a === a && edge.b === b) || (edge.a === b && edge.b === a))
-            );
-
-            if (!alreadyExists) {
-              edges.push(new Edge(a, b));
-              break;
-            }
-          }
+        for (let i = 0; i < stars.length; i++) {
+          const p = stars[i];
+          ctx.save();
+          ctx.shadowColor = '#c9a96e';
+          ctx.shadowBlur = glowIntensity * (p.glowMultiplier || 1) * 2;
+          ctx.globalAlpha = p.opacity;
+          ctx.fillStyle = color;
+          ctx.beginPath();
+          ctx.arc(p.x * dpr, p.y * dpr, p.size * dpr, 0, Math.PI * 2);
+          ctx.fill();
+          ctx.restore();
         }
       }
 
       function animate() {
-        ctx.clearRect(0, 0, width, height);
-
-        const aliveCount = nodes.filter(node => node.alive).length;
-        if (aliveCount < maxNodes && Math.random() < 0.07) {
-          nodes.push(new Node());
-        }
-
-        clusterTimer++;
-        if (clusterTimer > 760) {
-          spawnCluster();
-          clusterTimer = 0;
-        }
-
-        tryCreateEdge();
-
-        for (let i = edges.length - 1; i >= 0; i--) {
-          edges[i].update();
-
-          if (!edges[i].alive) {
-            edges.splice(i, 1);
-          } else {
-            edges[i].draw();
-          }
-        }
-
-        for (let i = nodes.length - 1; i >= 0; i--) {
-          nodes[i].update();
-
-          if (!nodes[i].alive) {
-            nodes.splice(i, 1);
-          } else {
-            nodes[i].draw();
-          }
-        }
-
+        updateStars();
+        drawStars();
         requestAnimationFrame(animate);
       }
 
-      requestAnimationFrame(animate);
+      animate();
     })();
   </script>
 </body>
